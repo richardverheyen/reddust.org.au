@@ -1,0 +1,17 @@
+// SASS
+@import 'variables';
+@import 'mixins';
+@import 'animations';
+
+// Commons
+@import 'normalize';
+@import 'fonts';
+@import 'common';
+@import 'header';
+@import 'footer';
+
+// Page specific
+@import 'landing';
+
+// Outdate browsers
+@import '../../bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.scss';
