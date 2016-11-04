@@ -193,96 +193,79 @@
   }
 
   #partners {
-    div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      flex-direction: column;
+    > div {
       padding: 0;
-
-      h1 {
-        color: $reddust-rust;
-      }
-
-      ul {
-        display: flex;
-        flex-flow: row wrap;
-        li {
-          width: 25vw;
-          height: 25vw;
-          background-color: $reddust-sunset;
-          max-width: 250px;
-          max-height: 250px;
-          color: $reddust-cream;
-          border: #eee 0.5px solid;
-
-          h3 {
-            color: white;
-            margin: 20px;
+      max-width: none;
+    }
+    h1 {
+      color: $reddust-rust;
+    }
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      li {
+        width: 25vw;
+        height: 25vw;
+        padding: 1px;
+        box-sizing: border-box;
+        background: #EEE;
+        .flip-container {
+          perspective: 1000px;
+          width: 100%;
+          height: 100%;
+          &.hover,
+          &:hover {
+            .flipper {
+              transform: rotateY(180deg);
+            }
           }
-
-          p {
-            margin: 20px;
-          }
-
-          img {
-            position: absolute;
-            top: 0;
+          .flipper {
+            position: relative;
+            transition: 0.6s;
+            transform-style: preserve-3d;
             width: 100%;
-            &:hover {
-              opacity: 0;
+            height: 100%;
+            .back,
+            .front {
+              width: 100%;
+              height: 100%;
+              backface-visibility: hidden;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+            .front {
+              z-index: 2;
+              transform: rotateY(0deg);
+              background: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              img {
+                width: 80%;
+                height: 80%;
+              }
+            }
+            .back {
+              transform: rotateY(180deg);
+              background-color: $reddust-sunset;
+              padding: 2vw;
+              box-sizing: border-box;
+              h3 {
+                font-family: $montserrat-bold;
+                text-transform: uppercase;
+                color: white;
+              }
+              p {
+                font-family: $montserrat-regular;
+                color: $reddust-cream;
+                line-height: 130%;
+                font-size: 14px;
+              }
             }
           }
         }
       }
     }
   }
-}
-
-/* entire container, keeps perspective */
-.flip-container {
-  perspective: 1000px;
-}
-/* flip the pane when hovered */
-.flip-container.hover .flipper,
-.flip-container:hover .flipper {
-  transform: rotateY(180deg);
-}
-
-.back,
-.flip-container,
-.front {
-  width: 320px;
-  height: 480px;
-}
-
-/* flip speed goes here */
-.flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-
-  position: relative;
-}
-
-/* hide back of pane during swap */
-.back,
-.front {
-  backface-visibility: hidden;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-  z-index: 2;
-  /* for firefox 31 */
-  transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-  transform: rotateY(180deg);
 }

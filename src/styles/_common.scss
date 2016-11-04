@@ -1,8 +1,8 @@
 body {
-  // font-family: $from-where-you-are;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 100%;
   margin: 0;
   // color: $reddust-red;
@@ -53,18 +53,40 @@ ul {
     padding: 0;
   }
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $from-where-you-are-regular;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 150%;
+  margin: 0;
+}
+
+// h1 {
+// 	font-size: 52px;
+// 	line-height: 100%;
+// 	text-align: center;
+// 	text-transform: capitalize;
 //
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   font-family: $from-where-you-are;
-//   font-style: normal;
-//   font-weight: normal;
-//   // line-height: 150%;
-//   margin: 0;
+// 	span {
+// 		display: block;
+// 		color: white;
+// 	}
+// }
+//
+// h3 {
+// 	color: $reddust-rust;
+// 	font-size: 23px;
+// }
+//
+// h4 {
+// 	color: $reddust-cream;
+// 	font-size: 20px;
 // }
 
 a {
