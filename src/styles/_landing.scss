@@ -50,7 +50,7 @@
       }
 
       h4 {
-        font-family: "Montserrat-Bold", sans-serif;
+        font-family: 'Montserrat-Bold', sans-serif;
         font-size: 20px;
         text-align: center;
         max-width: 700px;
@@ -129,7 +129,7 @@
           }
 
           h4 {
-            font-family: "Montserrat-Bold", sans-serif;
+            font-family: 'Montserrat-Bold', sans-serif;
             font-size: 20px;
             color: $reddust-cream;
 
@@ -223,9 +223,14 @@
       max-width: none;
       > h1 {
         color: $reddust-rust;
+        font-size: 45px;
+        margin: 70px auto 0;
+        text-align: center;
       }
       > p {
         color: $reddust-stone;
+        text-align: center;
+        margin: 20px 0 50px;
       }
     }
     ul {
