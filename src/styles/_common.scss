@@ -53,13 +53,14 @@ ul {
     padding: 0;
   }
 }
+//
 // h1,
 // h2,
 // h3,
 // h4,
 // h5,
 // h6 {
-//   // font-family: $from-where-you-are;
+//   font-family: $from-where-you-are;
 //   font-style: normal;
 //   font-weight: normal;
 //   // line-height: 150%;
@@ -67,7 +68,6 @@ ul {
 // }
 
 a {
-  color: red;
   text-decoration: none;
 
   &:hover {
@@ -82,15 +82,36 @@ a {
   }
 }
 
-button {
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 8px 14px;
-  border-radius: 6px;
-  background-color: transparent;
-  border: $reddust-gold 1px solid;
-  color: $reddust-gold;
+a {
+  &.button {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 6px;
+    background-color: transparent;
+    border: $rdgold 1px solid;
+    color: $rdgold;
+
+    &.rust {
+      background-color: $rdrust;
+      // border-color: $rdrust;
+      &:hover {
+        background-color: $rdsunset;
+        border-color: $rdsunset;
+      }
+    }
+
+    &.gold {
+      color: $rdgold;
+      border-color: $rdgold;
+
+      &:hover {
+        color: $rdcream;
+        border-color: $rdcream;
+      }
+    }
+  }
 }
 
 .internal {
