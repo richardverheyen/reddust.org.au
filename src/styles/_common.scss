@@ -1,3 +1,4 @@
+// All headings, paragraphs and buttons will inherit these font styles from the <body>
 body {
   font-family: $montserrat-regular;
   font-style: normal;
@@ -10,6 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+// The general layout of the page
 footer,
 header,
 section {
@@ -24,11 +26,13 @@ section {
   }
 }
 
+// To avoid <img> and <iframe> to have weird white space below them, make them a block
 iframe,
 img {
   display: block;
 }
 
+// In most cases we use <ul> not as bullet lists and thus we strip them of all browser defaults
 ul {
   list-style: none;
   margin: 0;
@@ -38,6 +42,7 @@ ul {
   }
 }
 
+// This is to override the browser default font-weight and margins
 h1,
 h2,
 h3,
@@ -63,44 +68,49 @@ h6 {
 //   font-size: 18px;
 // }
 
+// Normal hyperlinks
 a {
   text-decoration: none;
   &:hover {
     text-decoration: underline;
   }
-  &.button {
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 8px 14px;
-    border-radius: 5px;
-    background-color: transparent;
-    border: $reddust-gold 1px solid;
+}
+
+// Buttons
+a.button,
+button {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: $reddust-gold 1px solid;
+  color: $reddust-gold;
+  &.rust {
+    background-color: $reddust-rust;
+    &:hover {
+      background-color: $reddust-sunset;
+      border-color: $reddust-sunset;
+    }
+  }
+  &.gold {
     color: $reddust-gold;
-    &.rust {
-      background-color: $reddust-rust;
-      &:hover {
-        background-color: $reddust-sunset;
-        border-color: $reddust-sunset;
-      }
+    border-color: $reddust-gold;
+    &:hover {
+      color: $reddust-cream;
+      border-color: $reddust-cream;
     }
-    &.gold {
-      color: $reddust-gold;
-      border-color: $reddust-gold;
-      &:hover {
-        color: $reddust-cream;
-        border-color: $reddust-cream;
-      }
-    }
-    &.medium {
-      padding: 16px 50px;
-    }
-    &.large {
-      padding: 16px 80px;
-    }
+  }
+  &.medium {
+    padding: 16px 50px;
+  }
+  &.large {
+    padding: 16px 80px;
   }
 }
 
+// For the outdated browser message
 #outdated {
   p {
     max-width: none;
