@@ -1,26 +1,19 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $montserrat-regular;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 100%;
+  line-height: 130%;
   margin: 0;
-  // color: $reddust-red;
+  color: $reddust-stone;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  &.no-scroll {
-    @media (max-width: 900px) {
-      overflow: hidden;
-    }
-  }
 }
 
 footer,
 header,
 section {
   min-width: 320px;
-
   > div {
     min-width: 320px;
     max-width: 1080px;
@@ -28,14 +21,6 @@ section {
     box-sizing: border-box;
     padding: 0 20px;
     overflow: hidden;
-  }
-}
-
-main {
-  &.blur {
-    @media (max-width: 900px) {
-      filter: blur(10px);
-    }
   }
 }
 
@@ -48,7 +33,6 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
-
   li {
     padding: 0;
   }
@@ -67,62 +51,39 @@ h6 {
   margin: 0;
 }
 
+// TODO: JW: please remove to more specific stylesheet
 // h1 {
-// 	font-size: 52px;
-// 	line-height: 100%;
-// 	text-align: center;
-// 	text-transform: capitalize;
-//
-// 	span {
-// 		display: block;
-// 		color: white;
-// 	}
-// }
-//
-// h3 {
-// 	color: $reddust-rust;
-// 	font-size: 23px;
+//   font-size: 45px;
+//   text-align: center;
+//   text-transform: capitalize;
 // }
 //
 // h4 {
-// 	color: $reddust-cream;
-// 	font-size: 20px;
+//   font-family: $montserrat-regular;
+//   font-size: 18px;
 // }
 
 a {
   text-decoration: none;
   &:hover {
-    text-decoration: none;
+    text-decoration: underline;
   }
-}
-
-a {
-  &:link,
-  &:visited {
-    text-decoration: none;
-  }
-}
-
-a {
   &.button {
-    font-size: 16px;
+    font-size: 15px;
     text-transform: uppercase;
     font-weight: bold;
     padding: 8px 14px;
-    border-radius: 6px;
+    border-radius: 5px;
     background-color: transparent;
     border: $reddust-gold 1px solid;
     color: $reddust-gold;
-
     &.rust {
       background-color: $reddust-rust;
-      // border-color: $reddust-rust;
       &:hover {
         background-color: $reddust-sunset;
         border-color: $reddust-sunset;
       }
     }
-
     &.gold {
       color: $reddust-gold;
       border-color: $reddust-gold;
@@ -131,13 +92,13 @@ a {
         border-color: $reddust-cream;
       }
     }
+    &.medium {
+      padding: 16px 50px;
+    }
+    &.large {
+      padding: 16px 80px;
+    }
   }
-}
-
-.internal {
-  color: $reddust-gold;
-  background-color: $reddust-rust;
-  padding: 15px 50px;
 }
 
 #outdated {
