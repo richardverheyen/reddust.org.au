@@ -1,7 +1,7 @@
 #landing {
-<<<<<<< HEAD
   #hero {
-    background: url('/assets/img/landing/');
+    background: url('/assets/img/landing/home-banner.jpg');
+    background-size: cover;
 
     div {
       display: flex;
@@ -12,6 +12,8 @@
 
       h1 {
         text-transform: none;
+        color: $rdgold;
+        margin-bottom: 40px;
       }
 
       img {
@@ -141,7 +143,9 @@
 
       ul {
         display: flex;
-        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 40px;
 
         li {
           position: relative;
@@ -152,8 +156,10 @@
           a {
             display: flex;
             flex-direction: column;
-            width: 250px;
-            height: 250px;
+            width: 22vw;
+            height: 22vw;
+            max-width: 250px;
+            max-height: 250px;
             text-align: center;
 
             img {
@@ -167,14 +173,22 @@
               background-color: $rdgold;
               z-index: 1;
               padding: 12px;
-              margin-top: auto;
+              margin: auto 0 2px;
+            }
+          }
+        }
+        @media (max-width: 900px) {
+          flex-wrap: wrap;
+          max-width: 650px;
+
+          li {
+            a {
+              width: 40vw;
+              height: 40vw;
             }
           }
         }
       }
     }
   }
-=======
-
->>>>>>> 1a190385109f41114617228751dc70e663a95165
 }

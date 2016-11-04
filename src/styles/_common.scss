@@ -1,11 +1,11 @@
 body {
-  font-family: $from-where-you-are;
+  // font-family: $from-where-you-are;
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
   line-height: 100%;
   margin: 0;
-  color: $reddust-red;
+  // color: $reddust-red;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -53,28 +53,18 @@ ul {
     padding: 0;
   }
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $from-where-you-are;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 150%;
-  margin: 0;
-}
-
-p {
-  max-width: 700px;
-  line-height: 150%;
-}
-
-strong {
-  font-weight: normal;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   // font-family: $from-where-you-are;
+//   font-style: normal;
+//   font-weight: normal;
+//   // line-height: 150%;
+//   margin: 0;
+// }
 
 a {
   color: red;

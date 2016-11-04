@@ -1,15 +1,17 @@
 header {
-  background-color: $rdrust;
+  background: url('/assets/img/header/red-header-background.jpg');
+  background-size: cover;
 
   div {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 40px;
 
     > img {
       position: absolute;
-      top: 20dpx;
+      top: 25px;
       max-width: 220px;
+      margin-left: 50px;
     }
 
     nav {
