@@ -13,8 +13,10 @@
       height: 650px;
 
       h1 {
-        text-transform: none;
         color: $reddust-gold;
+        font-size: 45px;
+        text-align: center;
+        text-transform: capitalize;
         margin-bottom: 20px;
 
         span {
@@ -48,14 +50,18 @@
       }
 
       h4 {
+        font-family: "Montserrat-Bold", sans-serif;
+        font-size: 20px;
         text-align: center;
-        max-width: 660px;
+        max-width: 700px;
         color: white;
-        line-height: 160%;
+        line-height: 145%;
+        letter-spacing: 0.3px;
+        margin-top: 10px;
       }
 
       a {
-        margin-bottom: 70px;
+        margin: 20px auto 70px;
       }
     }
   }
@@ -69,7 +75,9 @@
       flex-direction: column;
 
       h1 {
+        font-size: 45px;
         color: $reddust-rust;
+        text-transform: capitalize;
         margin: 70px auto 0;
       }
 
@@ -92,6 +100,8 @@
       color: $reddust-cream;
 
       > h1 {
+        font-size: 45px;
+        text-transform: capitalize;
         margin: 70px auto 0;
       }
 
@@ -119,9 +129,12 @@
           }
 
           h4 {
-            text-transform: uppercase;
+            font-family: "Montserrat-Bold", sans-serif;
+            font-size: 20px;
+            color: $reddust-cream;
 
             span {
+              font-family: $from-where-you-are-regular;
               font-size: 35px;
             }
           }
@@ -147,6 +160,8 @@
       align-items: center;
 
       h1 {
+        font-size: 45px;
+        text-transform: capitalize;
         color: $reddust-rust;
         margin: 70px auto 0;
       }
