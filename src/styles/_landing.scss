@@ -191,4 +191,57 @@
       }
     }
   }
+
+  #partners {
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 0;
+
+      h1 {
+        color: $rdrust;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          position: relative;
+          background-color: $rdsunset;
+          width: 24vw;
+          height: 24vw;
+          max-width: 250px;
+          max-height: 250px;
+          color: $rdcream;
+          border: #eee 0.5px solid;
+
+          h3 {
+            color: white;
+            margin: 20px;
+          }
+
+          p {
+            margin: 20px;
+          }
+
+          img {
+            position: absolute;
+            top: 0;
+            width: 100%;
+
+            &:hover {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }
