@@ -1,5 +1,4 @@
 // All headings, paragraphs and buttons will inherit these font styles from the <body>
-
 body {
   font-family: $montserrat-regular;
   font-style: normal;
@@ -11,8 +10,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-// The general layout of the page
 
+// The general layout of the page
 footer,
 header,
 section {
@@ -27,14 +26,14 @@ section {
     overflow: hidden;
   }
 }
-// To avoid <img> and <iframe> to have weird white space below them, make them a block
 
+// To avoid <img> and <iframe> to have weird white space below them, make them a block
 iframe,
 img {
   display: block;
 }
-// In most cases we use <ul> not as bullet lists and thus we strip them of all browser defaults
 
+// In most cases we use <ul> not as bullet lists and thus we strip them of all browser defaults
 ul {
   list-style: none;
   margin: 0;
@@ -44,8 +43,8 @@ ul {
     padding: 0;
   }
 }
-// This is to override the browser default font-weight and margins
 
+// This is to override the browser default font-weight and margins
 h1,
 h2,
 h3,
@@ -58,65 +57,102 @@ h6 {
   line-height: 150%;
   margin: 0;
 }
-// Normal hyperlinks
 
+<<<<<<< HEAD
+=======
+// TODO: JW: please remove to more specific stylesheet
+// h1 {
+//   font-size: 45px;
+//   text-align: center;
+//   text-transform: capitalize;
+// }
+//
+// h4 {
+//   font-family: $montserrat-regular;
+//   font-size: 18px;
+// }
+
+// Normal hyperlinks
+>>>>>>> 29557a3d4dc86b17d9607ae82b15306bdc51614f
 a {
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
   }
-}
-// Buttons
+<<<<<<< HEAD
 
+  &.button {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 14px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: $reddust-gold 1px solid;
+    color: $reddust-gold;
+
+    &.rust {
+      background-color: $reddust-rust;
+
+      &:hover {
+        background-color: $reddust-sunset;
+        border-color: $reddust-sunset;
+      }
+    }
+
+    &.gold {
+      color: $reddust-gold;
+      border-color: $reddust-gold;
+
+      &:hover {
+        color: $reddust-cream;
+        border-color: $reddust-cream;
+      }
+    }
+
+    &.large {
+      padding: 0 50px;
+      line-height: 50px;
+=======
+}
+
+// Buttons
 a.button,
 button {
   font-size: 15px;
   text-transform: uppercase;
   font-weight: bold;
-  line-height: 32px;
-  padding: 0 14px;
+  padding: 8px 14px;
   border-radius: 5px;
   background-color: transparent;
   border: $reddust-gold 1px solid;
   color: $reddust-gold;
-
   &.rust {
     background-color: $reddust-rust;
-
     &:hover {
       background-color: $reddust-sunset;
       border-color: $reddust-sunset;
     }
   }
-
   &.gold {
     color: $reddust-gold;
     border-color: $reddust-gold;
-
     &:hover {
       color: $reddust-cream;
       border-color: $reddust-cream;
+>>>>>>> 29557a3d4dc86b17d9607ae82b15306bdc51614f
     }
   }
-
-  &.cream {
-    color: $reddust-cream;
-    border-color: $reddust-cream;
-
-    &:hover {
-      color: $reddust-sunset;
-      border-color: $reddust-sunset;
-    }
+  &.medium {
+    padding: 16px 50px;
   }
-
   &.large {
-    padding: 0 50px;
-    line-height: 46px;
+    padding: 16px 80px;
   }
 }
-// For the outdated browser message
 
+// For the outdated browser message
 #outdated {
   p {
     max-width: none;
