@@ -12,7 +12,7 @@
 
       h1 {
         text-transform: none;
-        color: $rdgold;
+        color: $reddust-gold;
         margin-bottom: 40px;
       }
 
@@ -25,7 +25,7 @@
   }
 
   #about-link {
-    background-color: $rdgold;
+    background-color: $reddust-gold;
 
     div {
       display: flex;
@@ -51,7 +51,7 @@
   }
 
   #where-we-work {
-    background-color: $rdcream;
+    background-color: $reddust-cream;
 
     div {
       display: flex;
@@ -59,7 +59,7 @@
       flex-direction: column;
 
       h1 {
-        color: $rdrust;
+        color: $reddust-rust;
         margin: 70px auto 0;
       }
 
@@ -79,7 +79,7 @@
       justify-content: space-around;
       align-items: center;
       flex-direction: column;
-      color: $rdcream;
+      color: $reddust-cream;
 
       > h1 {
         margin: 70px auto 0;
@@ -99,7 +99,7 @@
           margin: 0 40px;
 
           h1 {
-            color: $rdcream;
+            color: $reddust-cream;
             font-size: 80px;
             margin: 0 auto 60px;
           }
@@ -123,8 +123,8 @@
 
         button {
           padding: 16px 55px;
-          color: $rdcream;
-          border-color: $rdcream;
+          color: $reddust-cream;
+          border-color: $reddust-cream;
         }
       }
     }
@@ -137,7 +137,7 @@
       align-items: center;
 
       h1 {
-        color: $rdrust;
+        color: $reddust-rust;
         margin: 70px auto 0;
       }
 
@@ -170,7 +170,7 @@
             h3 {
               color: white;
               text-transform: uppercase;
-              background-color: $rdgold;
+              background-color: $reddust-gold;
               z-index: 1;
               padding: 12px;
               margin: auto 0 2px;
@@ -202,24 +202,19 @@
       padding: 0;
 
       h1 {
-        color: $rdrust;
+        color: $reddust-rust;
       }
 
       ul {
         display: flex;
-        flex-wrap: wrap;
-
+        flex-flow: row wrap;
         li {
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          position: relative;
-          background-color: $rdsunset;
-          width: 24vw;
-          height: 24vw;
+          width: 25vw;
+          height: 25vw;
+          background-color: $reddust-sunset;
           max-width: 250px;
           max-height: 250px;
-          color: $rdcream;
+          color: $reddust-cream;
           border: #eee 0.5px solid;
 
           h3 {
@@ -235,7 +230,6 @@
             position: absolute;
             top: 0;
             width: 100%;
-
             &:hover {
               opacity: 0;
             }
@@ -244,4 +238,51 @@
       }
     }
   }
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
+}
+/* flip the pane when hovered */
+.flip-container.hover .flipper,
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.back,
+.flip-container,
+.front {
+  width: 320px;
+  height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.back,
+.front {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
 }
