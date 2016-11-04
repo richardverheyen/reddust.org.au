@@ -69,7 +69,6 @@ ul {
 
 a {
   text-decoration: none;
-
   &:hover {
     text-decoration: none;
   }
@@ -90,25 +89,24 @@ a {
     padding: 8px 14px;
     border-radius: 6px;
     background-color: transparent;
-    border: $rdgold 1px solid;
-    color: $rdgold;
+    border: $reddust-gold 1px solid;
+    color: $reddust-gold;
 
     &.rust {
-      background-color: $rdrust;
-      // border-color: $rdrust;
+      background-color: $reddust-rust;
+      // border-color: $reddust-rust;
       &:hover {
-        background-color: $rdsunset;
-        border-color: $rdsunset;
+        background-color: $reddust-sunset;
+        border-color: $reddust-sunset;
       }
     }
 
     &.gold {
-      color: $rdgold;
-      border-color: $rdgold;
-
+      color: $reddust-gold;
+      border-color: $reddust-gold;
       &:hover {
-        color: $rdcream;
-        border-color: $rdcream;
+        color: $reddust-cream;
+        border-color: $reddust-cream;
       }
     }
   }
