@@ -197,8 +197,11 @@
       padding: 0;
       max-width: none;
     }
-    h1 {
+    > h1 {
       color: $reddust-rust;
+    }
+    > p {
+      color: $reddust-stone;
     }
     ul {
       display: flex;
