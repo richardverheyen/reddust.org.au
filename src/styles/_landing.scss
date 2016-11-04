@@ -209,6 +209,16 @@
         padding: 1px;
         box-sizing: border-box;
         background: #EEE;
+        @media (max-width: 900px) {
+          width: 33.3333vw;
+          height: 33.3333vw;
+        }
+        @media (max-width: 600px) {
+          width: 50vw;
+          height: 50vw;
+          min-width: 160px;
+          min-height: 160px;
+        }
         .flip-container {
           perspective: 1000px;
           width: 100%;
@@ -249,18 +259,31 @@
             .back {
               transform: rotateY(180deg);
               background-color: $reddust-sunset;
-              padding: 2vw;
               box-sizing: border-box;
+              padding: 0 2vw;
+              @media (max-width: 900px) {
+                padding: 2vw;
+              }
               h3 {
                 font-family: $montserrat-bold;
                 text-transform: uppercase;
                 color: white;
+                text-align: center;
+                margin: 28px 0 20px;
+                font-size: 20px;
+                line-height: 130%;
+                @media (max-width: 900px) {
+                  display: none;
+                }
               }
               p {
                 font-family: $montserrat-regular;
                 color: $reddust-cream;
                 line-height: 130%;
                 font-size: 14px;
+                @media (max-width: 600px) {
+                  font-size: 13px;
+                }
               }
             }
           }
