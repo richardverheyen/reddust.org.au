@@ -127,7 +127,7 @@ module.exports = function(grunt) {
         files: {
           'temp/js/main.min.js': ['src/js/main.js'],
           'temp/js/localstorage_safari_private_shim.min.js': ['src/js/localstorage_safari_private_shim.js'],
-          'dist/js/outdated-browser.min.js': ['src/js/outdated-browser.js']
+          'dist/assets/js/outdated-browser.min.js': ['src/js/outdated-browser.js']
         }
       }
     },

@@ -1,5 +1,5 @@
 body {
-  font-family: $book;
+  font-family: $from-where-you-are;
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
@@ -60,7 +60,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $bold;
+  font-family: $from-where-you-are;
   font-style: normal;
   font-weight: normal;
   line-height: 150%;
@@ -77,7 +77,7 @@ strong {
 }
 
 a {
-  color: $link-color;
+  color: red;
   text-decoration: none;
 
   &:hover {
