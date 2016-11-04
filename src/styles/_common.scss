@@ -56,18 +56,6 @@ h6 {
   margin: 0;
 }
 
-// TODO: JW: please remove to more specific stylesheet
-// h1 {
-//   font-size: 45px;
-//   text-align: center;
-//   text-transform: capitalize;
-// }
-//
-// h4 {
-//   font-family: $montserrat-regular;
-//   font-size: 18px;
-// }
-
 // Normal hyperlinks
 a {
   text-decoration: none;
@@ -87,6 +75,10 @@ button {
   background-color: transparent;
   border: $reddust-gold 1px solid;
   color: $reddust-gold;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
   &.rust {
     background-color: $reddust-rust;
     &:hover {

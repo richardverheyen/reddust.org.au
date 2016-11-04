@@ -1,1 +1,23 @@
-footer {}
+footer {
+  color: white;
+  display: flex;
+  section {
+    width: 50%;
+  }
+  #break-the-cycle {
+    background: $reddust-rust;
+    .button {
+      border-color: $reddust-gold;
+      color: $reddust-gold;
+      &:hover {
+        background: rgba($reddust-gold, 0.2);
+      }
+    }
+  }
+  #links {
+    background: $reddust-gold;
+    a {
+      color: white;
+    }
+  }
+}
