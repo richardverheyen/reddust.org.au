@@ -41,6 +41,11 @@ header {
             align-items: center;
             color: $reddust-cream;
 
+            &:hover {
+              color: $reddust-gold;
+              text-decoration: none;
+            }
+
             img {
               width: 26px;
               padding: 0 5px;

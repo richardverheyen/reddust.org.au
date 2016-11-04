@@ -64,13 +64,14 @@ a {
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 // Buttons
 
 a.button,
 button {
+  display: inline-block;
   font-size: 15px;
   text-transform: uppercase;
   font-weight: bold;
@@ -80,10 +81,15 @@ button {
   background-color: transparent;
   border: $reddust-gold 1px solid;
   color: $reddust-gold;
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
+  cursor: pointer;
+
+  &.support {
+    &:hover {
+      color: $reddust-sunset;
+      border-color: $reddust-sunset;
+    }
   }
+
   &.rust {
     background-color: $reddust-rust;
 
