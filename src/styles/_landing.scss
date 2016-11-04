@@ -13,8 +13,10 @@
       height: 650px;
 
       h1 {
-        text-transform: none;
         color: $reddust-gold;
+        font-size: 45px;
+        text-align: center;
+        text-transform: capitalize;
         margin-bottom: 20px;
 
         span {
@@ -48,6 +50,8 @@
       }
 
       h4 {
+        font-family: $montserrat-regular;
+        font-size: 18px;
         text-align: center;
         max-width: 660px;
         color: white;
@@ -207,15 +211,19 @@
       padding: 0;
       max-width: none;
     }
+
     > h1 {
       color: $reddust-rust;
     }
+
     > p {
       color: $reddust-stone;
     }
+
     ul {
       display: flex;
       flex-flow: row wrap;
+
       li {
         width: 25vw;
         height: 25vw;
@@ -232,22 +240,26 @@
           min-width: 160px;
           min-height: 160px;
         }
+
         .flip-container {
           perspective: 1000px;
           width: 100%;
           height: 100%;
+
           &.hover,
           &:hover {
             .flipper {
               transform: rotateY(180deg);
             }
           }
+
           .flipper {
             position: relative;
             transition: 0.6s;
             transform-style: preserve-3d;
             width: 100%;
             height: 100%;
+
             .back,
             .front {
               width: 100%;
@@ -257,6 +269,7 @@
               top: 0;
               left: 0;
             }
+
             .front {
               z-index: 2;
               transform: rotateY(0deg);
@@ -264,11 +277,13 @@
               display: flex;
               align-items: center;
               justify-content: center;
+
               img {
                 width: 80%;
                 height: 80%;
               }
             }
+
             .back {
               transform: rotateY(180deg);
               background-color: $reddust-sunset;
@@ -277,6 +292,7 @@
               @media (max-width: 900px) {
                 padding: 2vw;
               }
+
               h3 {
                 font-family: $montserrat-bold;
                 text-transform: uppercase;
@@ -289,6 +305,7 @@
                   display: none;
                 }
               }
+
               p {
                 font-family: $montserrat-regular;
                 color: $reddust-cream;
