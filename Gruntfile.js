@@ -60,10 +60,19 @@ module.exports = function(grunt) {
           basePath: 'src/templates/',
           modules: ['src/templates/helpers/helpers-*.js'],
           context: {
-            // formLink: '/can-I-transfer-my-UK-pension-to-Australian-super',
-            formLink: '/form',
-            formTitle: 'Can I transfer my UK Pension to Australian Super?',
-            pathPensionTransferGuide: '/assets/PDF/Pension-Transfer-Guide-by-FinSec-PTX.pdf'
+            partners: [{
+              name: 'Hannah Sutton Design',
+              logo: 'hannah-sutton-design.png',
+              intro: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+            }, {
+              name: 'Nabu Websites',
+              logo: 'nabu.svg',
+              intro: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+            }, {
+              name: 'Richardson Fried Chickens',
+              logo: 'richardson-fried-chickens.jpg',
+              intro: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+            }]
           }
         }
       }

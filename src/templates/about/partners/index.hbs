@@ -1,0 +1,109 @@
+{{#extend "layout"}}
+
+  {{#replace "meta"}}
+    <title>Partners</title>
+    <meta name="description" content="">
+  {{/replace}}
+
+  {{#replace "body-id"}}about-partners{{/replace}}
+
+  {{#replace "main"}}
+
+    <section id="hero">
+      <img src="" alt="" />
+    </section>
+
+    {{> about-nav}}
+
+    <section id="intro">
+      <div>
+        <h2>We wish to thank our partners for their support.</h2>
+        <p>Red Dust Role Models would not exist without the invaluable support of our funding partners, whose continues support allows us to plan, deliver and expand our programs and projects.</p>
+      </div>
+    </section>
+
+    <section id="partners">
+      <div>
+        <ul class="tiles partners">
+
+          {{#partners}}
+            <li>
+              <div class="flip-container">
+                <div class="flipper">
+                  <div class="front">
+                    <img src="/assets/img/landing/partners/{{logo}}" />
+                  </div>
+                  <div class="back">
+                    <h3>{{name}}</h3>
+                    <p>{{intro}}</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          {{/partners}}
+
+          <li>
+            <div class="flip-container">
+              <div class="flipper">
+                <div class="front">
+                  <img src="/assets/img/landing/partners/partner-johnsonjohnson.jpg" />
+                </div>
+                <div class="back">
+                  <h3>Johnson &amp; <br>Johnson</h3>
+                  <p>In early 2015, Johnson &amp; Johnson signed on to partner with Red Dust to support our Healthy Living initiatives in the Kintore community.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="flip-container">
+              <div class="flipper">
+                <div class="front">
+                  <img src="/assets/img/landing/partners/partner-johnsonjohnson.jpg" />
+                </div>
+                <div class="back">
+                  <h3>Johnson &amp; <br>Johnson</h3>
+                  <p>In early 2015, Johnson &amp; Johnson signed on to partner with Red Dust to support our Healthy Living initiatives in the Kintore community.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="flip-container">
+              <div class="flipper">
+                <div class="front">
+                  <img src="/assets/img/landing/partners/partner-johnsonjohnson.jpg" />
+                </div>
+                <div class="back">
+                  <h3>Johnson &amp; <br>Johnson</h3>
+                  <p>In early 2015, Johnson &amp; Johnson signed on to partner with Red Dust to support our Healthy Living initiatives in the Kintore community.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="flip-container">
+              <div class="flipper">
+                <div class="front">
+                  <img src="/assets/img/landing/partners/partner-johnsonjohnson.jpg" />
+                </div>
+                <div class="back">
+                  <h3>Johnson &amp; <br>Johnson</h3>
+                  <p>In early 2015, Johnson &amp; Johnson signed on to partner with Red Dust to support our Healthy Living initiatives in the Kintore community.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="become">
+      <div>
+        <h2>Become a Role Model</h2>
+        <a class="button" href="/contact">Contact us</button>
+    </div>
+  </section>
+
+  {{/replace}}
+{{/extend}}
