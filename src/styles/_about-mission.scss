@@ -1,5 +1,21 @@
 #about-mission {
-  #mission {}
-  #mantra {}
+  #mission {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    img {
+      max-width: 50vw;
+    }
+  }
+
+  #mantra {
+    background-color: $reddust-sunset;
+
+    ul {}
+
+    div {}
+  }
+
   #vision {}
 }
