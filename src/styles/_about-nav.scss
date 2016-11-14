@@ -9,6 +9,7 @@
     color: $reddust-cream;
 
     h1 {
+      font-size: 45px;
       margin: 20px;
     }
 
@@ -22,10 +23,15 @@
 
         a {
           font-family: $montserrat-regular;
+          text-transform: uppercase;
 
           &:link,
           &:visited {
             color: $reddust-cream;
+
+            &:hover {
+              color: $reddust-rust;
+            }
           }
         }
       }
