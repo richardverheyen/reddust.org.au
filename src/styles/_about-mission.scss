@@ -5,11 +5,13 @@
     div {
       display: flex;
       max-width: 1400px;
+      padding: 0;
 
       .image {
         border: 0;
         background-image: url('/assets/img/about/missionvalues/about-missionvalues-img1.jpg');
         background-size: cover;
+        background-position-y: 70%;
 
         img {
           opacity: 0;
@@ -44,16 +46,16 @@
   }
 
   #mantra {
-    background-color: $reddust-sunset;
-
     div {
       display: flex;
       max-width: 1400px;
+      padding: 0;
 
       .image {
         border: 0;
         background-image: url('/assets/img/about/missionvalues/about-missionvalues-img2.jpg');
         background-size: cover;
+        background-position: 90%;
 
         img {
           opacity: 0;
@@ -65,6 +67,7 @@
       div {
         display: block;
         box-sizing: border-box;
+        background-color: $reddust-sunset;
         width: 50%;
 
         ul {
@@ -77,25 +80,24 @@
             align-items: center;
             flex-direction: column;
             position: relative;
-            padding: 30px 0;
+            padding: 70px 0;
 
             h2 {
               font-size: 45px;
-              margin-bottom: 50px;
               z-index: 1;
             }
 
             img {
               position: absolute;
               max-width: 140px;
-              top: -5px;
+              top: 35px;
             }
 
             p {
-              font-size: 20px;
+              font-size: 22px;
               color: $reddust-bone;
               line-height: 140%;
-              max-width: 174px;
+              max-width: 324px;
               margin: 0 auto;
             }
           }
@@ -108,8 +110,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 900px;
+    background-image: url('/assets/img/about/missionvalues/about-banner-mission@2x.jpg');
+    background-size: cover;
 
-    div {}
+    h2 {
+      color: $reddust-bone;
+      max-width: 560px;
+    }
   }
 }
