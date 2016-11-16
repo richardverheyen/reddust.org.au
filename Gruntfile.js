@@ -2,15 +2,7 @@ module.exports = function(grunt) {
 
   'use strict';
 
-  // require('jit-grunt')(grunt);
-  //
   require('time-grunt')(grunt);
-  require('jit-grunt')(grunt, {
-    connect: 'grunt-contrib-connect',
-    connect: 'grunt-contrib-connect',
-    handlebarslayouts: 'grunt-handlebars-layouts',
-    replace: 'grunt-text-replace'
-  });
 
   grunt.initConfig({
 
@@ -246,21 +238,20 @@ module.exports = function(grunt) {
   });
 
   // Load tasks
-
-  // grunt.loadNpmTasks('grunt-contrib-clean');
-  // grunt.loadNpmTasks('grunt-contrib-concat');
-  // grunt.loadNpmTasks('grunt-contrib-connect');
-  // grunt.loadNpmTasks('grunt-contrib-copy');
-  // grunt.loadNpmTasks('grunt-contrib-jshint');
-  // grunt.loadNpmTasks('grunt-contrib-uglify');
-  // grunt.loadNpmTasks('grunt-contrib-watch');
-  // // grunt.loadNpmTasks('grunt-html-prettyprinter');
-  // // grunt.loadNpmTasks('grunt-inline-css');
-  // grunt.loadNpmTasks('grunt-postcss');
-  // grunt.loadNpmTasks('grunt-sass');
-  // grunt.loadNpmTasks('grunt-text-replace');
-  // grunt.loadNpmTasks('grunt-xml-sitemap');
-  // grunt.loadNpmTasks("grunt-handlebars-layouts");
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  // grunt.loadNpmTasks('grunt-html-prettyprinter');
+  // grunt.loadNpmTasks('grunt-inline-css');
+  grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-text-replace');
+  grunt.loadNpmTasks('grunt-xml-sitemap');
+  grunt.loadNpmTasks("grunt-handlebars-layouts");
 
   // Available commands
   grunt.registerTask('default', ['build', 'sitemap', 'serve']);
