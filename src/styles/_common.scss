@@ -63,6 +63,7 @@ h6 {
 
 a {
   text-decoration: none;
+
   &:hover {
     text-decoration: none;
   }
@@ -84,6 +85,8 @@ button {
   cursor: pointer;
 
   &.support {
+    margin: 2px 0;
+
     &:hover {
       color: $reddust-sunset;
       border-color: $reddust-sunset;
@@ -92,6 +95,7 @@ button {
 
   &.rust {
     background-color: $reddust-rust;
+
     &:hover {
       background-color: $reddust-sunset;
       border-color: $reddust-sunset;
@@ -101,6 +105,7 @@ button {
   &.gold {
     color: $reddust-gold;
     border-color: $reddust-gold;
+
     &:hover {
       color: $reddust-cream;
       border-color: $reddust-cream;
@@ -110,6 +115,7 @@ button {
   &.cream {
     color: $reddust-cream;
     border-color: $reddust-cream;
+
     &:hover {
       color: $reddust-sunset;
       border-color: $reddust-sunset;
@@ -122,27 +128,70 @@ button {
   }
 }
 
+.icon {
+  cursor: pointer;
+
+  img {
+    height: auto;
+  }
+
+  img:nth-last-child(1) {
+    display: none;
+  }
+
+  &:hover {
+    img:nth-last-child(2) {
+      display: none;
+    }
+
+    img:nth-last-child(1) {
+      display: block;
+    }
+  }
+}
+//Header Mobile Navigation Toggle
+
+.mobileNavActive {
+  header div nav ul {
+    display: flex;
+  }
+  @media (max-width: 600px) {
+    section:nth-child(1) {
+      filter: blur(2px);
+
+      &::before {
+        content: ('');
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        background: rgba(0,0,0,0.1);
+      }
+    }
+  }
+}
 // For the outdated browser message
+
 #outdated {
   p {
     max-width: none;
   }
 }
-
 // Most hero sections share the same CSS
+
 section#hero {
   background-size: cover;
   background-position: 50% 50%;
   height: 50vw;
   max-height: 700px;
 }
-
 // Both partner and people tiles share the same tile layout styles
+
 section.tiles {
   > div {
     padding: 0;
     max-width: 2400px;
   }
+
   ul {
     display: flex;
     flex-flow: row wrap;
@@ -182,18 +231,21 @@ section.tiles {
         perspective: 1000px;
         width: 100%;
         height: 100%;
+
         &.hover,
         &:hover {
           .flipper {
             transform: rotateY(180deg);
           }
         }
+
         .flipper {
           position: relative;
           transition: 0.6s;
           transform-style: preserve-3d;
           width: 100%;
           height: 100%;
+
           .back,
           .front {
             width: 100%;
@@ -203,6 +255,7 @@ section.tiles {
             top: 0;
             left: 0;
           }
+
           .front {
             z-index: 2;
             transform: rotateY(0deg);
@@ -210,11 +263,13 @@ section.tiles {
             display: flex;
             align-items: center;
             justify-content: center;
+
             img {
               width: 80%;
               height: 80%;
             }
           }
+
           .back {
             transform: rotateY(180deg);
             background-color: $reddust-sunset;
@@ -223,6 +278,7 @@ section.tiles {
             @media (max-width: 900px) {
               padding: 2vw;
             }
+
             h3 {
               font-family: $montserrat-bold;
               text-transform: uppercase;
@@ -235,6 +291,7 @@ section.tiles {
                 display: none;
               }
             }
+
             p {
               font-family: $montserrat-regular;
               color: $reddust-cream;
@@ -306,6 +363,7 @@ section.tiles {
         }
       }
     }
+
     .modal {
       position: fixed;
       z-index: -1;
