@@ -1,0 +1,29 @@
+#about-nav {
+  background: $reddust-gold;
+  text-align: center;
+  h1 {
+    font-size: 42px;
+    line-height: 100%;
+    margin: 36px 0 18px;
+    color: $reddust-cream;
+  }
+  ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 0 0 26px;
+  }
+  a {
+    display: block;
+    font-family: $montserrat-bold;
+    font-size: 15px;
+    line-height: 30px;
+    padding: 0 14px;
+    color: $reddust-cream;
+    text-transform: uppercase;
+    &.active,
+    &:hover {
+      color: $reddust-rust;
+    }
+  }
+}

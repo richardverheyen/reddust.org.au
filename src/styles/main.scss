@@ -13,11 +13,12 @@
 
 // Page specific
 @import 'landing';
-@import 'about-mission';
-@import 'about-people';
-@import 'about-role-models';
-@import 'about-partners';
-@import 'about-reports';
+@import 'about/nav';
+@import 'about/mission';
+@import 'about/people';
+@import 'about/role-models';
+@import 'about/partners';
+@import 'about/reports';
 
 // Outdate browsers
 @import '../../bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.scss';

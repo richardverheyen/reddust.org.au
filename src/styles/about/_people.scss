@@ -1,0 +1,20 @@
+#about-people {
+  #hero {
+    background-image: url('/assets/images/hero-about-people-temporary.png');
+    background-position: 90% 50%;
+    // @richard
+    // Use background-position to centre the hero image when doing responsive.
+    // This will differ for each hero image and is thus page specific.
+    // Also have a look at section#hero in common.scss
+  }
+  #filters {
+    background: $reddust-bone;
+    background: $reddust-cream;
+    background: $reddust-gold;
+    background: $reddust-sunset;
+    background: $reddust-rust;
+    background: $reddust-yinnar;
+    background: $reddust-stone;
+  }
+  #people {}
+}
