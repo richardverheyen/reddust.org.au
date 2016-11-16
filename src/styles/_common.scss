@@ -284,6 +284,7 @@ section.tiles {
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
+        transition: transform 500ms ease;
         h2,
         h3 {
           font-family: $montserrat-bold;
@@ -299,6 +300,7 @@ section.tiles {
         }
       }
       &:hover {
+        .no-image,
         img {
           transform: scale(1.06);
         }
