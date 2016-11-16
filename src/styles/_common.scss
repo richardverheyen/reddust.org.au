@@ -141,17 +141,30 @@ section#hero {
 section.tiles {
   > div {
     padding: 0;
-    max-width: none;
+    max-width: 2400px;
   }
   ul {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     li {
-      width: 25vw;
-      height: 25vw;
+      width: 16.666666vw;
+      height: 16.666666vw;
+      max-width: 400px;
+      max-height: 400px;
+      min-width: 160px;
+      min-height: 160px;
       padding: 1px;
       box-sizing: border-box;
       background: #EEE;
+      @media (max-width: 2000px) {
+        width: 20vw;
+        height: 20vw;
+      }
+      @media (max-width: 1600px) {
+        width: 25vw;
+        height: 25vw;
+      }
       @media (max-width: 900px) {
         width: 33.3333vw;
         height: 33.3333vw;
@@ -159,8 +172,6 @@ section.tiles {
       @media (max-width: 600px) {
         width: 50vw;
         height: 50vw;
-        min-width: 160px;
-        min-height: 160px;
       }
     }
   }
@@ -242,20 +253,55 @@ section.tiles {
   &.people {
     li {
       position: relative;
-      img {
+      cursor: pointer;
+      padding: 0.5px;
+      > img {
         width: 100%;
         height: auto;
       }
-      h2 {
+      > h2 {
         font-family: $montserrat-bold;
-        font-size: 14px;
+        font-size: 15px;
         line-height: 100%;
         text-transform: uppercase;
         letter-spacing: 0.4px;
         color: white;
         position: absolute;
-        bottom: 10%;
-        right: 10%;
+        bottom: 6%;
+        right: 7%;
+      }
+      .name {
+        position: absolute;
+        top: 0.5px;
+        left: 0.5px;
+        right: 0.5px;
+        bottom: 0.5px;
+        background: $reddust-rust;
+        opacity: 0;
+        text-align: center;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        transition: opacity 300ms ease-out;
+        h2,
+        h3 {
+          font-family: $montserrat-bold;
+          text-transform: uppercase;
+          color: white;
+          font-size: 22px;
+          line-height: 150%;
+          color: white;
+        }
+        h3 {
+          font-size: 18px;
+          color: $reddust-cream;
+        }
+      }
+      &.active,
+      &:hover {
+        .name {
+          opacity: 1;
+        }
       }
     }
     .modal {
