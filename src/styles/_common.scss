@@ -255,6 +255,7 @@ section.tiles {
       position: relative;
       cursor: pointer;
       padding: 0.5px;
+      background: $reddust-rust;
       > img {
         width: 100%;
         height: auto;
@@ -297,7 +298,6 @@ section.tiles {
           color: $reddust-cream;
         }
       }
-      &.active,
       &:hover {
         .name {
           opacity: 1;
