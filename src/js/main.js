@@ -3,10 +3,10 @@ $(document).ready(function() {
   $('header nav>div').on('click', function() {
 
     if (mobileNavActive) {
-      $('body').removeClass('mobileNavActive');
+      $('body').removeClass('mobile-nav-active');
       mobileNavActive = false;
     } else {
-      $('body').addClass('mobileNavActive');
+      $('body').addClass('mobile-nav-active');
       mobileNavActive = true;
       $('html, body').animate({
         scrollTop: 0

@@ -151,7 +151,7 @@ button {
 }
 //Header Mobile Navigation Toggle
 
-.mobileNavActive {
+.mobile-nav-active {
   header div nav ul {
     display: flex;
   }
@@ -196,6 +196,7 @@ section.tiles {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+
     li {
       width: 16.666666vw;
       height: 16.666666vw;
@@ -314,11 +315,13 @@ section.tiles {
       padding: 0;
       background: $reddust-rust;
       overflow: hidden;
+
       > img {
         width: 100%;
         height: auto;
         transition: transform 500ms ease;
       }
+
       > h2 {
         font-family: $montserrat-bold;
         font-size: 15px;
@@ -330,6 +333,7 @@ section.tiles {
         bottom: 6%;
         right: 7%;
       }
+
       .no-image {
         position: absolute;
         top: 0;
@@ -342,6 +346,7 @@ section.tiles {
         flex-flow: column nowrap;
         justify-content: center;
         transition: transform 500ms ease;
+
         h2,
         h3 {
           font-family: $montserrat-bold;
@@ -351,11 +356,13 @@ section.tiles {
           line-height: 150%;
           color: white;
         }
+
         h3 {
           font-size: 18px;
           color: $reddust-cream;
         }
       }
+
       &:hover {
         .no-image,
         img {
