@@ -254,11 +254,13 @@ section.tiles {
     li {
       position: relative;
       cursor: pointer;
-      padding: 0.5px;
+      padding: 0;
       background: $reddust-rust;
+      overflow: hidden;
       > img {
         width: 100%;
         height: auto;
+        transition: transform 500ms ease;
       }
       > h2 {
         font-family: $montserrat-bold;
@@ -271,19 +273,17 @@ section.tiles {
         bottom: 6%;
         right: 7%;
       }
-      .name {
+      .no-image {
         position: absolute;
-        top: 0.5px;
-        left: 0.5px;
-        right: 0.5px;
-        bottom: 0.5px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         background: $reddust-rust;
-        opacity: 0;
         text-align: center;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
-        transition: opacity 300ms ease-out;
         h2,
         h3 {
           font-family: $montserrat-bold;
@@ -299,8 +299,8 @@ section.tiles {
         }
       }
       &:hover {
-        .name {
-          opacity: 1;
+        img {
+          transform: scale(1.06);
         }
       }
     }
