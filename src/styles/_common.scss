@@ -190,8 +190,9 @@ section.tiles {
     li {
       width: 16.666666vw;
       height: 16.666666vw;
-      max-width: 400px;
-      max-height: 400px;
+      // max-width: 400px;
+      // max-height: 400px;
+
       min-width: 160px;
       min-height: 160px;
       padding: 1px;
@@ -213,27 +214,31 @@ section.tiles {
       //   width: 50vw;
       //   height: 50vw;
       // }
-      @media (max-width: 2000px) {
-        width: 20vw;
-        height: 20vw;
-      }
-      @media (max-width: 1600px) {
-        width: 25vw;
-        height: 25vw;
-      }
-      @media (max-width: 1200px) {
-        width: 33.3333vw;
-        height: 33.3333vw;
-      }
-      @media (max-width: 800px) {
-        width: 50vw;
-        height: 50vw;
-      }
     }
   }
   // Partner tiles 3D flip from logo to description
   &.partners {
     li {
+      @media (max-width: 2100px) {
+        width: 20vw;
+        height: 20vw;
+      }
+      @media (max-width: 1700px) {
+        width: 25vw;
+        height: 25vw;
+      }
+      @media (max-width: 1300px) {
+        width: 33.3333vw;
+        height: 33.3333vw;
+      }
+      @media (max-width: 900px) {
+        width: 50vw;
+        height: 50vw;
+      }
+      @media (max-width: 500px) {
+        width: 100vw;
+        height: 100vw;
+      }
       .flip-container {
         perspective: 1000px;
         width: 100%;
@@ -293,9 +298,6 @@ section.tiles {
               margin: 0 0 2px;
               font-size: 22px;
               line-height: 130%;
-              @media (max-width: 900px) {
-                display: none;
-              }
             }
             h3 {
               font-size: 13px;
@@ -309,6 +311,7 @@ section.tiles {
               line-height: 130%;
               font-size: 13px;
               margin: 0 0 22px;
+              overflow: hidden;
             }
             a.button {
               border: 1px solid $reddust-rust;

@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 
     watch: {
       handlebars: {
-        files: ['src/templates/**/*.hbs', 'src/templates/**/*.json', 'src/templates/layout.html '],
+        files: ['src/templates/**/*.hbs', 'src/**/*.json', 'src/templates/layout.html '],
         tasks: ['build-HTML']
       },
       sass: {

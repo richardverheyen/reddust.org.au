@@ -47,5 +47,71 @@
     "type": "program partner",
     "intro": "More than 1,000 Coles Express team members donate to Red Dust through regular payroll deductions, to help fund programs at Daly River, located 224 km south west of Darwin.More than 15 team members have visited Daly River as role models, generously giving their time, sharing culture and life experiences and offering practical assistance.",
     "url": "https://shop.coles.com.au//online/national"
+  }, {
+    "name": "Newman’s Own Foundation",
+    "logo": "newman-s-own-foundation.jpg",
+    "type": "associate partner",
+    "intro": "Newman’ s Own Foundation turns all net profits and royalties from the sale of Paul Newman’ s Own products into charitable donations.To date, more than US$400 million has been given to thousands of charities worldwide.",
+    "url": "http://www.paulnewmansown.com.au/"
+  }, {
+    "name": "DoubleTree By Hilton",
+    "logo": "double-tree.jpg",
+    "type": "associate partner",
+    "intro": "As a Red Dust partner, Hilton has been a strong supporter of our programs and is a major accommodation partner, providing rooms and facilities for our staff whilst in Darwin.",
+    "url": "http://doubletree3.hilton.com/"
+  }, {
+    "name": "Edgewise",
+    "logo": "edge-wise.jpg",
+    "type": "associate partner",
+    "intro": "Edgewise is an Australian owned and operated professional services organization, specializing in the provision of insurance broking services to businesses of all sizes across all industries.With collectively over 100 years of experience in the insurance industry, Edgewise knows what it takes to source the most appropriate protection for both individual and business assets.",
+    "url": "http://www.edgewise.com.au/"
+  }, {
+    "name": "McGrathNicol",
+    "logo": "mcgrathnicol.jpg",
+    "type": "associate partner",
+    "intro": "McGrathNicol is an independent boutique advisory firm specialising in Corporate Advisory, Forensic, Transaction Services and Corporate Recovery.We are a market leader in Australia and in New Zealand, with more than 30 Partners and 300 people across the region.",
+    "url": "http://www.mcgrathnicol.com/"
+  }, {
+    "name": "Northern Territory Government",
+    "logo": "northern-territory-government.jpg",
+    "type": "associate partner",
+    "intro": "As the presiding Government over most of the remote communities where Red Dust Role Models conducts its programs, the Northern Territory Government is a strong advocate of the Red Dust organisation providing much appreciated funding to support our health and education initiatives.",
+    "url": "https://nt.gov.au/"
+  }, {
+    "name": "Nike",
+    "logo": "nike.jpg",
+    "type": "associate partner",
+    "intro": "Nike Australia has established a long and significant relationship with Red Dust Role Models.As a founding corporate partner, Nike Australia has seen Red Dust Role Models develop into an effective program that sees the lives of indigenous youth enriched.Nike believes in the power of sport to unleash potential.",
+    "url": "http://www.nike.com/"
+  }, {
+    "name": "Clayton Utz",
+    "logo": "clayton-utz.jpg",
+    "type": "associate partner",
+    "intro": "Clayton Utz assists a wide range of community partners and clients each year.They provide regular legal advice, volunteers and financial support to a number of community organisations and charities.Clayton Utz also assist individuals who need one - off help with specific legal problems and regularly make one - off donations to charities.",
+    "url": "https://www.claytonutz.com/"
+  }, {
+    "name": "Chifley Resort",
+    "logo": "chifleyresort.jpg",
+    "type": "associate partner",
+    "intro": "Chifley Alice Springs Resort is a longtime friend of Red Dust.We are thankful for Chifley providing us with comfortable accommodation, delicious meals and great service before and after each Red Dust program delivery in the central desert.",
+    "url": "http://www.silverneedlehotels.com/chifley/alice-springs"
+  }, {
+    "name": "Network Ten",
+    "logo": "ten.jpg",
+    "type": "special thanks",
+    "intro": "Ten Network Holdings is committed to supporting and giving back to the communities in which we operate and helping our staff find ways to work with a diverse range of foundations and not-for-profit organisations including Red Dust Role Models.",
+    "url": "https://tenplay.com.au/"
+  }, {
+    "name": "Working Dog",
+    "logo": "working-dog.jpg",
+    "type": "special thanks",
+    "intro": "Founded in January 1993, Working Dog is the creative minds behind The Castle, The Dish, Frontline, Thank God You 're Here, The Panel, Russell Coight's All Aussie Adventures, The Hollowmen, Utopia and now HYBPA",
+    "url": "http://www.workingdog.com/"
+  }, {
+    "name": "Day3",
+    "logo": "day-3.jpg",
+    "type": "special thanks",
+    "intro": "Day3's commitment to being a leading full service provider, seamlessly combining digital strategy, creative design, technical delivery and managed services, is proven by our ability to provide end - to - end services for our clients and to act as a partner for a range of business initiatives.",
+    "url": "http: //www.day3.com.au/"
   }]
 }
