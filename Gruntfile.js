@@ -109,7 +109,7 @@ module.exports = function(grunt) {
     jshint: {
       files: ['src/js/main.js'],
       options: {
-        force: true,
+        force: false,
         globals: {
           jQuery: true,
           console: true,
