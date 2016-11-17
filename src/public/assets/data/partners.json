@@ -1,0 +1,51 @@
+{
+  "partners": [{
+    "name": "Danone",
+    "logo": "danone-nutricia.png",
+    "type": "program partner",
+    "intro": "Commencing the partnership with Red Dust in 2016 in support of the Community of Peppimenarti, Danone and Red Dust are very excited by what we can achieve together in the area of health. For over 100 years Danone Nutricia has been at the forefront of research in infant nutrition and our pioneering efforts continue today.",
+    "url": "http://www.danonenutricia.com.au/"
+  }, {
+    "name": "Johnson & Johnson",
+    "logo": "johnson-and-johnson.jpg",
+    "type": "program partner",
+    "intro": "In early 2015, Johnson & Johnson signed on to partner with Red Dust to support our Healthy Living initiatives in the Kintore community.Johnson & Johnson supports community - based programs that improve health and well - being.",
+    "url": "https://www.jnj.com.au/"
+  }, {
+    "name": "Australian Unity",
+    "logo": "australian-unity.jpg",
+    "type": "program partner",
+    "intro": "With the help of Australian Unity, Red Dust Role Models runs intervention - based educational and lifestyle programs in six to seven communities, helping younger generations understand the link between decision - making and healthy outcomes– whether related to hygiene, nutrition or exercise.Role models from a range of backgrounds use their skills to engage young people through art, music, sport and other interests.",
+    "url": "http://www.australianunity.com.au/"
+  }, {
+    "name": "Telco Together Foundation",
+    "logo": "telco.jpg",
+    "type": "program partner",
+    "intro": "Launched in July 2012, the Telco Together Foundation is a registered charity that brings together the telecommunications industry in support of disadvantaged communities.Members of the Foundation include Optus, Vodafone, NBN Co, Dodo, M2, AAPT, Alcatel, Community Telco, Eftel, Telcoinabox, Vocus Communications, Smart Business Telco and Globe Telecom.",
+    "url": "http://www.telcotogether.org/"
+  }, {
+    "name": "Medibank",
+    "logo": "medibank.jpg",
+    "type": "program partner",
+    "intro": "Medibank has been involved with Red Dust programs.They conducted the community connection component of the program, providing access to the community, visiting homes, experiencing traditional bush medicines and general relationships within the community.",
+    "url": "https://www.medibank.com.au/"
+  }, {
+    "name": "DrinkWise Australia",
+    "logo": "drink-wise.jpg",
+    "type": "program partner",
+    "intro": "DrinkWise Australia is an independent, not-for-profit organisation focused on promoting cultural change to reduce the harm arising from the irresponsible consumption of alcohol.Their vision is to improve the Australian drinking culture so that consuming alcohol too young and to excess is considered undesirable.DrinkWise Australia provides generous support for our Strong Young Women' s and Strong Young Men' s programs.",
+    "url": "https://drinkwise.org.au/"
+  }, {
+    "name": "Coles Express",
+    "logo": "coles-express.jpg",
+    "type": "program partner",
+    "intro": "Coles Express has partnered with Red Dust Role Models since 2014. Working in remote Indigenous communities​ across the Top End for more than 20 years, Red Dust Role Models 'Healthy Living' programs encourage Indigenous youth to learn more about health, and inspire them to live healthier lifestyles.",
+    "url": "https://www.colesexpress.com.au/"
+  }, {
+    "name": "Coles Online",
+    "logo": "coles-online.jpg",
+    "type": "program partner",
+    "intro": "More than 1,000 Coles Express team members donate to Red Dust through regular payroll deductions, to help fund programs at Daly River, located 224 km south west of Darwin.More than 15 team members have visited Daly River as role models, generously giving their time, sharing culture and life experiences and offering practical assistance.",
+    "url": "https://shop.coles.com.au//online/national"
+  }]
+}
