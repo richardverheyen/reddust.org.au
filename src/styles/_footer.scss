@@ -15,23 +15,31 @@ footer {
     display: flex;
     align-items: center;
     text-align: center;
+    min-height: 250px;
 
     h2 {
       font-size: 30px;
       max-width: 420px;
       margin: 0 auto 30px;
+      @media (max-width: 800px) {
+        font-size: 4vw;
+      }
+      @media (max-width: 500px) {
+        font-size: 20px;
+      }
     }
+    @media (min-width: 700px) {
+      .button {
+        border-color: $reddust-gold;
+        color: $reddust-gold;
+        font-size: 20px;
+        line-height: 40px;
+        padding: 0 20px;
+        display: inline-block;
 
-    .button {
-      border-color: $reddust-gold;
-      color: $reddust-gold;
-      font-size: 20px;
-      line-height: 40px;
-      padding: 0 20px;
-      display: inline-block;
-
-      &:hover {
-        background: rgba($reddust-gold, 0.4);
+        &:hover {
+          background: rgba($reddust-gold, 0.4);
+        }
       }
     }
   }
@@ -49,6 +57,9 @@ footer {
       margin-bottom: 20px;
       text-transform: uppercase;
       font-family: $montserrat-bold;
+      @media (max-width: 600px) {
+        font-size: 22px;
+      }
     }
 
     ul {
@@ -59,6 +70,7 @@ footer {
       color: white;
       display: inline-block;
       line-height: 160%;
+      cursor: pointer;
 
       &:hover {
         text-decoration: underline;

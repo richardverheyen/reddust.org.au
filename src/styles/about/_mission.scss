@@ -109,18 +109,4 @@
       }
     }
   }
-
-  #vision {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 900px;
-    background-image: url('/assets/img/about/missionvalues/about-banner-mission@2x.jpg');
-    background-size: cover;
-
-    h2 {
-      color: $reddust-bone;
-      max-width: 560px;
-    }
-  }
 }

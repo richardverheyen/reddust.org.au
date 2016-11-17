@@ -39,43 +39,103 @@
       padding: 0;
       width: 100vw;
       max-width: 1440px;
-      height: 900px;
+      height: 62vw;
+      min-height: 568px;
 
-      ul {
+      > ul {
+        display: flex;
         height: 100%;
 
-        li {
+        > li {
           display: flex;
           align-items: center;
           justify-content: center;
           width: 100vw;
           height: 100%;
 
-          div {
-            text-align: center;
-            margin: 0 auto;
-            color: white;
-            max-width: 350px;
-
-            h1 {
-              font-size: 40px;
+          &:nth-child(1) {
+            img:nth-child(1) {
+              display: none;
             }
-
-            h3 {}
           }
 
-          img {
-            max-width: 40px;
+          &:nth-last-child(1) {
+            img:nth-last-child(1) {
+              display: none;
+            }
+          }
+        }
+
+        > li:nth-child(1) {
+          &:after {
+            content: 'Click to see more';
             position: absolute;
-            left: 10vw;
-            margin-left: -20px;
+            color: $reddust-cream;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 15px;
+            left: 78vw;
+            max-width: 90px;
+            @media (max-width: 1000px) {
+              left: 73vw;
+              font-size: 14px;
+            }
+            @media (max-width: 700px) {
+              left: 80vw;
+              font-size: 12px;
+              max-width: 80px;
+              margin-top: 70px;
+            }
+            @media (max-width: 400px) {
+              left: 72vw;
+            }
+          }
+        }
+
+        div {
+          text-align: center;
+          margin: 0 auto;
+          color: white;
+          max-width: 415px;
+          @media (max-width: 800px) {
+            max-width: 330px;
+          }
+          @media (max-width: 710px) {
+            max-width: 310px;
           }
 
-          img:nth-last-child(1) {
-            max-width: 40px;
-            position: absolute;
-            left: 90vw;
+          h1 {
+            font-size: 40px;
+            @media (max-width: 1000px) {
+              font-size: 4vw;
+            }
+            @media (max-width: 580px) {
+              font-size: 22px;
+            }
           }
+
+          h3 {
+            font-family: $montserrat-bold;
+            font-size: 18px;
+            margin-top: 20px;
+          }
+        }
+
+        img {
+          max-width: 40px;
+          position: absolute;
+          left: 10vw;
+          margin-left: -40px;
+          padding: 20px;
+          @media (max-width: 1050px) {
+            width: 30px;
+          }
+        }
+
+        img:nth-last-child(1) {
+          max-width: 40px;
+          position: absolute;
+          left: 90vw;
         }
       }
     }
