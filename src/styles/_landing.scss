@@ -1,58 +1,52 @@
 #landing {
-  #hero {
+  #video-hero {
     position: relative;
     width: 100vw;
     height: 57vw;
-    // background: url('/assets/img/landing/home-banner.jpg');
-    // background-size: cover;
-    // background-position: 40%;
-    iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > iframe {
       position: absolute;
       width: 100vw;
       height: 57vw;
+      max-height: none;
       top: 0;
     }
-    div {
+    > div {
+      z-index: 1;
       position: relative;
-      z-index: 2;
+      height: 57vw;
       display: flex;
-      align-items: center;
+      flex-flow: column wrap;
       justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      height: 100%;
-
-      div {
-        h1 {
-          color: $reddust-gold;
-          font-size: 45px;
-          text-align: center;
-          text-transform: capitalize;
-          margin-bottom: 20px;
-          text-shadow: 1px 1px 10px RGBA(0,0,0,0.5);
-          @media (max-width: 1100px) {
-            font-size: 4vw;
-          }
-          @media (max-width: 600px) {
-            font-size: 24px;
-          }
-
-          span {
-            display: block;
-            color: white;
-          }
+      align-items: center;
+      h1 {
+        color: $reddust-gold;
+        font-size: 45px;
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 10px RGBA(0,0,0,0.5);
+        @media (max-width: 1100px) {
+          font-size: 4vw;
+        }
+        @media (max-width: 600px) {
+          font-size: 24px;
         }
 
-        a {
-          position: absolute;
-          margin-top: 160px;
+        span {
+          display: block;
+          color: white;
+        }
+      }
 
-          img {
-            width: 70px;
-            padding: 10px;
-            @media (max-width: 800px) {
-              width: 50px;
-            }
+      a {
+        img {
+          width: 70px;
+          padding: 10px;
+          @media (max-width: 800px) {
+            width: 50px;
           }
         }
       }

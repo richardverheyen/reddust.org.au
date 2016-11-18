@@ -9,13 +9,11 @@
 
   {{#replace "main"}}
 
-    <section id="hero">
+    <section id="video-hero">
       <iframe src="https://player.vimeo.com/video/192058587?background=1" frameborder="0"></iframe>
       <div>
-        <div>
-          <h1>Health promotion <span>in remote Indigenous <br>communities</span></h1>
-          <a class="icon" href="#about-link"> <img src="/assets/img/icons/down-arrow.svg" /><img src="/assets/img/icons/down-arrow-hover.svg" /></a>
-        </div>
+        <h1>Health promotion <span>in remote Indigenous <br>communities</span></h1>
+        <a class="icon" href="#about-link"> <img src="/assets/img/icons/down-arrow.svg" /><img src="/assets/img/icons/down-arrow-hover.svg" /></a>
       </div>
     </section>
 
@@ -102,21 +100,21 @@
 
         <ul>
           {{#partners}}
-          <li>
-            <div class="flip-container">
-              <div class="flipper">
-                <div class="front">
-                  <img src="/assets/img/partners/{{logo}}" />
-                </div>
-                <div class="back">
-                  <h2>{{name}}</h2>
-                  <h3>{{type}}</h3>
-                  <p>{{intro}}</p>
-                  <a href="{{url}}" title="{{name}}" target="_blank" class="button">Website</a>
+            <li>
+              <div class="flip-container">
+                <div class="flipper">
+                  <div class="front">
+                    <img src="/assets/img/partners/{{logo}}" />
+                  </div>
+                  <div class="back">
+                    <h2>{{name}}</h2>
+                    <h3>{{type}}</h3>
+                    <p>{{intro}}</p>
+                    <a href="{{url}}" title="{{name}}" target="_blank" class="button">Website</a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
+            </li>
           {{/partners}}
         </ul>
       </div>
