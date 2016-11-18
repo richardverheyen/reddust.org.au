@@ -1,18 +1,22 @@
 #landing {
+  background-color: $reddust-bone;
+
   #video-hero {
     position: relative;
     width: 100vw;
-    height: 57vw;
+    height: 56vw;
     display: flex;
     justify-content: center;
     align-items: center;
+
     > iframe {
       position: absolute;
       width: 100vw;
-      height: 57vw;
+      height: 56vw;
       max-height: none;
       top: 0;
     }
+
     > div {
       z-index: 1;
       position: relative;
@@ -21,6 +25,7 @@
       flex-flow: column wrap;
       justify-content: center;
       align-items: center;
+
       h1 {
         color: $reddust-gold;
         font-size: 45px;
@@ -215,6 +220,7 @@
             max-width: 250px;
             max-height: 250px;
             text-align: center;
+
             &:hover {
               img {
                 transform: scale(1.15);

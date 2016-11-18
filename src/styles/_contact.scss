@@ -1,10 +1,12 @@
 #contact {
+  background-color: $reddust-yinnar;
+
   #hero {
     background-image: url('/assets/img/contact/contact-banner.jpg');
   }
 
   #title {
-    background-color: $reddust-yinnar;
+    background-color: $reddust-sunset;
 
     div {
       text-align: center;
@@ -32,6 +34,7 @@
       margin: auto;
       width: 100%;
       max-width: 1200px;
+      background-color: $reddust-cream;
       @media (max-width: 700px) {
         flex-direction: column;
       }

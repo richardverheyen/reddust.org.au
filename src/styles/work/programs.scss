@@ -1,4 +1,6 @@
 #programs {
+  background-color: $reddust-yinnar;
+
   #hero {
     background-image: url('/assets/img/work/work-banner-temporary.jpg');
   }
@@ -38,7 +40,7 @@
       overflow: hidden;
       padding: 0;
       width: 100vw;
-      max-width: 1440px;
+      max-width: 1080px;
       height: 62vw;
       min-height: 568px;
 
@@ -51,6 +53,7 @@
           align-items: center;
           justify-content: center;
           width: 100vw;
+          max-width: 1080px;
           height: 100%;
 
           &:nth-child(1) {
