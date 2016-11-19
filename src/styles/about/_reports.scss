@@ -1,1 +1,10 @@
-#about-reports {}
+#about-reports {
+  #hero {
+    display: none;
+  }
+  #about-nav {
+    a[href="/about/reports"] {
+      color: $reddust-rust;
+    }
+  }
+}

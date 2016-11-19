@@ -1,4 +1,12 @@
 #about-partners {
+  #hero {
+    display: none;
+  }
+  #about-nav {
+    a[href="/about/partners"] {
+      color: $reddust-rust;
+    }
+  }
   #intro {}
   #partners {}
   #become {}
