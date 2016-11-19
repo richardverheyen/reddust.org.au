@@ -411,31 +411,6 @@ section.tiles {
   }
 }
 
-#vision {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vw;
-  max-height: 700px;
-  min-height: 400px;
-  background-image: url('/assets/img/about/misson-and-values/about-banner-mission@2x.jpg');
-  background-size: cover;
-  background-position: 25% 0;
-  text-align: center;
-
-  h2 {
-    color: $reddust-bone;
-    max-width: 560px;
-    @media (max-width: 700px) {
-      font-size: 3vw;
-      margin: 10vw;
-    }
-    @media (max-width: 500px) {
-      font-size: 16px;
-    }
-  }
-}
-
 #coming-soon {
   background-color: $reddust-cream;
   > div {
