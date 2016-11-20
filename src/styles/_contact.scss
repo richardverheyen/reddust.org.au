@@ -155,6 +155,9 @@
           }
           &:nth-last-child(2) {
             background-color: $reddust-gold;
+            a {
+              color: $reddust-rust;
+            }
           }
           &:nth-last-child(3) {
             div {
