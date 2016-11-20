@@ -25,13 +25,36 @@
       </div>
     </section>
 
-    <section id="people" class="tiles people">
+    <section id="people" class="tiles partners">
+      <div>
+        <ul>
+          {{#people}}
+            <li>
+              <div class="flip-container">
+                <div class="flipper">
+                  <div class="front">
+                    <img src="/assets/img/people/{{image}}" />
+                  </div>
+                  <div class="back">
+                    <h2>{{name}}</h2>
+                    <h3>{{position}}</h3>
+                    <p>{{intro}}</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          {{/people}}
+        </ul>
+      </div>
+    </section>
+
+    <!-- <section id="people" class="tiles people">
       <div>
         <ul>
           {{> five-demo-people}} {{> five-demo-people}} {{> five-demo-people}} {{> five-demo-people}}
         </ul>
       </div>
-    </section>
+    </section> -->
 
   {{/replace}}
 {{/extend}}
