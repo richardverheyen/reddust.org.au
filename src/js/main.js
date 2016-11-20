@@ -27,9 +27,6 @@ $(document).ready(function() {
     var newSlide = currentSlide + increment;
     var newLeft = -100 * (newSlide - 1) + '%';
     var isAnimating = $ul.hasClass('velocity-animating') ? true : false;
-
-    console.log(newSlide);
-
     if (newSlide < 1) {
       // if first slide, spring left and back
       if (!isAnimating) {
@@ -53,5 +50,7 @@ $(document).ready(function() {
         }, 800, 'easeOutExpo');
     }
   });
+
+  $('#about-people #people [src="/assets/img/people/"]').parents('.flip-container').addClass('hover');
 
 });
