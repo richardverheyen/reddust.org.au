@@ -133,6 +133,27 @@
             color: $reddust-rust;
           }
         }
+        &.slide-4 {
+          > div {
+            max-width: 520px;
+            text-align: left;
+            h2 {
+              font-size: 22px;
+              margin: 20px 0;
+            }
+            p {
+              line-height: 160%;
+              font-size: 15px;
+            }
+            .dates {
+              display: flex;
+              flex-flow: row wrap;
+              > div {
+                width: 50%;
+              }
+            }
+          }
+        }
       }
     }
     &#healthy-living {

@@ -20,8 +20,8 @@ $(document).ready(function() {
   // Animate the horizantal program sliders
   $('.program-slider nav img').on('click', function() {
     var $section = $(this).parents('section'); // reusable jQuery selector
-    var $ul = $section.find('ul');
-    var amountOfSlides = $section.find('>ul>li').length; // count the amount of slides
+    var $ul = $section.children('ul');
+    var amountOfSlides = $section.children('ul').children('li').length; // count the amount of slides
     var currentSlide = $section.data('current') || 1; // if no data attribute is found on <section> then assume current slide is 1
     var increment = $(this).hasClass('next') ? 1 : -1;
     var newSlide = currentSlide + increment;
