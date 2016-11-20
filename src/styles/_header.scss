@@ -39,10 +39,14 @@ header {
         display: none;
         margin-right: 25px;
         transition: ease-in-out all 200ms;
-
-        img {
-          width: 32px;
+        button {
+          border: 0;
+          outline: 0;
+          img {
+            width: 32px;
+          }
         }
+
       }
       @media (max-width: 900px) {
         > div {

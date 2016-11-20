@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   //mobile Dropdown Menu Toggle
   var mobileNavActive = false;
-  $('header nav>div').on('click', function() {
+  $('header nav button').on('click', function() {
 
     if (mobileNavActive) {
       $('body').removeClass('mobile-nav-active');
