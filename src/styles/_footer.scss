@@ -37,7 +37,6 @@ footer {
         line-height: 40px;
         padding: 0 20px;
         display: inline-block;
-
         &:hover {
           background: rgba($reddust-gold, 0.4);
         }
@@ -72,13 +71,12 @@ footer {
       display: inline-block;
       line-height: 160%;
       cursor: pointer;
-
       &:hover {
         text-decoration: underline;
       }
     }
   }
-  @media (max-width: 700px) {
+  @media (max-width: 750px) {
     flex-direction: column;
 
     > section {
