@@ -1,18 +1,18 @@
 #about-mission {
   #hero {
-    display: block;
-    position: relative;
     overflow: hidden;
-
     img {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100vw;
-      min-height: 100%;
-      @media (max-width: 800px) {
+      height: auto;
+      @media (max-width: 620px) {
         width: auto;
-        height: 100%;
+        height: 300px;
+      }
+      @media (max-width: 500px) {
+        margin-left: -130px;
+      }
+      @media (max-width: 400px) {
+        margin-left: -220px;
       }
     }
   }
@@ -149,7 +149,6 @@
               @media (max-width: 450px) {
                 font-size: 32px;
               }
-
               &:after {
                 content: ' ';
                 position: absolute;

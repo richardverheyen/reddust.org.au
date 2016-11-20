@@ -1,7 +1,135 @@
 #music-videos {
+  #hero {
+    overflow: hidden;
+    img {
+      width: 100vw;
+      height: auto;
+      transition: ease-in-out 500ms all;
+      @media (max-width: 620px) {
+        width: auto;
+        height: 300px;
+      }
+      @media (max-width: 500px) {
+        margin-left: -130px;
+      }
+      @media (max-width: 400px) {
+        margin-left: -220px;
+      }
+    }
+  }
+
   #work-nav {
     a[href="/work/music-videos"] {
       color: $reddust-gold;
+    }
+  }
+
+  #video-archive {
+    background-color: $reddust-yinnar;
+    div {
+      padding: 0;
+      max-width: 1400px;
+      ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+
+        li {
+          position: relative;
+          width: 25vw;
+          height: 25vw;
+          max-width: 300px;
+          max-height: 300px;
+          img {
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+          }
+          &::before {
+            content: ('');
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $reddust-yinnar;
+            opacity: 0;
+            transition: ease-in-out all 200ms;
+
+          }
+          div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: ease-in-out all 200ms;
+
+            h3 {
+              font-family: $montserrat-bold;
+              color: $reddust-bone;
+              font-size: 26px;
+              padding: 5px;
+              margin-top: 2vw;
+              @media (max-width: 1000px) {
+                margin-top: 1vw;
+                font-size: 22px;
+                line-height: 110%;
+              }
+              @media (max-width: 900px) {
+                font-size: 20px;
+              }
+            }
+            h4 {
+              font-family: $montserrat-bold;
+              color: $reddust-gold;
+              font-size: 16px;
+              padding: 5px;
+              @media (max-width: 1000px) {
+                font-size: 14px;
+                line-height: 120%;
+
+              }
+
+            }
+            h5 {
+              font-family: $montserrat-regular;
+              color: $reddust-gold;
+              font-size: 14px;
+              padding: 5px;
+              @media (max-width: 1000px) {
+                font-size: 13px;
+              }
+
+            }
+            a {
+              width: 100px;
+              margin: 5px auto 15%;
+              &:hover {
+                color: $reddust-sunset;
+                border-color: $reddust-sunset;
+                background-color: rgba($reddust-rust,0.3);
+
+              }
+            }
+          }
+          &:hover {
+            &::before {
+              opacity: 0.8;
+            }
+            > div {
+              opacity: 1;
+
+            }
+          }
+        }
+      }
     }
   }
 }
