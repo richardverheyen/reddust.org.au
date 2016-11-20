@@ -137,9 +137,23 @@
           > div {
             max-width: 520px;
             text-align: left;
+            h1 {
+              color: $reddust-cream;
+              text-align: center;
+              font-size: 40px;
+              margin-bottom: 40px;
+            }
             h2 {
               font-size: 22px;
               margin: 20px 0;
+            }
+            h3 {
+              font-family: $montserrat-bold;
+              text-transform: uppercase;
+            }
+            > h3 {
+              text-align: center;
+
             }
             p {
               line-height: 160%;
@@ -148,8 +162,19 @@
             .dates {
               display: flex;
               flex-flow: row wrap;
+              padding-left: 100px;
               > div {
                 width: 50%;
+                margin-bottom: 40px;
+                h3 {
+                  font-size: 28px;
+                  font-size: 20px;
+                  margin-bottom: 6px;
+                }
+                p {
+                  margin: 0;
+                  font-size: 16px;
+                }
               }
             }
           }
