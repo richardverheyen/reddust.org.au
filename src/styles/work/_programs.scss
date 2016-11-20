@@ -1,10 +1,6 @@
 #programs {
   background-color: $reddust-yinnar;
 
-  #hero {
-    background-image: url('/assets/img/work/work-banner-temporary.jpg');
-  }
-
   #work-nav {
     a[href="/work/programs"] {
       color: $reddust-gold;
@@ -13,7 +9,6 @@
 
   #intro {
     background-color: $reddust-cream;
-
     div {
       display: flex;
       flex-direction: column;
@@ -22,14 +17,12 @@
       height: 525px;
       box-sizing: border-box;
       text-align: center;
-
       h2 {
         font-family: $montserrat-bold;
         text-transform: uppercase;
         color: $reddust-rust;
         margin: 20px;
       }
-
       p {
         line-height: 200%;
         max-width: 760px;
@@ -40,7 +33,6 @@
   .scroller {
     background-size: cover;
     background-position: 50%;
-
     > div {
       position: relative;
       overflow: hidden;
@@ -49,11 +41,9 @@
       max-width: 1080px;
       height: 62vw;
       min-height: 568px;
-
       > ul {
         display: flex;
         height: 100%;
-
         > li {
           display: flex;
           align-items: center;
@@ -61,20 +51,17 @@
           width: 100vw;
           max-width: 1080px;
           height: 100%;
-
           &:nth-child(1) {
             img:nth-child(1) {
               display: none;
             }
           }
-
           &:nth-last-child(1) {
             img:nth-last-child(1) {
               display: none;
             }
           }
         }
-
         > li:nth-child(1) {
           &:after {
             content: 'Click to see more';
@@ -140,7 +127,6 @@
             width: 30px;
           }
         }
-
         img:nth-last-child(1) {
           max-width: 40px;
           position: absolute;
