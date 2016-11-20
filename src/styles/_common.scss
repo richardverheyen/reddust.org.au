@@ -410,6 +410,7 @@ section.tiles {
           color: $reddust-cream;
         }
       }
+
       &:hover {
         .no-image,
         img {
@@ -427,6 +428,7 @@ section.tiles {
 
 #coming-soon {
   background-color: $reddust-cream;
+
   > div {
     min-height: 420px;
     height: 80vh;
@@ -434,11 +436,13 @@ section.tiles {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+
     h1 {
       font-size: 30px;
       margin-bottom: 20px;
       color: $reddust-rust;
     }
+
     h2 {
       font-size: 20px;
       color: $reddust-sunset;
