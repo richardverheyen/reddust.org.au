@@ -4,4 +4,90 @@
       color: $reddust-gold;
     }
   }
+
+  #the-need {
+    background: url('/assets/img/landing/home-banner-impact@2x.jpg');
+    background-size: cover;
+
+    > div {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      color: $reddust-cream;
+
+      > h1 {
+        font-size: 45px;
+        text-transform: capitalize;
+        margin: 70px auto 0;
+        color: $reddust-sunset;
+      }
+
+      div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        margin: 50px auto 100px;
+
+        div {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+          margin: 0 40px;
+          width: 235px;
+
+          h1 {
+            color: $reddust-cream;
+            text-transform: none;
+            font-size: 38px;
+            line-height: 120%;
+          }
+
+          h4 {
+            font-family: $montserrat-bold;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: white;
+            margin: 30px auto;
+          }
+        }
+      }
+    }
+  }
+
+  #how-we-help {
+    div {
+      text-align: center;
+
+      h1 {
+        text-transform: capitalize;
+        color: $reddust-sunset;
+        margin-top: 60px;
+      }
+
+      p {
+        margin: 40px auto;
+      }
+
+      img {}
+    }
+  }
+
+  #impact {
+    background-color: $reddust-sunset;
+
+    div {
+      h1 {
+        text-align: center;
+        color: $reddust-bone;
+        margin-top: 60px;
+      }
+
+      img {
+        margin: 40px;
+      }
+    }
+  }
 }

@@ -5,6 +5,12 @@
     background-position: 70%;
   }
 
+  #about-nav {
+    a[href="/about/reports"] {
+      color: $reddust-rust;
+    }
+  }
+
   #intro {
     div {
       display: flex;
