@@ -1,10 +1,12 @@
 #contact {
+  background-color: $reddust-yinnar;
+
   #hero {
     background-image: url('/assets/img/contact/contact-banner.jpg');
   }
 
   #title {
-    background-color: $reddust-yinnar;
+    background-color: $reddust-sunset;
 
     div {
       text-align: center;
@@ -32,6 +34,7 @@
       margin: auto;
       width: 100%;
       max-width: 1200px;
+      background-color: $reddust-cream;
       @media (max-width: 700px) {
         flex-direction: column;
       }
@@ -67,7 +70,12 @@
           }
 
           a {
-            color: $reddust-bone;
+            color: $reddust-rust;
+            border-color: $reddust-rust;
+            &:hover {
+              color: $reddust-sunset;
+              border-color: $reddust-sunset;
+            }
           }
         }
       }
@@ -131,13 +139,34 @@
             height: auto;
             max-width: 100vw;
           }
-
           &:nth-last-child(1) {
             background-color: $reddust-rust;
-          }
+            div {
+              a {
+                color: $reddust-gold;
+                border-color: $reddust-gold;
+                &:hover {
+                  color: $reddust-cream;
+                  border-color: $reddust-cream;
+                }
+              }
+            }
 
+          }
           &:nth-last-child(2) {
             background-color: $reddust-gold;
+          }
+          &:nth-last-child(3) {
+            div {
+              a {
+                color: $reddust-gold;
+                border-color: $reddust-gold;
+                &:hover {
+                  color: $reddust-cream;
+                  border-color: $reddust-cream;
+                }
+              }
+            }
           }
 
           div {
@@ -174,6 +203,7 @@
               margin: 5px;
             }
           }
+
         }
       }
     }

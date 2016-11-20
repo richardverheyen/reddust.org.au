@@ -1,1 +1,224 @@
-#support {}
+#support {
+
+  #title {
+    background-color: $reddust-sunset;
+
+    div {
+      text-align: center;
+
+      h1 {
+        color: $reddust-cream;
+        font-size: 45px;
+        margin: 25px;
+        @media (max-width: 900px) {
+          font-size: 4vw;
+        }
+        @media (max-width: 600px) {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  #intro {
+    background-color: $reddust-cream;
+
+    div {
+      display: flex;
+      justify-content: center;
+
+      p {
+        text-align: center;
+        line-height: 180%;
+        max-width: 840px;
+        margin: 60px;
+        @media (max-width: 500px) {
+          margin: 40px 8px;
+        }
+      }
+    }
+  }
+
+  #your-donation {
+    background: url('/assets/img/support/what-your-donation-does.jpg');
+    background-size: cover;
+    height: 66vw;
+    max-height: 800px;
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+
+    > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: $reddust-cream;
+
+      > h1 {
+        font-size: 45px;
+        text-transform: capitalize;
+        margin: 8vw;
+        color: $reddust-sunset;
+        text-align: center;
+        @media (max-width: 900px) {
+          font-size: 5vw;
+          margin: 5vw;
+        }
+        @media (max-width: 500px) {
+          font-size: 24px;
+        }
+      }
+
+      div {
+        display: flex;
+        justify-content: space-around;
+        width: 80vw;
+        max-width: 1080px;
+        @media (max-width: 500px) {
+          width: 92vw;
+        }
+
+        div {
+          display: flex;
+          justify-content: flex-start;
+          flex-direction: column;
+          text-align: center;
+          width: 235px;
+          margin: 20px;
+          @media (max-width: 700px) {
+            margin: 10px;
+          }
+          @media (max-width: 500px) {
+            margin: 5px;
+          }
+
+          h1 {
+            color: $reddust-cream;
+            text-transform: none;
+            font-size: 50px;
+            line-height: 120%;
+            @media (max-width: 900px) {
+              font-size: 6vw;
+            }
+            @media (max-width: 500px) {
+              font-size: 26px;
+            }
+          }
+
+          h4 {
+            font-family: $montserrat-bold;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: white;
+            margin: 30px auto;
+            @media (max-width: 900px) {
+              font-size: 14px;
+            }
+            @media (max-width: 700px) {
+              font-size: 12px;
+            }
+            @media (max-width: 500px) {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .support-avenues {
+    background-color: $reddust-yinnar;
+
+    div {
+      display: flex;
+      justify-content: center;
+      flex-flow: row nowrap;
+      max-width: none;
+      padding: 0;
+
+      .image {
+        position: relative;
+        overflow: hidden;
+        @media (max-width: 750px) {
+          display: none;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          min-height: 100%;
+          min-width: 100%;
+          max-width: 700px;
+        }
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 50vw;
+        max-width: 700px;
+        box-sizing: border-box;
+        background-color: $reddust-cream;
+        @media (max-width: 750px) {
+          width: 100%;
+          max-width: 750px;
+        }
+
+        h2 {
+          font-family: $montserrat-bold;
+          text-transform: uppercase;
+          color: $reddust-rust;
+          margin: 80px 20px 20px;
+          @media (max-width: 450px) {
+            font-size: 18px;
+            margin: 40px 8px 10px;
+          }
+        }
+
+        p {
+          line-height: 200%;
+          max-width: 360px;
+          margin: 20px 30px;
+          @media (max-width: 450px) {
+            font-size: 15px;
+            line-height: 160%;
+            padding: 0 20px;
+            margin-bottom: 40px;
+          }
+        }
+
+        a {
+          color: $reddust-rust;
+          border-color: $reddust-rust;
+          margin-bottom: 80px;
+          width: 120px;
+          &:hover {
+            color: $reddust-sunset;
+            border-color: $reddust-sunset;
+          }
+        }
+      }
+    }
+  }
+
+  #donate {
+    div {
+      @media (max-width: 750px) {
+        background-color: $reddust-bone;
+      }
+    }
+  }
+
+  #partnerships {
+    div {
+      @media (max-width: 750px) {
+        background-color: $reddust-gold;
+      }
+    }
+  }
+}

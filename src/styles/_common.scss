@@ -18,6 +18,7 @@ footer,
 header,
 section {
   min-width: 320px;
+
   > div {
     min-width: 320px;
     max-width: 1080px;
@@ -182,11 +183,20 @@ button {
 // Most hero sections share the same CSS
 
 section#hero {
-  background-size: cover;
-  background-position: 50% 50%;
-  height: 50vw;
-  max-height: 700px;
-  min-height: 400px;
+  overflow: hidden;
+  @media (max-width: 500px) {
+    height: 300px;
+  }
+  img {
+    width: 100vw;
+    height: auto;
+    @media (max-width: 500px) {
+      min-height: 100%;
+      min-width: 100%;
+      width: auto;
+      height: 100%;
+    }
+  }
 }
 // Both partner and people tiles share the same tile layout styles
 
@@ -206,12 +216,11 @@ section.tiles {
       height: 16.666666vw;
       // max-width: 400px;
       // max-height: 400px;
-
       min-width: 160px;
       min-height: 160px;
       padding: 1px;
       box-sizing: border-box;
-      background: #EEE;
+      background: $reddust-bone;
       // @media (max-width: 2000px) {
       //   width: 20vw;
       //   height: 20vw;
@@ -253,6 +262,7 @@ section.tiles {
         width: 100vw;
         height: 100vw;
       }
+
       .flip-container {
         perspective: 1000px;
         width: 100%;
@@ -304,6 +314,7 @@ section.tiles {
             display: flex;
             flex-flow: column nowrap;
             justify-content: center;
+
             h2,
             h3 {
               font-family: $montserrat-bold;
@@ -313,6 +324,7 @@ section.tiles {
               font-size: 22px;
               line-height: 130%;
             }
+
             h3 {
               font-size: 13px;
               margin: 0 0 13px;
@@ -327,6 +339,7 @@ section.tiles {
               margin: 0 0 22px;
               overflow: hidden;
             }
+
             a.button {
               border: 1px solid $reddust-rust;
               color: $reddust-rust;
@@ -413,6 +426,7 @@ section.tiles {
 
 #coming-soon {
   background-color: $reddust-cream;
+
   > div {
     min-height: 420px;
     height: 80vh;
@@ -420,11 +434,13 @@ section.tiles {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+
     h1 {
       font-size: 30px;
       margin-bottom: 20px;
       color: $reddust-rust;
     }
+
     h2 {
       font-size: 20px;
       color: $reddust-sunset;

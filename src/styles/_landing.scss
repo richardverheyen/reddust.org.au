@@ -1,18 +1,32 @@
 #landing {
+  background-color: $reddust-bone;
+
   #video-hero {
     position: relative;
     width: 100vw;
-    height: 57vw;
+    height: 56vw;
+    min-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 700px) {
+      background-image: url('/assets/img/landing/home-banner.jpg');
+      background-size: cover;
+      background-position: 80%;
+    }
+
     > iframe {
       position: absolute;
       width: 100vw;
-      height: 57vw;
+      height: 56vw;
+      min-height: 400px;
       max-height: none;
       top: 0;
+      @media (max-width: 700px) {
+        display: none;
+      }
     }
+
     > div {
       z-index: 1;
       position: relative;
@@ -21,6 +35,8 @@
       flex-flow: column wrap;
       justify-content: center;
       align-items: center;
+      padding: 0;
+
       h1 {
         color: $reddust-gold;
         font-size: 45px;
@@ -33,6 +49,9 @@
         }
         @media (max-width: 600px) {
           font-size: 24px;
+        }
+        @media (max-width: 450px) {
+          font-size: 22px;
         }
 
         span {
@@ -65,8 +84,12 @@
       h3 {
         text-align: center;
         max-width: 670px;
-        margin: 70px auto 0;
+        margin: 70px auto 10px;
         color: $reddust-rust;
+        @media (max-width: 450px) {
+          font-size: 18px;
+          margin-top: 40px;
+        }
       }
 
       h4 {
@@ -78,10 +101,16 @@
         line-height: 145%;
         letter-spacing: 0.3px;
         margin-top: 10px;
+        @media (max-width: 450px) {
+          font-size: 16px;
+        }
       }
 
       a {
         margin: 20px auto 70px;
+        @media (max-width: 450px) {
+          margin-bottom: 40px;
+        }
       }
     }
   }
@@ -99,9 +128,16 @@
         color: $reddust-rust;
         text-transform: capitalize;
         margin: 70px auto 0;
+        @media (max-width: 900px) {
+          font-size: 4vw;
+        }
+        @media (max-width: 600px) {
+          font-size: 24px;
+        }
       }
 
       img {
+        width: 90vw;
         max-width: 720px;
         margin-bottom: 70px;
       }
@@ -123,6 +159,12 @@
         font-size: 45px;
         text-transform: capitalize;
         margin: 70px auto 0;
+        @media (max-width: 900px) {
+          font-size: 4vw;
+        }
+        @media (max-width: 600px) {
+          font-size: 24px;
+        }
       }
 
       > div {
@@ -188,6 +230,12 @@
         text-transform: capitalize;
         color: $reddust-rust;
         margin: 70px auto 0;
+        @media (max-width: 900px) {
+          font-size: 4vw;
+        }
+        @media (max-width: 600px) {
+          font-size: 24px;
+        }
       }
 
       > p {
@@ -200,7 +248,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0 40px;
+        @media (max-width: 900px) {
+          flex-wrap: wrap;
+          max-width: 650px;
+        }
 
         li {
           list-style: none;
@@ -215,6 +266,16 @@
             max-width: 250px;
             max-height: 250px;
             text-align: center;
+            @media (max-width: 900px) {
+              width: 40vw;
+              height: 40vw;
+            }
+            @media (max-width: 500px) {
+              width: 90vw;
+              height: 90vw;
+              max-height: 300px;
+              max-width: 300px;
+            }
             &:hover {
               img {
                 transform: scale(1.15);
@@ -245,17 +306,6 @@
             }
           }
         }
-        @media (max-width: 900px) {
-          flex-wrap: wrap;
-          max-width: 650px;
-
-          li {
-            a {
-              width: 40vw;
-              height: 40vw;
-            }
-          }
-        }
       }
     }
   }
@@ -271,6 +321,12 @@
         margin: 70px auto 0;
         text-align: center;
         text-transform: capitalize;
+        @media (max-width: 900px) {
+          font-size: 4vw;
+        }
+        @media (max-width: 600px) {
+          font-size: 24px;
+        }
       }
 
       > p {

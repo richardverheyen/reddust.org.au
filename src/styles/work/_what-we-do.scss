@@ -1,7 +1,161 @@
 #what-we-do {
+  #hero {
+    overflow: hidden;
+    img {
+      width: 100vw;
+      height: auto;
+      transition: ease-in-out 500ms all;
+      @media (max-width: 620px) {
+        width: auto;
+        height: 300px;
+      }
+      @media (max-width: 500px) {
+        margin-left: -130px;
+      }
+      @media (max-width: 400px) {
+        margin-left: -220px;
+      }
+    }
+  }
+
   #work-nav {
     a[href="/work/what-we-do"] {
       color: $reddust-gold;
+    }
+  }
+
+  #the-need {
+    background: url('/assets/img/support/what-your-donation-does.jpg');
+    background-size: cover;
+    height: 66vw;
+    max-height: 800px;
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    transition: 200ms ease-in-out all;
+
+    > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: $reddust-cream;
+
+      > h1 {
+        font-size: 45px;
+        text-transform: capitalize;
+        margin: 5vw auto 1vw;
+        color: $reddust-sunset;
+        text-align: center;
+        @media (max-width: 900px) {
+          font-size: 5vw;
+          margin: 3vw auto 1vw;
+        }
+        @media (max-width: 500px) {
+          font-size: 24px;
+        }
+      }
+
+      div {
+        display: flex;
+        justify-content: space-around;
+        width: 80vw;
+        max-width: 1080px;
+        @media (max-width: 500px) {
+          width: 92vw;
+        }
+
+        div {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+          width: 235px;
+          margin: 20px;
+          @media (max-width: 1100px) {
+            justify-content: flex-start;
+          }
+          @media (max-width: 700px) {
+            margin: 10px;
+          }
+          @media (max-width: 500px) {
+            margin: 5px;
+          }
+
+          h1 {
+            color: $reddust-cream;
+            text-transform: none;
+            font-size: 38px;
+            line-height: 120%;
+            @media (max-width: 1100px) {
+              font-size: 3.5vw;
+            }
+            @media (max-width: 500px) {
+              font-size: 20px;
+            }
+          }
+
+          h4 {
+            font-family: $montserrat-bold;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: white;
+            margin: 30px auto;
+            &:nth-child(1) {
+              margin-top: 0;
+            }
+            @media (max-width: 900px) {
+              font-size: 14px;
+            }
+            @media (max-width: 700px) {
+              font-size: 11px;
+              margin: 10px;
+
+            }
+            @media (max-width: 500px) {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #how-we-help {
+    div {
+      text-align: center;
+
+      h1 {
+        text-transform: capitalize;
+        color: $reddust-sunset;
+        margin-top: 60px;
+      }
+
+      p {
+        margin: 40px auto;
+      }
+
+      img {
+        max-width: 100%;
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  #impact {
+    background-color: #d48850;
+
+    div {
+      h1 {
+        text-align: center;
+        color: $reddust-bone;
+        margin-top: 60px;
+      }
+
+      img {
+        max-width: 100%;
+        margin: 40px 0;
+      }
     }
   }
 }

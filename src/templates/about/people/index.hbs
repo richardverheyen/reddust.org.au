@@ -9,34 +9,52 @@
 
   {{#replace "main"}}
 
-  <!-- <section id="hero">
-    <img src="" alt="" />
-  </section> -->
+    <section id="hero">
+      <img src="" alt="" />
+    </section>
 
-  {{> about-nav}}
+    {{> about-nav}}
 
-  {{> coming-soon}}
+    <section id="filter">
+      <div>
+        <p>Sort by:</p>
+        <button>Everyone</button>
+        <button>Directors</button>
+        <button>Staff</button>
+        <button>Members</button>
+      </div>
+    </section>
 
-  <!-- <section id="filter">
-    <div>
-      <p>Sort by:</p>
-      <button>Everyone</button>
-      <button>Directors</button>
-      <button>Staff</button>
-      <button>Members</button>
-    </div>
-  </section>
+    <section id="people" class="tiles partners">
+      <div>
+        <ul>
+          {{#people}}
+            <li>
+              <div class="flip-container">
+                <div class="flipper">
+                  <div class="front">
+                    <img src="/assets/img/people/{{image}}" />
+                  </div>
+                  <div class="back">
+                    <h2>{{name}}</h2>
+                    <h3>{{position}}</h3>
+                    <p>{{intro}}</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          {{/people}}
+        </ul>
+      </div>
+    </section>
 
-  <section id="people" class="tiles people">
-    <div>
-      <ul>
-        {{> five-demo-people}}
-        {{> five-demo-people}}
-        {{> five-demo-people}}
-        {{> five-demo-people}}
-      </ul>
-    </div>
-  </section> -->
+    <!-- <section id="people" class="tiles people">
+      <div>
+        <ul>
+          {{> five-demo-people}} {{> five-demo-people}} {{> five-demo-people}} {{> five-demo-people}}
+        </ul>
+      </div>
+    </section> -->
 
   {{/replace}}
 {{/extend}}

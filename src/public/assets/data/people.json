@@ -1,0 +1,379 @@
+{
+  "people": [{
+    "name": "John Van Groningen",
+    "position": "Founder",
+    "category": "director",
+    "image": "john-vangroningen@2x.jpg",
+    "intro": "In 2006 John Van Groningen along with assistance from a range of friends and supporters, created Red Dust Role Models. John lived in the remote Indigenous community of Lajamanu, and understood the challenges and hurdles faced by people living in these areas of Australia.  Sadly, on December 23, 2012 John passed away due to complications with his battle with cancer."
+  }, {
+    "name": "Martin Hirons",
+    "position": "Chairman",
+    "category": "director",
+    "image": "martin-hirons@2x.jpg",
+    "intro": "Martin was introduced to Red Dust Role Models through his various basketball connections. Martin Hirons has spent his career in the sport business sector and brings a wealth of experience to the Red Dust leadership team he brings his core expertise based around business strategy and market research."
+  }, {
+    "name": "Ray Minniecon",
+    "position": "Director/Cultural Advisor",
+    "category": "director",
+    "image": "ray-minniecon@2x.jpg",
+    "intro": "Ray is a descendant of the Kabi Kabi nation and the Gurang Gurang nation of South East Queensland, the South Sea Islander people, with connections to the people of Ambrym Island. Ray earned a BA in Theology and helped establish the Aboriginal Education Unit in Murdoch University. He has also worked for World Vision Australia’s Indigenous programs."
+  }, {
+    "name": "Will Minson",
+    "position": "Director",
+    "category": "director",
+    "image": "will-minson@2x.jpg",
+    "intro": "A longtime Red Dust Role Model, Will was warmly welcomed to the board at the end of 2014. A former player in the Western Bulldogs, Will was selected 20th overall in the AFL Draft and began his professional career when he debuted in 2004. Most recently, Will completed his Sciences Degree from the University of Melbourne. "
+  }, {
+    "name": "Ben Lawrence",
+    "position": "Director",
+    "category": "director",
+    "image": "ben-lawrence@2x.jpg",
+    "intro": "Ben is the Chief Human Resources Officer for Wesfarmers Limited.  Prior to joining Wesfarmers in 2008, Ben was the Chief Human Resources Officer for Foster’s Group Limited and has held a variety of senior roles here and in the United States. In addition to serving on the board of Red Dust, Ben is currently a non-executive director of the Wunan Foundation."
+  }, {
+    "name": "Austin Van Groningen",
+    "position": "Director",
+    "category": "director",
+    "image": "austin-vangroningen@2x.jpg",
+    "intro": "The son of Red Dust founder John Van Groningen, Austin is proud to continue his late father’s legacy in working with the organisation. Joining the board in 2013, Austin provides Red Dust with fresh thinking, new possibilities and a healthy dose of John’s trademark energy. Austin completed his Bachelor of Arts in 2013, majoring in politics. "
+  }, {
+    "name": "Paul Guerra",
+    "position": "Director",
+    "category": "director",
+    "image": "paul-guerra@2x.jpg",
+    "intro": "Paul has enjoyed a 20-year career in the telecommunications sector working at senior levels for renowned companies Motorola and Vodafone. Paul has a strong record in sales and marketing and has been instrumental in solidifying the presence of both organisations in Australia. Paul also dedicates some of his time to serve as a Director on several charity-based organisations."
+  }, {
+    "name": "Darren Smith",
+    "position": "Chief Executive Officer",
+    "category": "staff",
+    "image": "",
+    "intro": "Darren has been involved with Red Dust for over 12 years and brings to his role a ten-year career as a professional basketball player and management experience. As the Chief Executive Officer, he coordinates the effective delivery of programs throughout Australia and leads teams on the ground while out bush, as well as looking after all other aspects of the organisation."
+  }, {
+    "name": "Samantha Guttridge",
+    "position": "Partnerships Manager",
+    "category": "staff",
+    "image": "",
+    "intro": "Sam started with Red Dust in February 2013 after completing a Bachelor of General Studies at Monash University majoring in International Marketing in 1999. Sam’s previous role before Red Dust was with Treasury Wine Estate (Formerly Fosters Group); where she worked in Brand Marketing on several premium wine brands, including Penfolds, Seppelt and Coldstream Hills, for over five years."
+  }, {
+    "name": "Jonathan Hermawan Tjapaltjarri",
+    "position": "Manager Central Australia",
+    "category": "staff",
+    "image": "",
+    "intro": "Jonathan is a fluent Pintupi-Luritja speaking man from the NT community of Walungurru (Kintore). He is a fully qualified teacher/educator and proud advocate for Aboriginal community leadership, youth empowerment and reconciliation. Based in Alice Springs, Jonathan currently works for Red Dust as an Alcohol and Men’s Health Educator and Coordinator, journeying with Aboriginal males (youth and adults) and their families."
+  }, {
+    "name": "Lara Davenport",
+    "position": "Healthy Living Program Coordinator",
+    "category": "staff",
+    "image": "lara-davenport@2x.jpg",
+    "intro": "After winning gold in the 4x200 Freestyle Relay at the 2008 Olympic Games, became a Red Dust Role Model in 2008. In 2015 she came on board as the Healthy Living Program Coordinator. With her tertiary training in Psychology, sporting accomplishments and Red Dust program experience in hand, Lara is truly a great addition to the ever-evolving Red Dust team."
+  }, {
+    "name": "Billie O’Keefe",
+    "position": "Strong Young Women’s Program Senior Project Officer",
+    "category": "staff",
+    "image": "",
+    "intro": "Prior joining the Red Dust team in 2016, Billie has worked in the N.T for ten years in community development, child maternity and health promotion. She completed a Bachelor’s in Community Development and is currently studying Health Sciences part-time with a pathway into medicine."
+  }, {
+    "name": "Emilie Goegan",
+    "position": "Business & Communications Manager",
+    "category": "staff",
+    "image": "",
+    "intro": "Emilie joined Red Dust mid 2016 as a volunteer and not to long became a valuable member of the team as Business and Communications Manager. With a background in education and a Bachelor’s Degree in Creative Arts majoring in Professional Writing, Emilie has travelled extensively throughout Asia as an educator prior to settling back home in Melbourne."
+  }, {
+    "name": "Mitch Firth",
+    "position": "Role Model",
+    "category": "role-model-arts",
+    "image": "mitch-firth@2x.jpg",
+    "intro": ""
+  }, {
+    "name": "Fiona Scicluna",
+    "position": "Role Model",
+    "category": "role-model-arts",
+    "image": "fiona-scicluna@2x.jpg",
+    "intro": "Fiona grew up in Sydney, Australia and began her dance training at the McDonald College of performing arts before continuing on to Dance World 301 and then to Glenn Wood Tap. She is trained in many difference areas of dance including jazz, tap, stomp and salsa. She has worked all over the world including New York City, London, Germany and Amsterdam."
+  }, {
+    "name": "David Callow",
+    "position": "Role Model",
+    "category": "role-model-arts",
+    "image": "",
+    "intro": "David Callow is a freelance photographer specialising in sporting features. Based in Melbourne, David is a regular Red Duster, shooting and producing the many photos during the tours."
+  }, {
+    "name": "Shura Taft",
+    "position": "Role Model",
+    "category": "role-model-arts",
+    "image": "shura-taft@2x.jpg",
+    "intro": "Santo is a filmmaker and TV personality with the Working Dog team. His work includes such classics as “The Late Show”, “D Generation”, “Frontline”, “The Castle”, “The Dish”, “Thank God You’re Here”, “The Panel”, and worked with Glenn Robbins in the “All Aussie Adventures”. Santo generously gives his time and expertise to encourage remote students. Link to - (Working Dog website.)"
+  }, {
+    "name": " Santo Cilauro",
+    "position": "Role Model",
+    "category": "role-model-arts",
+    "image": "santo-cilauro@2x.jpg",
+    "intro": "Santo is a filmmaker and TV personality with the Working Dog team. His work includes such classics as “The Late Show”, “D Generation”, “Frontline”, “The Castle”, “The Dish”, “Thank God You’re Here”, “The Panel”, and worked with Glenn Robbins in the “All Aussie Adventures”. Santo generously gives his time and expertise to encourage remote students. Link to - (Working Dog website.)"
+  }, {
+    "name": "Katie Houghton-Ward",
+    "position": "Role Model",
+    "category": "role-model-arts",
+    "image": "katie-houghton-ward@2x.jpg",
+    "intro": "Katie Houghton-Ward has been illustrating comics for over twelve years now and doesn’t plan to stop any time soon. Best known for her early work with the creator owned series ‘Deckheadz’ which featured weekly for five years in top music magazine ’3D world’."
+  }, {
+    "name": "Fiona Freeman",
+    "position": "Role Model",
+    "category": "role-model-arts",
+    "image": "fiona-freeman@2x.jpg",
+    "intro": "A graduate of WAAPA in WA, Fiona also studied at the Royal Academy of Dance in London and has worked with the Australian Sports Commission’s Active After School program, conducted sessions for the Australian Institute of Sport, and delivered seminars on health and safety in dance and worked as a specialist teacher. Her dance activities are immensely popular amongst the communities."
+  }, {
+    "name": "Raymond Walters Japanangka",
+    "position": "Role Model",
+    "category": "role-model-arts",
+    "image": "raymond-walters-japanangka@2x.jpg",
+    "intro": "Born in Alice Springs. Raymond’s grandfather’s country is Ngarleyekwerleng in the Western Desert near Yuendumu, and his grandmother’s country is Alhalkerre Atnangkerre. He brings his expertise in Sport & Recreation, Remote/Urban Aboriginal Community Development, Family & Child Welfare, Alcohol & Other Drugs Awareness and Consultancy on Aboriginal Community Engagement policies and procedures."
+  }, {
+    "name": "Anthea Lindquist",
+    "position": "Role Model",
+    "category": "role-model-health",
+    "image": "",
+    "intro": "Anthea has a long-standing interest in Indigenous rights and health in Australia. She has been involved in a number of roles in Australia and overseas to pursue this passion and really make a difference. Anthea completed her final months of medical school in the N.T in 2008, and has furthered her study with specialist training in Obstetrics and Gynecology."
+  }, {
+    "name": "Naomi Corfield",
+    "position": "Role Model",
+    "category": "role-model-health",
+    "image": "",
+    "intro": ""
+  }, {
+    "name": "Nicole Border",
+    "position": "Role Model",
+    "category": "role-model-health",
+    "image": "nicole-border@2x.jpg",
+    "intro": "Nicole’s became involved with Red Dust in 2006 when she joined a tour out to the remote community of Kintore. Nicole studied Psychology and explored the psychosocial factors associated with physical activity behaviour in her Honours thesis. She then went on to complete a Masters Degree in Health Promotion, focusing her work on Aboriginal and Torres Strait Islander health and chronic disease. "
+  }, {
+    "name": "Bridget a’Beckett",
+    "position": "Role Model",
+    "category": "role-model-music",
+    "image": "bridget-a'beckett@2x.jpg",
+    "intro": "Bridget completed a Bachelor of Music from AIM, Sydney, and holds Grade 7 AMEB in violin and Grade 6 AMEB in piano. She has toured Australia, Europe and America, and signed a development deal with Sony BMG.  She has worked in music therapy, assisting in the development of a songwriting therapy program for mothers and children."
+  }, {
+    "name": "Tim Lane",
+    "position": "Role Model",
+    "category": "role-model-music",
+    "image": "tim-lane@2x.jpg",
+    "intro": ""
+  }, {
+    "name": "Steve Lane",
+    "position": "Role Model",
+    "category": "role-model-music",
+    "image": "",
+    "intro": "Steve has been a bassist and songwriter for many well-known bands [Red October, The Angels, Jimi the Human and Spectre 7, The Clone Theory, The Steinbecks, voicepopfoible, The Lamb Sandwich Trio, Vibropile]. In 1996 Lane founded the St Luke’s Sternberg Street Music Program for people recovering from mental illness and since 2002 has been teaching music industry skills at Bendigo Regional Institute of TAFE. "
+  }, {
+    "name": "Glenn Bidmead",
+    "position": "Role Model",
+    "category": "role-model-music",
+    "image": "glenn-bidmead@2x.jpg",
+    "intro": "Glenn is a singer/songwriter/guitarist/producer and live performer who works extensively with Adam Thompson in schools around the country, with Adam’s Muso Magic workshops. He also plays gigs three to four nights a week around Sydney. Glen works with Adam as part of the Red Dust music program."
+  }, {
+    "name": "Wayne Glenn",
+    "position": "Role Model",
+    "category": "role-model-music",
+    "image": "wayne-glenn@2x.jpg",
+    "intro": "Wayne is a social worker who has worked in a wide variety of community based and forensic settings from personal counseling, men’s health and family work. Focusing on drug and alcohol counseling with at risk young people. He has also been a musician and song writer most of his life, engaging young people in writing, recording and producing their own songs."
+  }, {
+    "name": "Adam Thompson",
+    "position": "Role Model",
+    "category": "role-model-music",
+    "image": "adam-thompson@2x.jpg",
+    "intro": "Adam created the music workshop that he has evolved throughout his 10-year association with Red Dust Role Models and its founding organisation, which forms the music program for Red Dust’s Lifestyle Education Program. A singer, songwriter, entertainer and engaging speaker, Adam is widely known for his success as the lead singer for ARIA-award winning band Chocolate Starfish."
+  }, {
+    "name": "Kate Lynch",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "kate-lynch@2x.jpg",
+    "intro": "As a passionate swimmer Kate stepped out of the pool and into the coaching world, whilst studying a Bachelor of Education and Commerce at Deakin University. Working in the aquatic and recreation sector for over 10 years, Kate has lectured at national and international conferences, developed educational and health programs as well as managed facilities in both metropolitan and remote Australia."
+  }, {
+    "name": "Jill Noe",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "jill-noe@2x.jpg",
+    "intro": "Originally from Portland, Oregon Jill is a professional basketball player for the Nunawading Spectres. Receiving an undergrad in Journalism and Mass Communication and my Masters in Liberal Arts and Sciences from Arizona State University."
+  }, {
+    "name": "Carley McKay",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "carley-mckay@2x.jpg",
+    "intro": "Carley spent all of 2007 training for rowing at the AIS and has been involved in the national selection process over a four year period. She has enjoyed multiple state championship victories as well as some international travel as part of her rowing career. Carley also has a double degree in Chemical Engineering and Commerce from the University of Melbourne."
+  }, {
+    "name": "Rhianne Kerr",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Rhianne has been representing NSW in softball since 2007 being named Vice Captain of the 2011 NSW U19 Team. Rhianne was a member of the U19 Australian Squad for two years. She also coaches various teams, and helps to run a disabled athlete softball competition. She is currently studying exercise and sport science at the University of Sydney."
+  }, {
+    "name": "Jonathon Shepherd",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Jonathon has been actively playing basketball for the past 17 years and currently plays with the Dandenong Rangers in Victoria. In 2001 Jonathon gained a full scholarship and began a 4 year NCAA basketball career. During this time Jonathon graduated with a Bachelor of Business Administration with a minor in Sports Management from Nova Southeastern University in Florida."
+  }, {
+    "name": "Tim Callan",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Tim is a former Australia Rules Football player. He was first recruited in the Bulldogs’ under 18 side and went on to become one of the Bulldogs key players. Tim played a key role in the success of their first seven undefeated rounds in 2007, a highlight in the Bulldogs history. He retired in 2010 with a great career behind him."
+  }, {
+    "name": "Jarrod Harbrow",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Jarrod is an Australia Rules Football player making his debut in 2007 for the Western Bulldogs where his pace, skill and running abilities shone. At the end of the 2010 season Jarrod chose to join the Gold Coast Suns where he could return to Queensland and his family and begin playing on a newly established AFL side."
+  }, {
+    "name": "Tom Lonergan",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Tom is an Australia Rules Football player. After being selected by the Geelong Cats, Tom spent two years in their VFL side before going on to play as a permanent player of the team. Tom played a career-defining season of football in 2010, when he played 22 out of 25 possible games which included two finals and in which he set many career bests in disposals, marks, handballs and tackles."
+  }, {
+    "name": "Lindsay Gilbee",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Lindsay is an Australia Rules Football player first selected by the Bulldogs in the 3rd round of the 1999 National AFL Draft after he completed his season with the Eastern Ranges in the TAC cup. Lindsay was regarded as one of the Bulldogs best kickers of the football and built his reputation as ‘the man with the golden boot’."
+  }, {
+    "name": "Tom Hill",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Tom is an Australian Rules Football player. After missing out on the NAB AFL Draft pick of 2009, Tom went on to continue football in NSW where he faced a serious injury to the knee. However, through persistence and hard work, Tom realized his ambition when he was successful in the 2010 selection and since then has been a key player to the Western Bulldogs AFL side."
+  }, {
+    "name": "Glenn Manton",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Glenn began his professional career as an Australia Rules Football player when he was selected as part of Essendon’s U19 side. In 1992 he made his AFL debut for the Bombers and went on to play 21 games for them over three seasons. In 1995 he moved to Carlton’s AFL side where he became one of their most respected and key defenders. Glenn played 157 games with the Blues before retiring from the sport after a highly achieving career."
+  }, {
+    "name": "Gavin Wanganeen",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Gavin is a retired AFL Player, playing in two premierships with Essendon and Port Adelaide. Wanganeen is a Brownlow Medallist and is considered one of the finest Indigenous players to date."
+  }, {
+    "name": "Will Minson",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "will-minson@2x.jpg",
+    "intro": "Adelaide-born Will Minson made his AFL debut with the Western Bulldogs in 2004 and was nominated for the NAB Rising Star Award in 2006. A founding member of Red Dust Role Models, the multi-talented ruckman also studies civil engineering at University of Melbourne and is known as an excellent saxophonist and cook."
+  }, {
+    "name": "Hannah Macdougall",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Hannah represented Australia twice at the Paralympic Games. At the 2004 Athens Paralympics, she received a bronze medal in the 4 x 100m Medley Relay team. She was the a captain of the Australian Paralympic Swim Team for both the 2006 World Swimming Championships and 2008 Beijing Paralympic Games. Hannah is now attempting her third Paralympics, in a different sport – cycling."
+  }, {
+    "name": "Hugh Minson",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Hugh is an Australia Rules Football player. Drafted in 2006 by the NAB Draft as a 17-year-old by Port Adelaide, it was only 2 and a half years before a knee injury forced him into retirement. Hugh’s career though was one full of highlights and coaches and teammates described him as an “outstanding young man”.  "
+  }, {
+    "name": "Leah Rush",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Leah is a professional basketball player who has played for various teams throughout the United States, Australia, and Europe. She played collegiate basketball at the University of Oklahoma, and began her professional career in the WNBA and several teams throughout Europe and Australia. Leah has a master's degree in development anthropology from the University of Durham in the UK."
+  }, {
+    "name": "Lori Chizik",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Basketball has been a very big part of Lori’s life since I first started playing in primary school. Lori has been a Head Coach in the WNBL and was the first female coach in the NBL when I was an assistant with the Titans. She was involved with the Opals, the Women’s National Team, as an assistant coach in the lead up to the Sydney Olympics. "
+  }, {
+    "name": "Caitlin Thwaites",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Caitlin is an Australian netball player in the ANZ Championship, playing for the Melbourne Vixens. Caitlin is also a member of the Victorian Institute of Sport with her ambition being to represent Australia at the Commonwealth Games and World Championships."
+  }, {
+    "name": "Allan Border",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "allan-border@2x.jpg",
+    "intro": "A career spanning 16 years, Allan played 156 Cricket Tests for Australia, scoring 11, 174 runs including 27 centuries and finishing with an average of 50.56. He captained Australia in 93 Tests from 1984 to 1994 – a world record – winning 32 and losing 22. He was one of the 55 inaugural inductees of the ICC Cricket Hall of Fame in 2009."
+  }, {
+    "name": "Allison Tranquilli",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Allison was a professional basketballer who competed in the WNBL and around the world. As a member of the Australian National Team (the Opals) Allison competed at the 1996 and 2004 Olympic Games winning a Bronze and Silver medal. She also competed at 3 World Championships and spent four years competing at the highest level in Europe. "
+  }, {
+    "name": "Elyse Penaluna",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "elyse-penaluna@2x.jpg",
+    "intro": "Possessing great athleticism and touch around the basket for her size Elyse is working hard to make the transition into a senior player. With unlimited potential Elyse is has stepped up in the WNBL this season and has become a dominate force within the league."
+  }, {
+    "name": "Melanie Jones",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Melanie (MJ) is known as a pioneer for women’s cricket in Australia and around the world. She brings a wealth of sporting experience and achievement to her role, having represented Australia in all forms of international cricket. A qualified teacher, she is currently pursuing a media career while also working closely with elite female athletes in career development with Elite Sports Properties – Majestic Division. "
+  }, {
+    "name": "Brett Wheeler",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Brett’s NBL basketball career has spanned twelve years - winning two championships and representing Australia sixteen times. Brett is an active contributor to Red Dust, both in the field as a Role Model and in the graphic and visual arts."
+  }, {
+    "name": "Tash Alabakov",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Tash is a female basketball player, during the 2006/2007 WNBL season Tash was a part of the Bulleen Boomers development squad. Currently playing for the Nunawading Spectres in the SEABL competition Tash aspires to permanently play on a WNBL team. Tash is also in her last year of university studying Health Promotion which involves empowering individuals and equipping them with the knowledge and skills to make healthy lifestyle choices."
+  }, {
+    "name": "Glen Singleton",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Glenn has competed at state, national and international levels for all of his seventeen years as a kayaker and has, at senior level, competed for more than ten years and in over forty international events, with great results. In conjunction with his sporting career Glenn has studied Business at TAFE and then Sports Science at Deakin University."
+  }, {
+    "name": "Lara Davenport",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "lara-davenport@2x.jpg",
+    "intro": "Lara was a member of the Australian Swimming Team for over 10 years. She participated in Australia youth teams through to the elite level, representing Australia at the 2008 Olympic Games and won Gold in the 4×200 Freestyle Relay, along with and the Short and Long Course World Championships. "
+  }, {
+    "name": "Linley Frame",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "linley-frame@2x.jpg",
+    "intro": "Linley won the 1991 World 100-metre Breaststroke Championship and an additional two silver medals in the 200-metre Breaststroke and the 4×100 Medley Relay at the same meet. During her career she was a Pan Pacific champion and won three World Short course medals, plus many other international medals throughout a career that spanned sixteen years."
+  }, {
+    "name": "Anil Kumble",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "A former Indian Cricketer and captain of the Indian Test cricket team, Anil is a right-arm leg spin bowler and a right-hand batsman. Currently the leading wicket-taker for India in both Test and One Day International matches. At present he is the third highest wicket-taker in Test cricket and one of only three bowlers to have taken over 600 Test wickets."
+  }, {
+    "name": "Kyle Vander Kuyp",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "kyle-vander-kuyp@2x.jpg",
+    "intro": "Kyle is an Indigenous Australian athlete and a descendant of the Yuin Clan of south coast NSW and the Woromi Clan of north coast NSW. He holds the Australian record for 110m Hurdles (13.29 sec) and the Australian record for 60m Hurdles indoors (7.73 sec), and has been National Champion 12 times, including a silver medal in the 1994 Commonwealth Games."
+  }, {
+    "name": "Tim Maloney",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": "Tim is a wheelchair basketball player who has played for Adelaide Thunder, Wollongong Roller Hawks, Bradford Bears (England), University of Kentucky WheelKats (USA), and The Australian Team (The Rollers 1989 – 1998).He won the wheelchair basketball Gold Medal in the 1996 Atlanta Paralympic Games and broke and held the world record in the 800m in wheelchair racing from 1985-87."
+  }, {
+    "name": "Luke Darcy",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "luke-darcy@2x.jpg",
+    "intro": "Luke is a former Australian rules footballer who played for the Western Bulldogs, a team he captained for 2 years. Debuting in 1994, Luke is regarded as one of the Bulldogs’ most successful ruckmen/forwards. In 2001 he took out the Charles Sutton Medal, and continued to stamp his name on the game in the following seasons. "
+  }, {
+    "name": "",
+    "position": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "intro": ""
+  }, {
+    "name": "Richardson Fried Chickens",
+    "position": "richardson-fried-chickens.jpg",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  }]
+}

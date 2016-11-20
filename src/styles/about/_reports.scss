@@ -1,10 +1,99 @@
 #about-reports {
-  #hero {
-    display: none;
-  }
+
   #about-nav {
     a[href="/about/reports"] {
       color: $reddust-rust;
     }
+  }
+
+  #intro {
+    background-color: $reddust-cream;
+    div {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: auto;
+      width: 100%;
+      max-width: 1200px;
+      text-align: center;
+
+      h4 {
+        font-size: 20px;
+        color: $reddust-gold;
+        max-width: 500px;
+        margin: 80px auto 20px;
+        @media (max-width: 600px) {
+          font-size: 18px;
+          max-width: 90vw;
+        }
+      }
+
+      p {
+        line-height: 180%;
+        font-size: 15px;
+        max-width: 500px;
+        margin: auto auto 80px;
+        @media (max-width: 600px) {
+          font-size: 14px;
+          max-width: 90vw;
+        }
+      }
+    }
+  }
+
+  .downloads {
+    background-color: $reddust-bone;
+    div {
+      max-width: 500px;
+
+      h3 {
+        font-family: $montserrat-bold;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: $reddust-rust;
+        margin: 70px auto 20px;
+      }
+
+      p {
+        text-align: center;
+        @media (max-width: 500px) {
+          font-size: 14px;
+        }
+      }
+
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 20px auto;
+
+          h5 {
+            font-family: $montserrat-bold;
+            color: $reddust-rust;
+            font-size: 15px;
+            letter-spacing: 0.6px;
+            @media (max-width: 500px) {
+              font-size: 14px;
+            }
+          }
+
+          a {
+            color: $reddust-rust;
+            border-color: $reddust-rust;
+            margin-left: 5px;
+            &:hover {
+              color: $reddust-sunset;
+              border-color: $reddust-sunset;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #annual {
+    margin-bottom: 70px;
   }
 }
