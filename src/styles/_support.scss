@@ -1,21 +1,4 @@
 #support {
-  #hero {
-    display: block;
-    position: relative;
-    overflow: hidden;
-
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      min-height: 100%;
-      @media (max-width: 800px) {
-        width: auto;
-        height: 100%;
-      }
-    }
-  }
 
   #title {
     background-color: $reddust-sunset;
@@ -214,7 +197,6 @@
           border-color: $reddust-rust;
           margin-bottom: 80px;
           width: 120px;
-
           &:hover {
             color: $reddust-sunset;
             border-color: $reddust-sunset;
