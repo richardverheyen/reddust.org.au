@@ -60,7 +60,8 @@ module.exports = function(grunt) {
           basePath: 'src/templates/',
           modules: ['src/templates/helpers/helpers-*.js'],
           context: [
-            "src/public/assets/data/partners.json"
+            "src/public/assets/data/partners.json",
+            "src/public/assets/data/people.json"
           ]
         }
       }

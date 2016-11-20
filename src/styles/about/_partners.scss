@@ -1,13 +1,77 @@
 #about-partners {
-  #hero {
-    display: none;
-  }
   #about-nav {
     a[href="/about/partners"] {
       color: $reddust-rust;
     }
   }
-  #intro {}
+  #intro {
+    background-color: $reddust-cream;
+    div {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: auto;
+      width: 100%;
+      max-width: 1200px;
+      text-align: center;
+
+      h4 {
+        font-size: 20px;
+        color: $reddust-gold;
+        max-width: 500px;
+        margin: 80px auto 20px;
+        @media (max-width: 600px) {
+          font-size: 18px;
+          max-width: 90vw;
+        }
+      }
+
+      p {
+        line-height: 180%;
+        font-size: 15px;
+        max-width: 500px;
+        margin: auto auto 80px;
+        @media (max-width: 600px) {
+          font-size: 14px;
+          max-width: 90vw;
+        }
+      }
+    }
+  }
+
   #partners {}
-  #become {}
+  #become {
+    background-color: $reddust-cream;
+    div {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: auto;
+      width: 100%;
+      max-width: 1200px;
+      text-align: center;
+
+      h4 {
+        font-size: 20px;
+        color: $reddust-gold;
+        max-width: 500px;
+        margin: 80px auto 20px;
+        @media (max-width: 600px) {
+          font-size: 18px;
+          max-width: 90vw;
+        }
+      }
+
+      p {
+        line-height: 180%;
+        font-size: 15px;
+        max-width: 500px;
+        margin: auto auto 80px;
+        @media (max-width: 600px) {
+          font-size: 14px;
+          max-width: 90vw;
+        }
+      }
+    }
+  }
 }
