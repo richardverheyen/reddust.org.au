@@ -410,7 +410,6 @@ section.tiles {
           color: $reddust-cream;
         }
       }
-
       &:hover {
         .no-image,
         img {
@@ -426,27 +425,23 @@ section.tiles {
   }
 }
 
-#vision {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vw;
-  max-height: 700px;
-  min-height: 400px;
-  background-image: url('/assets/img/about/missionvalues/about-banner-mission@2x.jpg');
-  background-size: cover;
-  background-position: 25% 0;
-  text-align: center;
-
-  h2 {
-    color: $reddust-bone;
-    max-width: 560px;
-    @media (max-width: 700px) {
-      font-size: 3vw;
-      margin: 10vw;
+#coming-soon {
+  background-color: $reddust-cream;
+  > div {
+    min-height: 420px;
+    height: 80vh;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    h1 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: $reddust-rust;
     }
-    @media (max-width: 500px) {
-      font-size: 16px;
+    h2 {
+      font-size: 20px;
+      color: $reddust-sunset;
     }
   }
 }

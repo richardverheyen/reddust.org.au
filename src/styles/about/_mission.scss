@@ -1,30 +1,25 @@
 #about-mission {
-  text-align: center;
-  background-color: $reddust-yinnar;
-
   #hero {
-    background-image: url('/assets/img/about/missionvalues/about-banner.jpg');
+    background-image: url('/assets/img/about/misson-and-values/about-banner.jpg');
+    background-position: 50% 20%;
   }
-
+  #about-nav {
+    a[href="/about/mission-and-values"] {
+      color: $reddust-rust;
+    }
+  }
   #mission {
-    div {
+    > div {
       display: flex;
-      max-width: 1400px;
+      flex-flow: row nowrap;
+      max-width: none;
       padding: 0;
-
       .image {
-        border: 0;
-        background-image: url('/assets/img/about/missionvalues/about-missionvalues-img1.jpg');
-        background-size: cover;
-        background-position-y: 70%;
-
         img {
-          opacity: 0;
-          width: 100%;
+          width: 50vw;
           height: auto;
         }
       }
-
       div {
         display: flex;
         flex-direction: column;
@@ -34,14 +29,12 @@
         height: 525px;
         box-sizing: border-box;
         background-color: $reddust-cream;
-
         h2 {
           font-family: $montserrat-bold;
           text-transform: uppercase;
           color: $reddust-rust;
           margin: 20px;
         }
-
         p {
           line-height: 200%;
           max-width: 360px;
@@ -49,23 +42,16 @@
       }
     }
   }
-
   #mantra {
-    div {
+    > div {
       display: flex;
-      max-width: 1400px;
+      flex-flow: row nowrap;
+      max-width: none;
       padding: 0;
-
       .image {
-        border: 0;
-        background-image: url('/assets/img/about/missionvalues/about-missionvalues-img2.jpg');
-        background-size: cover;
-        background-position: 90%;
-
         img {
-          opacity: 0;
-          width: 100%;
-          height: auto;
+          width: auto;
+          min-height: 100%;
         }
       }
 
@@ -90,14 +76,19 @@
             h2 {
               font-size: 45px;
               z-index: 1;
+              &:after {
+                content: ' ';
+                position: absolute;
+                width: 140px;
+                height: 140px;
+                top: 50%;
+                left: 50%;
+                margin-left: -70px;
+                margin-top: -70px;
+                background: url('/assets/img/about/mission-and-values/red-dot.png') no-repeat 0 0 / 140px 140px;
+                z-index: -1;
+              }
             }
-
-            img {
-              position: absolute;
-              max-width: 140px;
-              top: 35px;
-            }
-
             p {
               font-size: 22px;
               color: $reddust-bone;
@@ -108,6 +99,31 @@
           }
         }
       }
+    }
+  }
+}
+// Keep outside #about-mission so we can use this on other pages as well
+#vision {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vw;
+  max-height: 700px;
+  min-height: 400px;
+  background-image: url('/assets/img/about/mission-and-values/kids-jumping-for-rugby@2x.jpg');
+  background-size: cover;
+  background-position: 25% 0;
+  text-align: center;
+
+  h2 {
+    color: $reddust-bone;
+    max-width: 560px;
+    @media (max-width: 700px) {
+      font-size: 3vw;
+      margin: 10vw;
+    }
+    @media (max-width: 500px) {
+      font-size: 16px;
     }
   }
 }

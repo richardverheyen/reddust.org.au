@@ -1,4 +1,12 @@
-#about-people {
+#about-role-models {
+  #hero {
+    display: none;
+  }
+  #about-nav {
+    a[href="/about/role-models"] {
+      color: $reddust-rust;
+    }
+  }
   #intro {}
   #ambassadors {}
   #arts {}

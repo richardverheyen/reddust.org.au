@@ -55,20 +55,17 @@
           width: 100vw;
           max-width: 1080px;
           height: 100%;
-
           &:nth-child(1) {
             img:nth-child(1) {
               display: none;
             }
           }
-
           &:nth-last-child(1) {
             img:nth-last-child(1) {
               display: none;
             }
           }
         }
-
         > li:nth-child(1) {
           &:after {
             content: 'Click to see more';
@@ -134,7 +131,6 @@
             width: 30px;
           }
         }
-
         img:nth-last-child(1) {
           max-width: 40px;
           position: absolute;
