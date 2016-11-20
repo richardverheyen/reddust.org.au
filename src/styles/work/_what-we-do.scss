@@ -4,6 +4,7 @@
     img {
       width: 100vw;
       height: auto;
+      transition: ease-in-out 500ms all;
       @media (max-width: 620px) {
         width: auto;
         height: 300px;

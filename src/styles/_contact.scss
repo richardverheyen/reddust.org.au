@@ -70,7 +70,12 @@
           }
 
           a {
-            color: $reddust-bone;
+            color: $reddust-rust;
+            border-color: $reddust-rust;
+            &:hover {
+              color: $reddust-sunset;
+              border-color: $reddust-sunset;
+            }
           }
         }
       }
@@ -134,13 +139,34 @@
             height: auto;
             max-width: 100vw;
           }
-
           &:nth-last-child(1) {
             background-color: $reddust-rust;
-          }
+            div {
+              a {
+                color: $reddust-gold;
+                border-color: $reddust-gold;
+                &:hover {
+                  color: $reddust-cream;
+                  border-color: $reddust-cream;
+                }
+              }
+            }
 
+          }
           &:nth-last-child(2) {
             background-color: $reddust-gold;
+          }
+          &:nth-last-child(3) {
+            div {
+              a {
+                color: $reddust-gold;
+                border-color: $reddust-gold;
+                &:hover {
+                  color: $reddust-cream;
+                  border-color: $reddust-cream;
+                }
+              }
+            }
           }
 
           div {
@@ -177,6 +203,7 @@
               margin: 5px;
             }
           }
+
         }
       }
     }
