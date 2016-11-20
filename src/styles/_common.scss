@@ -423,27 +423,6 @@ section.tiles {
   }
 }
 
-section.slider {
-  position: relative;
-  nav {
-    button {
-      position: absolute;
-      width: 40px;
-      top: 50%;
-      padding: 20px;
-      transform: translateY(-40px);
-      &.next {
-        left: 10vw;
-        // background-image: url('/assets/img/icons/arrow-right.svg');
-      }
-      &.next {
-        right: 10vw;
-        // background-image: url('/assets/img/icons/arrow-left.svg');
-      }
-    }
-  }
-}
-
 #coming-soon {
   background-color: $reddust-cream;
 

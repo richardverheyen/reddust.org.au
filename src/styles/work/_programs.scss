@@ -30,145 +30,110 @@
     }
   }
 
-  .scroller {
-    background-size: cover;
-    background-position: 50%;
-    > div {
-      position: relative;
-      overflow: hidden;
-      padding: 0;
-      width: 100vw;
-      max-width: 1080px;
-      height: 62vw;
-      min-height: 568px;
-      > ul {
-        display: flex;
-        height: 100%;
-        > li {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100vw;
-          max-width: 1080px;
-          height: 100%;
-          &:nth-child(1) {
-            img:nth-child(1) {
-              display: none;
-            }
-          }
-          &:nth-last-child(1) {
-            img:nth-last-child(1) {
-              display: none;
-            }
-          }
+  section.program-slider {
+    position: relative;
+    height: 700px;
+    nav {
+      img {
+        position: absolute;
+        width: 40px;
+        top: 50%;
+        padding: 20px;
+        transform: translateY(-40px);
+        cursor: pointer;
+        z-index: 1;
+        &:hover {
+          opacity: 0.7;
         }
-        > li:nth-child(1) {
-          &:after {
-            content: 'Click to see more';
-            position: absolute;
-            color: $reddust-cream;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 15px;
-            left: 78vw;
-            max-width: 90px;
-            @media (max-width: 1000px) {
-              left: 73vw;
-              font-size: 14px;
-            }
-            @media (max-width: 700px) {
-              left: 80vw;
-              font-size: 12px;
-              max-width: 80px;
-              margin-top: 70px;
-            }
-            @media (max-width: 400px) {
-              left: 72vw;
-            }
-          }
-        }
-
-        div {
-          text-align: center;
-          margin: 0 auto;
-          color: white;
-          max-width: 415px;
-          @media (max-width: 800px) {
-            max-width: 330px;
-          }
-          @media (max-width: 710px) {
-            max-width: 310px;
-          }
-
-          h1 {
-            font-size: 40px;
-            @media (max-width: 1000px) {
-              font-size: 4vw;
-            }
-            @media (max-width: 580px) {
-              font-size: 22px;
-            }
-          }
-
-          h3 {
-            font-family: $montserrat-bold;
-            font-size: 18px;
-            margin-top: 20px;
-          }
-        }
-
-        img {
-          max-width: 40px;
-          position: absolute;
+        &.prev {
           left: 10vw;
-          margin-left: -40px;
-          padding: 20px;
-          @media (max-width: 1050px) {
-            width: 30px;
+        }
+        &.next {
+          right: 10vw;
+        }
+      }
+    }
+    ul {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 500vw;
+      height: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      li {
+        width: 100vw;
+        height: 100%;
+        background-size: cover;
+        background-position: 50% 50%;
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .slide-1 {
+          h1 {
+            font-size: 48px;
+            max-width: 420px;
+            line-height: 130%;
           }
         }
-        img:nth-last-child(1) {
-          max-width: 40px;
+        h2 {
+          font-size: 20px;
+        }
+        h3 {
+          font-family: $montserrat-bold;
+          font-size: 18px;
+          margin-top: 20px;
+        }
+        .see-more {
           position: absolute;
-          left: 90vw;
+          color: $reddust-cream;
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 15px;
+          right: 15vw;
+          max-width: 90px;
         }
       }
     }
-  }
-
-  #healthy-living-program {
-    background-image: url('/assets/img/work/programs-healthyliving-1.jpg');
-
-    div {
-      ul {
-        width: 400vw;
-
-        li {}
+    &#healthy-living {
+      .slide-1 {
+        background-image: url('/assets/img/work/programs/healthy-living-1.jpg');
+      }
+      .slide-2 {
+        background-image: url('/assets/img/work/programs/healthy-living-2.jpg');
+      }
+      .slide-3 {
+        background-image: url('/assets/img/work/programs/healthy-living-3.jpg');
+      }
+      .slide-4 {
+        background-image: url('/assets/img/work/programs/healthy-living-4.jpg');
       }
     }
-  }
-
-  #alcohol-education {
-    background-image: url('/assets/img/work/programs-alcohol-1.jpg');
-
-    div {
-      ul {
-        width: 300vw;
-
-        li {}
+    &#strong-yount-men {
+      .slide-1 {
+        background-image: url('/assets/img/work/programs/strong-young-men-1.jpg');
+      }
+      .slide-2 {
+        background-image: url('/assets/img/work/programs/strong-young-men-2.jpg');
+      }
+      .slide-3 {
+        background-image: url('/assets/img/work/programs/strong-young-men-3.jpg');
+      }
+      .slide-4 {
+        background-image: url('/assets/img/work/programs/strong-young-men-4.jpg');
       }
     }
-  }
-
-  #strong-young-women {
-    background-image: url('/assets/img/work/programs-strongwomen-1.jpg');
-
-    div {
-      ul {
-        height: 100%;
-        width: 200vw;
-
-        li {}
+    &#strong-young-women {
+      .slide-1 {
+        background-image: url('/assets/img/work/programs/strong-young-women-1.jpg');
+      }
+      .slide-2 {
+        background-image: url('/assets/img/work/programs/strong-young-women-2.jpg');
+      }
+      .slide-3 {
+        background-image: url('/assets/img/work/programs/strong-young-women-3.jpg');
       }
     }
   }

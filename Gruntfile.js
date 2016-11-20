@@ -137,7 +137,7 @@ module.exports = function(grunt) {
         files: {
           'dist/assets/js/main.js': [
             'bower_components/jquery/dist/jquery.min.js',
-            'src/js/localstorage_safari_private_shim.js',
+            'bower_components/velocity/velocity.min.js',
             'src/js/main.js'
           ]
         }
@@ -146,7 +146,7 @@ module.exports = function(grunt) {
         files: {
           'dist/assets/js/main.min.js': [
             'bower_components/jquery/dist/jquery.min.js',
-            'temp/js/localstorage_safari_private_shim.min.js',
+            'bower_components/velocity/velocity.min.js',
             'temp/js/main.min.js'
           ]
         }
