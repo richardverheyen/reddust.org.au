@@ -34,15 +34,15 @@ $(document).ready(function() {
       // if first slide, spring left and back
       if (!isAnimating) {
         $ul.velocity('stop')
-          .velocity({ translateX: '150px' }, 300, "easeOutQuad")
-          .velocity({ translateX: '0px' }, 300, "easeInSine");
+          .velocity({ translateX: '150px' }, 250, "easeOutQuad")
+          .velocity({ translateX: '0px' }, 250, "easeInSine");
       }
     } else if (newSlide > amountOfSlides) {
       // if last slide, spring right and back
       if (!isAnimating) {
         $ul.velocity('stop')
-          .velocity({ translateX: '-150px' }, 300, "easeOutQuad")
-          .velocity({ translateX: '0px' }, 300, "easeInSine");
+          .velocity({ translateX: '-150px' }, 250, "easeOutQuad")
+          .velocity({ translateX: '0px' }, 250, "easeInSine");
       }
     } else {
       // if not first or last slide, slide to next or previous slide
