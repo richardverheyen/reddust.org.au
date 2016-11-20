@@ -3,55 +3,104 @@
     background-image: url('/assets/img/about/misson-and-values/about-banner.jpg');
     background-position: 50% 20%;
   }
+
   #about-nav {
     a[href="/about/mission-and-values"] {
       color: $reddust-rust;
     }
   }
+
   #mission {
-    > div {
+    background-color: $reddust-yinnar;
+
+    div {
       display: flex;
+      justify-content: center;
       flex-flow: row nowrap;
       max-width: none;
       padding: 0;
+
       .image {
+        position: relative;
+        overflow: hidden;
+        @media (max-width: 750px) {
+          display: none;
+        }
+
         img {
-          width: 50vw;
-          height: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+          min-height: 100%;
+          min-width: 100%;
+          max-width: 700px;
         }
       }
+
       div {
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
         justify-content: center;
-        width: 50%;
-        height: 525px;
+        width: 50vw;
+        max-width: 700px;
         box-sizing: border-box;
         background-color: $reddust-cream;
+        @media (max-width: 750px) {
+          width: 100%;
+          max-width: 750px;
+        }
+
         h2 {
           font-family: $montserrat-bold;
           text-transform: uppercase;
           color: $reddust-rust;
-          margin: 20px;
+          margin: 80px auto 20px;
+          @media (max-width: 450px) {
+            font-size: 18px;
+            margin: 40px auto 10px;
+          }
         }
+
         p {
           line-height: 200%;
           max-width: 360px;
+          margin-bottom: 80px;
+          @media (max-width: 450px) {
+            font-size: 15px;
+            line-height: 160%;
+            padding: 0 20px;
+            margin-bottom: 40px;
+          }
         }
       }
     }
   }
+
   #mantra {
-    > div {
+    background-color: $reddust-yinnar;
+
+    div {
       display: flex;
+      justify-content: center;
       flex-flow: row nowrap;
       max-width: none;
       padding: 0;
+
       .image {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        @media (max-width: 750px) {
+          display: none;
+        }
+
         img {
-          width: auto;
-          min-height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
         }
       }
 
@@ -59,7 +108,12 @@
         display: block;
         box-sizing: border-box;
         background-color: $reddust-sunset;
-        width: 50%;
+        width: 50vw;
+        max-width: 700px;
+        @media (max-width: 750px) {
+          width: 100vw;
+          max-width: 750px;
+        }
 
         ul {
           color: $reddust-cream;
@@ -72,10 +126,17 @@
             flex-direction: column;
             position: relative;
             padding: 70px 0;
+            @media (max-width: 450px) {
+              padding: 30px 0;
+            }
 
             h2 {
               font-size: 45px;
               z-index: 1;
+              @media (max-width: 450px) {
+                font-size: 32px;
+              }
+
               &:after {
                 content: ' ';
                 position: absolute;
@@ -87,14 +148,27 @@
                 margin-top: -70px;
                 background: url('/assets/img/about/mission-and-values/red-dot.png') no-repeat 0 0 / 140px 140px;
                 z-index: -1;
+                @media (max-width: 450px) {
+                  width: 70px;
+                  height: 70px;
+                  background-size: cover;
+                  margin-left: -35px;
+                  margin-top: -35px;
+                }
               }
             }
+
             p {
               font-size: 22px;
               color: $reddust-bone;
               line-height: 140%;
+              text-align: center;
               max-width: 324px;
               margin: 0 auto;
+              @media (max-width: 450px) {
+                font-size: 18px;
+                padding: 0 20px;
+              }
             }
           }
         }
@@ -103,6 +177,7 @@
   }
 }
 // Keep outside #about-mission so we can use this on other pages as well
+
 #vision {
   display: flex;
   justify-content: center;
