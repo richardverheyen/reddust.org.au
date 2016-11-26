@@ -101,6 +101,9 @@ header {
           text-transform: uppercase;
           margin: 1px 0 1px 1vw;
           font-weight: bolder;
+          @media (max-width: 750px) {
+            flex-direction: row;
+          }
 
           a {
             display: flex;
