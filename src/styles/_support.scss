@@ -188,7 +188,7 @@
             font-size: 15px;
             line-height: 160%;
             padding: 0 20px;
-            margin-bottom: 40px;
+            margin: 20 auto 20px;
           }
         }
 
@@ -200,6 +200,9 @@
           &:hover {
             color: $reddust-sunset;
             border-color: $reddust-sunset;
+          }
+          @media (max-width: 450px) {
+            margin-bottom: 40px;
           }
         }
       }
