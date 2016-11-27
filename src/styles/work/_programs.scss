@@ -26,6 +26,9 @@
       p {
         line-height: 200%;
         max-width: 760px;
+        @media (max-width: 400px) {
+          font-size: 14px;
+        }
       }
     }
   }
