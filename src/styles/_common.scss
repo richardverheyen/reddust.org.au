@@ -314,6 +314,9 @@ section.tiles {
             display: flex;
             flex-flow: column nowrap;
             justify-content: center;
+            @media (max-width: 500px) {
+              padding: 20px;
+            }
 
             h2,
             h3 {
@@ -323,6 +326,11 @@ section.tiles {
               margin: 0 0 2px;
               font-size: 22px;
               line-height: 130%;
+            }
+            @media (max-width: 400px) {
+              h2 {
+                font-size: 18px;
+              }
             }
 
             h3 {
@@ -338,6 +346,9 @@ section.tiles {
               font-size: 13px;
               margin: 0 0 22px;
               overflow: hidden;
+              @media (max-width: 400px) {
+                font-size: 12px;
+              }
             }
 
             a.button {

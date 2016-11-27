@@ -271,79 +271,6 @@
       }
     }
   }
-  // #impact {
-  //   background-size: cover;
-  //
-  //   div {
-  //     display: flex;
-  //     justify-content: space-around;
-  //     align-items: center;
-  //     flex-direction: column;
-  //     color: $reddust-cream;
-  //
-  //     > h1 {
-  //       font-size: 45px;
-  //       text-transform: capitalize;
-  //       margin: 70px auto 0;
-  //       @media (max-width: 900px) {
-  //         font-size: 4vw;
-  //       }
-  //       @media (max-width: 600px) {
-  //         font-size: 24px;
-  //       }
-  //     }
-  //
-  //     > div {
-  //       display: flex;
-  //       justify-content: space-around;
-  //       align-items: flex-end;
-  //       flex-direction: row;
-  //       margin-top: 100px;
-  //
-  //       div {
-  //         display: flex;
-  //         justify-content: flex-end;
-  //         flex-direction: column;
-  //         text-align: center;
-  //         margin: 0 40px;
-  //
-  //         h1 {
-  //           color: $reddust-cream;
-  //           font-size: 80px;
-  //           margin: 0 auto 60px;
-  //         }
-  //
-  //         img {
-  //           max-width: 120px;
-  //           margin: 0 auto 45px;
-  //         }
-  //
-  //         h4 {
-  //           font-family: $montserrat-bold;
-  //           font-size: 20px;
-  //           text-transform: uppercase;
-  //           color: white;
-  //           margin: 0 auto;
-  //
-  //           span {
-  //             font-family: $from-where-you-are-regular;
-  //             font-size: 35px;
-  //           }
-  //         }
-  //       }
-  //     }
-  //
-  //     > a {
-  //       margin: 70px;
-  //
-  //       .button {
-  //         padding: 16px 55px;
-  //         color: $reddust-cream;
-  //         border-color: $reddust-cream;
-  //       }
-  //     }
-  //   }
-  // }
 
   #how-you-can-help {
     > div {
@@ -406,6 +333,9 @@
               img {
                 transform: scale(1.15);
               }
+              h3 {
+                color: $reddust-rust;
+              }
             }
 
             div {
@@ -423,7 +353,7 @@
 
             h3 {
               font-family: $montserrat-bold;
-              color: white;
+              color: $reddust-bone;
               text-transform: uppercase;
               background-color: $reddust-gold;
               z-index: 1;
