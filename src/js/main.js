@@ -27,10 +27,9 @@ if (!!ga) {
 
 $(document).ready(function() {
 
-  //mobile Dropdown Menu Toggle
+  // Open & close the mobile navigation
   var mobileNavActive = false;
   $('header nav button').on('click', function() {
-
     if (mobileNavActive) {
       $('body').removeClass('mobile-nav-active');
       mobileNavActive = false;
@@ -41,7 +40,6 @@ $(document).ready(function() {
         scrollTop: 0
       }, 200);
     }
-
   });
 
   // Animate the horizantal program sliders
@@ -78,6 +76,21 @@ $(document).ready(function() {
     }
   });
 
-  $('#about-people #people [src="/assets/img/people/"]').parents('.flip-container').addClass('hover');
+  $('.tiles.people li').on('click', function() {
+    var $h2 = $(this).find('h2').clone();
+    var $h3 = $(this).find('h3').clone();
+    var $p = $(this).find('p').clone();
+    var $img = $(this).find('image').clone() || null;
+    $('#modals .modal .content').html('').append($img).append($h2).append($h3).append($p);
+    $('#modals').show();
+  });
+
+  $('#modals .overlay').on('click', function() {
+    $('#modals').hide();
+  });
+
+  $('#modals .modal').on('click', function(event) {
+    event.stopPropagation();
+  });
 
 });
