@@ -29,7 +29,6 @@
 
     > div {
       z-index: 1;
-      position: relative;
       height: 57vw;
       display: flex;
       flex-flow: column wrap;
@@ -61,6 +60,8 @@
       }
 
       a {
+        position: absolute;
+        bottom: 10%;
         img {
           width: 70px;
           padding: 10px;

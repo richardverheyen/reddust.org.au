@@ -50,6 +50,9 @@ footer {
     > div {
       display: flex;
       justify-content: space-around;
+      @media (max-width: 400px) {
+        flex-direction: column;
+      }
     }
 
     h3 {
@@ -64,6 +67,9 @@ footer {
 
     ul {
       margin: 0 20px 0 0;
+      @media (max-width: 400px) {
+        margin: 15px 10px;
+      }
     }
 
     a {
