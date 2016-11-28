@@ -1,5 +1,11 @@
 {
   "partners": [{
+    "name": "Australian Government",
+    "logo": "australian-government-department-of-social-services.jpg",
+    "type": "program partner",
+    "intro": "At the beginning of 2016, the Australian Government Department of Social Services partnered with Red Dust to provide support for the Strong Young Women's Program.",
+    "url": "https://www.dss.gov.au/"
+  }, {
     "name": "Danone",
     "logo": "danone-nutricia.png",
     "type": "program partner",

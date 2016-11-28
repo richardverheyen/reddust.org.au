@@ -25,22 +25,18 @@
       </div>
     </section>
 
-    <section id="people" class="tiles partners">
+    <section id="people" class="tiles people">
       <div>
         <ul>
           {{#people}}
-            <li>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <img src="/assets/img/people/{{image}}" />
-                  </div>
-                  <div class="back">
-                    <h2>{{name}}</h2>
-                    <h3>{{position}}</h3>
-                    <p>{{intro}}</p>
-                  </div>
-                </div>
+            <li class="{{category}} {{#if image}}image{{else}}no-image{{/if}}">
+              <div>
+                {{#if image}}
+                <img src="/assets/img/people/{{image}}" alt="{{name}} - {{position}} at Red Dust" />
+                {{/if}}
+                <h2>{{name}}</h2>
+                <h3>{{role}}</h3>
+                <p>{{bio}}</p>
               </div>
             </li>
           {{/people}}
@@ -48,13 +44,16 @@
       </div>
     </section>
 
-    <!-- <section id="people" class="tiles people">
-      <div>
-        <ul>
-          {{> five-demo-people}} {{> five-demo-people}} {{> five-demo-people}} {{> five-demo-people}}
-        </ul>
+    <section id="modals">
+      <div class="overlay">
+        <div class="modal">
+          <button>Close</button>
+          <div class="content">
+            
+          </div>
+        </div>
       </div>
-    </section> -->
+    </section>
 
   {{/replace}}
 {{/extend}}
