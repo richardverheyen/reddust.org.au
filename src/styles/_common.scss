@@ -1,5 +1,4 @@
 // All headings, paragraphs and buttons will inherit these font styles from the <body>
-
 body {
   font-family: $montserrat-regular;
   font-style: normal;
@@ -12,8 +11,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: $reddust-bone;
 }
-// The general layout of the page
 
+// The general layout of the page
 footer,
 header,
 section {
@@ -28,14 +27,14 @@ section {
     overflow: hidden;
   }
 }
-// To avoid <img> and <iframe> to have weird white space below them, make them a block
 
+// To avoid <img> and <iframe> to have weird white space below them, make them a block
 iframe,
 img {
   display: block;
 }
-// In most cases we use <ul> not as bullet lists and thus we strip them of all browser defaults
 
+// In most cases we use <ul> not as bullet lists and thus we strip them of all browser defaults
 ul {
   list-style: none;
   margin: 0;
@@ -45,8 +44,8 @@ ul {
     padding: 0;
   }
 }
-// This is to override the browser default font-weight and margins
 
+// This is to override the browser default font-weight and margins
 h1,
 h2,
 h3,
@@ -59,16 +58,16 @@ h6 {
   line-height: 150%;
   margin: 0;
 }
-// Normal hyperlinks
 
+// Normal hyperlinks
 a {
   text-decoration: none;
   &:hover {
     text-decoration: none;
   }
 }
-// Buttons
 
+// Buttons
 a.button,
 button {
   display: inline-block;
@@ -82,7 +81,6 @@ button {
   border: $reddust-gold 1px solid;
   color: $reddust-gold;
   cursor: pointer;
-
   &.support {
     margin: 2px 0;
     &:hover {
@@ -90,7 +88,6 @@ button {
       border-color: $reddust-sunset;
     }
   }
-
   &.rust {
     background-color: $reddust-rust;
     &:hover {
@@ -98,7 +95,6 @@ button {
       border-color: $reddust-sunset;
     }
   }
-
   &.gold {
     color: $reddust-gold;
     border-color: $reddust-gold;
@@ -107,7 +103,6 @@ button {
       border-color: $reddust-cream;
     }
   }
-
   &.cream {
     color: $reddust-cream;
     border-color: $reddust-cream;
@@ -116,28 +111,22 @@ button {
       border-color: $reddust-sunset;
     }
   }
-
   &.large {
     padding: 0 50px;
     line-height: 46px;
   }
 }
-
 .rust {
   background-color: $reddust-rust;
 }
-
 .gold {
   background-color: $reddust-gold;
 }
-
 .sunset {
   background-color: $reddust-sunset;
 }
-
 .icon {
   cursor: pointer;
-
   img {
     height: auto;
   }
@@ -153,8 +142,8 @@ button {
     }
   }
 }
-//Header Mobile Navigation Toggle
 
+//Header Mobile Navigation Toggle
 .mobile-nav-active {
   header div nav ul {
     display: flex;
@@ -173,15 +162,15 @@ button {
     }
   }
 }
-// For the outdated browser message
 
+// For the outdated browser message
 #outdated {
   p {
     max-width: none;
   }
 }
-// Most hero sections share the same CSS
 
+// Most hero sections share the same CSS
 section#hero {
   overflow: hidden;
   @media (max-width: 500px) {
@@ -198,47 +187,28 @@ section#hero {
     }
   }
 }
-// Both partner and people tiles share the same tile layout styles
 
+// Both partner and people tiles share the same tile layout styles
 section.tiles {
   > div {
     padding: 0;
     max-width: 2400px;
   }
-
   ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-
     li {
       width: 16.666666vw;
       height: 16.666666vw;
-      // max-width: 400px;
-      // max-height: 400px;
       min-width: 160px;
       min-height: 160px;
       padding: 1px;
       box-sizing: border-box;
       background: $reddust-bone;
-      // @media (max-width: 2000px) {
-      //   width: 20vw;
-      //   height: 20vw;
-      // }
-      // @media (max-width: 1600px) {
-      //   width: 25vw;
-      //   height: 25vw;
-      // }
-      // @media (max-width: 900px) {
-      //   width: 33.3333vw;
-      //   height: 33.3333vw;
-      // }
-      // @media (max-width: 600px) {
-      //   width: 50vw;
-      //   height: 50vw;
-      // }
     }
   }
+
   // Partner tiles 3D flip from logo to description
   &.partners {
     li {
@@ -262,7 +232,6 @@ section.tiles {
         width: 100vw;
         height: 100vw;
       }
-
       .flip-container {
         perspective: 1000px;
         width: 100%;
@@ -273,14 +242,12 @@ section.tiles {
             transform: rotateY(180deg);
           }
         }
-
         .flipper {
           position: relative;
           transition: 0.6s;
           transform-style: preserve-3d;
           width: 100%;
           height: 100%;
-
           .back,
           .front {
             width: 100%;
@@ -290,7 +257,6 @@ section.tiles {
             top: 0;
             left: 0;
           }
-
           .front {
             z-index: 2;
             transform: rotateY(0deg);
@@ -298,13 +264,11 @@ section.tiles {
             display: flex;
             align-items: center;
             justify-content: center;
-
             img {
               width: 80%;
               height: 80%;
             }
           }
-
           .back {
             transform: rotateY(180deg);
             background-color: $reddust-sunset;
@@ -338,7 +302,6 @@ section.tiles {
               margin: 0 0 13px;
               color: $reddust-rust;
             }
-
             p {
               font-family: $montserrat-regular;
               color: $reddust-cream;
@@ -350,7 +313,6 @@ section.tiles {
                 font-size: 12px;
               }
             }
-
             a.button {
               border: 1px solid $reddust-rust;
               color: $reddust-rust;
@@ -365,6 +327,7 @@ section.tiles {
       }
     }
   }
+
   // People tiles open a lightbox when clicked upon
   &.people {
     li {
@@ -373,61 +336,106 @@ section.tiles {
       padding: 0;
       background: $reddust-rust;
       overflow: hidden;
-
-      > img {
-        width: 100%;
-        height: auto;
-        transition: transform 500ms ease;
+      @media (max-width: 2100px) {
+        width: 20vw;
+        height: 20vw;
       }
-
-      > h2 {
-        font-family: $montserrat-bold;
-        font-size: 15px;
-        line-height: 100%;
-        text-transform: uppercase;
-        letter-spacing: 0.4px;
-        color: white;
-        position: absolute;
-        bottom: 6%;
-        right: 7%;
+      @media (max-width: 1700px) {
+        width: 25vw;
+        height: 25vw;
       }
-
-      .no-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+      @media (max-width: 1300px) {
+        width: 33.3333vw;
+        height: 33.3333vw;
+      }
+      @media (max-width: 900px) {
+        width: 50vw;
+        height: 50vw;
+      }
+      @media (max-width: 500px) {
+        width: 100vw;
+        height: 100vw;
+      }
+      &:nth-child(4n+1) {
+        background: $reddust-yinnar;
+      }
+      &:nth-child(4n+2) {
         background: $reddust-rust;
-        text-align: center;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        transition: transform 500ms ease;
-
+      }
+      &:nth-child(4n+3) {
+        background: $reddust-sunset;
+      }
+      &:nth-child(4n+4) {
+        background: $reddust-gold;
+      }
+      &.image {
+        &:hover {
+          img {
+            transform: scale(1.06);
+          }
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          transition: transform 500ms ease;
+        }
+        h2 {
+          font-family: $montserrat-bold;
+          font-size: 20px;
+          line-height: 130%;
+          text-transform: uppercase;
+          letter-spacing: 0.4px;
+          color: white;
+          position: absolute;
+          bottom: 4.5%;
+          right: 7%;
+          text-shadow: 0 0 10px RGBA(0,0,0,0.2);
+        }
+        h3 {
+          display: none;
+        }
+      }
+      &.no-image {
+        &:hover {
+          > div {
+            transform: scale(1.06);
+          }
+        }
+        > div {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          text-align: center;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          transition: transform 500ms ease;
+        }
         h2,
         h3 {
-          font-family: $montserrat-bold;
           text-transform: uppercase;
-          color: white;
-          font-size: 22px;
-          line-height: 150%;
-          color: white;
+          padding: 0 4vw;
+          line-height: 130%;
         }
-
+        h2 {
+          font-family: $montserrat-bold;
+          font-size: 30px;
+          color: $reddust-bone;
+          margin-bottom: 10px;
+        }
         h3 {
-          font-size: 18px;
+          font-family: $montserrat-regular;
+          font-size: 22px;
           color: $reddust-cream;
+          letter-spacing: 0.5px;
         }
       }
-      &:hover {
-        .no-image,
-        img {
-          transform: scale(1.06);
-        }
+      p {
+        display: none;
       }
     }
-
     .modal {
       position: fixed;
       z-index: -1;

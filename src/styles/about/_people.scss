@@ -11,10 +11,21 @@
     display: none;
     background: $reddust-stone;
   }
-  #people {
-    img {
-      width: 100%;
-      height: 100%;
+  #modals {
+    display: none;
+    .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: RGBA(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .modal {
+        background: $reddust-bone;
+      }
     }
   }
 }
