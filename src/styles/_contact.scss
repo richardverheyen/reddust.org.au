@@ -1,9 +1,4 @@
 #contact {
-  background-color: $reddust-yinnar;
-
-  #hero {
-    background-image: url('/assets/img/contact/contact-banner.jpg');
-  }
 
   #title {
     background-color: $reddust-sunset;
@@ -27,6 +22,7 @@
 
   #address {
     display: block;
+    background-color: $reddust-yinnar;
 
     > div {
       display: flex;
@@ -109,6 +105,7 @@
 
   #actions {
     display: block;
+    background-color: $reddust-yinnar;
 
     > div {
       display: flex;
