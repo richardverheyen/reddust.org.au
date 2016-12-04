@@ -79,6 +79,7 @@ button {
   border: $reddust-gold 1px solid;
   color: $reddust-gold;
   cursor: pointer;
+  outline: 0;
   &.support {
     margin: 2px 0;
     &:hover {
@@ -311,9 +312,42 @@ section.tiles {
         display: none;
       }
     }
+  }
+}
+
+#modals {
+  display: none;
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: RGBA(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
     .modal {
-      position: fixed;
-      z-index: -1;
+      position: relative;
+      background: $reddust-bone;
+      svg {
+        width: 20px;
+        height: 20px;
+        padding: 20px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        &:hover {
+          path[fill="#D66839"] {
+            fill: $reddust-rust;
+          }
+        }
+      }
+      .content {
+        padding: 30px;
+      }
     }
   }
 }

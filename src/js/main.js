@@ -76,19 +76,22 @@ $(document).ready(function() {
     }
   });
 
+  // Clicking a person opens the modal
   $('.tiles.people li').on('click', function() {
     var $h2 = $(this).find('h2').clone();
     var $h3 = $(this).find('h3').clone();
     var $p = $(this).find('p').clone();
-    var $img = $(this).find('image').clone() || null;
+    var $img = $(this).find('img').clone() || null;
     $('#modals .modal .content').html('').append($img).append($h2).append($h3).append($p);
     $('#modals').show();
   });
 
-  $('#modals .overlay').on('click', function() {
+  // Clicking the modal overlay or close button closes the modal
+  $('#modals').find('.overlay, .modal>svg').on('click', function() {
     $('#modals').hide();
   });
 
+  // Prevent the modal from closing when clicking inside the modal box
   $('#modals .modal').on('click', function(event) {
     event.stopPropagation();
   });
