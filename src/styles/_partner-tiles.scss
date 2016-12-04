@@ -1,0 +1,145 @@
+section.tiles.partners {
+  > div {
+    padding: 0;
+    max-width: 2400px;
+  }
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  li {
+    padding: 1px;
+    box-sizing: border-box;
+    background: $reddust-bone;
+    // The minimum size a tile should have to fit the biggest partner bio (Drinkwise Australia)
+    min-width: 360px;
+    min-height: 360px;
+    // Everything above 2160px gets 7 columns
+    width: 14.28vw;
+    height: 14.28vw;
+    // 5 columns
+    @media (max-width: 2160px) {
+      width: 20vw;
+      height: 20vw;
+    }
+    // 4 columns
+    @media (max-width: 1800px) {
+      width: 25vw;
+      height: 25vw;
+    }
+    // 3 columns
+    @media (max-width: 1440px) {
+      width: 33.3333vw;
+      height: 33.3333vw;
+    }
+    // 2 columns
+    @media (max-width: 1080px) {
+      width: 50vw;
+      height: 50vw;
+    }
+    // 3 columns, below 720px is lightbox, above 720px is flippers
+    @media (max-width: 720px) {
+      // The minimum size to fit 2 tiles next to each other on mobile screens
+      width: 33.3333vw;
+      height: 33.3333vw;
+      min-width: 160px;
+      min-height: 160px;
+    }
+    // 2 columns for iPhone 4
+    @media (max-width: 480px) {
+      width: 50vw;
+      height: 50vw;
+    }
+
+    .flip-container {
+      perspective: 1000px;
+      width: 100%;
+      height: 100%;
+      &.hover,
+      &:hover {
+        .flipper {
+          // We don't want the partner tiles to flip on mobile screens, instead we'd open a lightbox
+          @media (min-width: 721px) {
+            transform: rotateY(180deg);
+          }
+        }
+      }
+      .flipper {
+        position: relative;
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        width: 100%;
+        height: 100%;
+        .back,
+        .front {
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .front {
+          z-index: 2;
+          transform: rotateY(0deg);
+          background: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 80%;
+            height: 80%;
+          }
+        }
+        .back {
+          transform: rotateY(180deg);
+          background-color: $reddust-sunset;
+          box-sizing: border-box;
+          padding: 33px;
+          text-align: center;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          h2,
+          h3 {
+            font-family: $montserrat-bold;
+            text-transform: uppercase;
+            color: white;
+            margin: 0 0 2px;
+            font-size: 22px;
+            line-height: 130%;
+          }
+          @media (max-width: 400px) {
+            h2 {
+              font-size: 18px;
+            }
+          }
+
+          h3 {
+            font-size: 13px;
+            margin: 0 0 13px;
+            color: $reddust-rust;
+          }
+          p {
+            font-family: $montserrat-regular;
+            color: $reddust-cream;
+            line-height: 130%;
+            font-size: 13px;
+            margin: 0 0 17px;
+            overflow: hidden;
+          }
+          a.button {
+            border: 1px solid $reddust-rust;
+            color: $reddust-rust;
+            margin: 0 auto;
+            padding: 0 20px;
+            &:hover {
+              background: rgba($reddust-rust, 0.2);
+            }
+          }
+        }
+      }
+    }
+  }
+}
