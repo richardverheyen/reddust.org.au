@@ -173,6 +173,7 @@ section#hero {
   overflow: hidden;
   position: relative;
   min-height: 300px;
+  background-color: $reddust-yinnar;
   @media (min-width: 1700px) {
     display: flex;
     justify-content: center;

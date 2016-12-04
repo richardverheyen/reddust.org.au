@@ -25,11 +25,12 @@
 
         img {
           position: absolute;
-          top: 0;
-          left: 0;
+          top: 50%;
+          left: 50%;
           min-height: 100%;
           min-width: 100%;
-          max-width: 700px;
+          max-width: 843px;
+          transform: translate(-50%,-50%);
         }
       }
 
@@ -40,7 +41,7 @@
         text-align: center;
         justify-content: center;
         width: 50vw;
-        max-width: 700px;
+        max-width: 843px;
         box-sizing: border-box;
         background-color: $reddust-cream;
         @media (max-width: 750px) {
@@ -97,6 +98,10 @@
           top: 0;
           left: 0;
           height: 100%;
+          @media (min-width: 1572px) {
+            height: auto;
+            width: 100%;
+          }
         }
       }
 
@@ -105,7 +110,7 @@
         box-sizing: border-box;
         background-color: $reddust-sunset;
         width: 50vw;
-        max-width: 700px;
+        max-width: 843px;
         @media (max-width: 750px) {
           width: 100vw;
           max-width: 750px;
@@ -178,7 +183,7 @@
   justify-content: center;
   align-items: center;
   height: 50vw;
-  max-height: 700px;
+  max-height: 843px;
   min-height: 400px;
   background-image: url('/assets/img/about/mission-and-values/kids-jumping-for-rugby@2x.jpg');
   background-size: cover;
