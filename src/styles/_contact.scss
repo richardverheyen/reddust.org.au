@@ -29,7 +29,7 @@
       padding: 0;
       margin: auto;
       width: 100%;
-      max-width: 1200px;
+      max-width: 1686px;
       background-color: $reddust-cream;
       @media (max-width: 700px) {
         flex-direction: column;
@@ -39,7 +39,7 @@
         flex-direction: column;
         text-align: center;
         width: 50vw;
-        max-width: 700px;
+        max-width: 843px;
         @media (max-width: 700px) {
           width: 100vw;
         }
@@ -112,7 +112,7 @@
       padding: 0;
       margin: auto;
       width: 100vw;
-      max-width: 1200px;
+      max-width: 1686px;
 
       ul {
         display: flex;
@@ -122,14 +122,14 @@
         }
 
         li {
-          display: block;
+          display: flex;
           flex-direction: column;
           align-items: center;
           text-align: center;
           width: 33.33vw;
           height: 33.33vw;
-          max-width: 400px;
-          max-height: 400px;
+          max-width: 562px;
+          max-height: 562px;
           background-color: $reddust-sunset;
           @media (max-width: 1040px) {
             width: 100vw;
@@ -175,6 +175,7 @@
             justify-content: center;
             align-items: center;
             padding: 10%;
+            margin: auto 0;
             color: $reddust-bone;
             @media (max-width: 1040px) {
               padding: 5vw;

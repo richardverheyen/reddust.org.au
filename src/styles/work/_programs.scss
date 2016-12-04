@@ -35,27 +35,45 @@
 
   section.program-slider {
     position: relative;
-    min-height: 700px;
-    height: 100vh;
+    max-height: 800px;
+    min-height: 480px;
+    height: 55vw;
+    width: 100vw;
+    overflow: hidden;
     nav {
       img {
         position: absolute;
-        height: 120px;
+        height: 94px;
         top: 50%;
         padding: 20px;
         cursor: pointer;
         z-index: 1;
         transform: translateY(-60px);
+        @media (max-width: 1200px) {
+          height: 8vw;
+        }
+        @media (max-width: 450px) {
+          height: 30px;
+          padding: 10px;
+        }
         &:hover {
           opacity: 0.7;
         }
         &.prev {
           left: 8vw;
           padding-right: 100px;
+          @media (max-width: 450px) {
+            left: 0;
+            top: 56%;
+          }
         }
         &.next {
           right: 8vw;
           padding-left: 100px;
+          @media (max-width: 450px) {
+            right: 0;
+            top: 56%;
+          }
         }
       }
     }
@@ -85,6 +103,16 @@
             line-height: 130%;
             color: $reddust-cream;
             margin-top: 110px;
+            @media (max-width: 1200px) {
+              font-size: 4vw;
+              margin-top: 20px;
+              max-width: 40vw;
+            }
+            @media (max-width: 500px) {
+              font-size: 20px;
+              margin-top: 0;
+              max-width: 200px;
+            }
           }
           h2 {
             font-family: $montserrat-bold;
@@ -92,6 +120,12 @@
             font-size: 26px;
             line-height: 130%;
             margin-top: 30px;
+            @media (max-width: 800px) {
+              font-size: 3.5vw;
+            }
+            @media (max-width: 500px) {
+              font-size: 18px;
+            }
           }
           p.see-more {
             font-family: $montserrat-bold;
@@ -100,14 +134,31 @@
             text-align: center;
             text-transform: uppercase;
             font-size: 15px;
-            right: 15vw;
-            top: 50%;
+            right: 8vw;
+            top: 62%;
             max-width: 90px;
             margin: 0;
             line-height: 140%;
+            @media (max-width: 800px) {
+              font-size: 2vw;
+            }
+            @media (max-width: 500px) {
+              font-size: 10px;
+              right: 5vw;
+              top: 55%;
+            }
+            @media (max-width: 450px) {
+              right: 3vw;
+            }
+            @media (max-width: 380px) {
+              right: 1vw;
+            }
           }
         }
         &.slide-2 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           text-align: left;
           > div {
             max-width: 520px;
@@ -116,27 +167,60 @@
             color: $reddust-gold;
             font-size: 20px;
             margin: 20px 0;
+            max-width: 80vw;
+            @media (max-width: 400px) {
+              margin: 10px 0;
+              font-size: 14px;
+            }
           }
           p {
             font-family: $montserrat-regular;
             font-size: 15px;
             line-height: 160%;
-            margin: 0;
+            margin: 0 auto;
+            max-width: 80vw;
+            @media (max-width: 400px) {
+              font-size: 11px;
+            }
+
           }
         }
         &.slide-3 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           h3 {
             font-size: 20px;
             color: $reddust-sunset;
             font-family: $montserrat-bold;
-            margin: 20px 0 10px;
+            margin: 20px auto 10px;
+            max-width: 80vw;
+
           }
           h1 {
             font-size: 38px;
             color: $reddust-rust;
+            max-width: 80vw;
+            margin: 0 auto;
+            @media (max-width: 400px) {
+              font-size: 15px;
+            }
+          }
+          img {
+            margin: 0 auto;
+            @media (max-width: 800px) {
+              transform: none;
+            }
+            @media (max-width: 450px) {
+              width: 90vw;
+              margin-top: 35px;
+            }
           }
         }
         &.slide-4 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           > div {
             max-width: 520px;
             text-align: left;
@@ -145,22 +229,33 @@
               text-align: center;
               font-size: 40px;
               margin-bottom: 40px;
+              max-width: 76vw;
+              @media (max-width: 400px) {
+                font-size: 15px;
+              }
             }
             h2 {
               font-size: 22px;
               margin: 20px 0;
+              max-width: 76vw;
+
             }
             h3 {
               font-family: $montserrat-bold;
               text-transform: uppercase;
+              max-width: 76vw;
+
             }
             > h3 {
               text-align: center;
+              max-width: 76vw;
 
             }
             p {
               line-height: 160%;
               font-size: 15px;
+              max-width: 76vw;
+
             }
             .dates {
               display: flex;
@@ -173,10 +268,14 @@
                   font-size: 28px;
                   font-size: 20px;
                   margin-bottom: 6px;
+                  max-width: 76vw;
+
                 }
                 p {
-                  margin: 0;
+                  margin: 0 auto;
                   font-size: 16px;
+                  max-width: 76vw;
+
                 }
               }
             }
@@ -193,9 +292,9 @@
       }
       .slide-3 {
         background-image: url('/assets/img/work/programs/healthy-living-3.jpg');
-        img {
-          transform: translateY(-15px) translateX(-10px);
-        }
+        // img {
+        //   transform: translateY(-15px) translateX(-10px);
+        // }
       }
       .slide-4 {
         background-image: url('/assets/img/work/programs/healthy-living-4.jpg');
@@ -210,9 +309,9 @@
       }
       .slide-3 {
         background-image: url('/assets/img/work/programs/strong-young-men-3.jpg');
-        img {
-          transform: translateY(-28px) translateX(-15px);
-        }
+        // img {
+        //   transform: translateY(-28px) translateX(-15px);
+        // }
       }
       .slide-4 {
         background-image: url('/assets/img/work/programs/strong-young-men-4.jpg');
@@ -227,9 +326,9 @@
       }
       .slide-3 {
         background-image: url('/assets/img/work/programs/strong-young-women-3.jpg');
-        img {
-          transform: translateY(-20px) translateX(-15px);
-        }
+        // img {
+        //   transform: translateY(-20px) translateX(-15px);
+        // }
       }
     }
   }
