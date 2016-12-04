@@ -1,22 +1,4 @@
 #music-videos {
-  #hero {
-    overflow: hidden;
-    img {
-      width: 100vw;
-      height: auto;
-      transition: ease-in-out 500ms all;
-      @media (max-width: 620px) {
-        width: auto;
-        height: 300px;
-      }
-      @media (max-width: 500px) {
-        margin-left: -130px;
-      }
-      @media (max-width: 400px) {
-        margin-left: -220px;
-      }
-    }
-  }
 
   #work-nav {
     a[href="/work/music-videos"] {
