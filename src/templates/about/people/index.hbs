@@ -32,11 +32,15 @@
             <li class="{{category}} {{#if image}}image{{else}}no-image{{/if}}">
               <div>
                 {{#if image}}
-                <img src="/assets/img/people/{{image}}" alt="{{name}} - {{position}} at Red Dust" />
+                <div class="img">
+                  <img src="/assets/img/people/{{image}}" alt="{{name}} - {{position}} at Red Dust" />
+                </div>
                 {{/if}}
-                <h2>{{name}}</h2>
-                <h3>{{role}}</h3>
-                <p>{{bio}}</p>
+                <div class="bio">
+                  <h2>{{name}}</h2>
+                  <h3>{{role}}</h3>
+                  <p>{{bio}}</p>
+                </div>
               </div>
             </li>
           {{/people}}

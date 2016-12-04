@@ -237,6 +237,8 @@ section.tiles {
       padding: 0;
       background: $reddust-rust;
       overflow: hidden;
+      min-width: 160px;
+      min-height: 160px;
       @media (max-width: 2100px) {
         width: 20vw;
         height: 20vw;
@@ -253,10 +255,6 @@ section.tiles {
         width: 50vw;
         height: 50vw;
       }
-      @media (max-width: 500px) {
-        width: 100vw;
-        height: 100vw;
-      }
       &:nth-child(4n+1) {
         background: $reddust-yinnar;
       }
@@ -267,6 +265,18 @@ section.tiles {
         background: $reddust-sunset;
       }
       &:nth-child(4n+4) {
+        background: $reddust-gold;
+      }
+      &:nth-child(7n+1) {
+        background: $reddust-yinnar;
+      }
+      &:nth-child(7n-2) {
+        background: $reddust-rust;
+      }
+      &:nth-child(7n+2) {
+        background: $reddust-sunset;
+      }
+      &:nth-child(7n+5) {
         background: $reddust-gold;
       }
       &.image {
@@ -353,6 +363,7 @@ section.tiles {
     align-items: center;
     justify-content: center;
     padding: 30px;
+    max-width: none;
     .modal {
       position: relative;
       background: $reddust-bone;
@@ -364,14 +375,12 @@ section.tiles {
         right: 10px;
         top: 10px;
         cursor: pointer;
+        background: $reddust-bone;
         &:hover {
           path[fill="#D66839"] {
             fill: $reddust-rust;
           }
         }
-      }
-      .content {
-        padding: 30px;
       }
     }
   }
@@ -387,13 +396,11 @@ section.tiles {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-
     h1 {
       font-size: 30px;
       margin-bottom: 20px;
       color: $reddust-rust;
     }
-
     h2 {
       font-size: 20px;
       color: $reddust-sunset;

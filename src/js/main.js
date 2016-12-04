@@ -78,12 +78,16 @@ $(document).ready(function() {
 
   // Clicking a person opens the modal
   $('.tiles.people li').on('click', function() {
-    var $h2 = $(this).find('h2').clone();
-    var $h3 = $(this).find('h3').clone();
-    var $p = $(this).find('p').clone();
-    var $img = $(this).find('img').clone() || null;
-    $('#modals .modal .content').html('').append($img).append($h2).append($h3).append($p);
+    var $bio = $(this).find('.bio').clone();
+    var $img = $(this).find('.img').clone();
+    var $modal = $('#modals .modal');
+    $('#modals .modal .content').html('').append($img).append($bio);
     $('#modals').show();
+    if ($img.length) {
+      $modal.addClass('has-image');
+    } else {
+      $modal.removeClass('has-image');
+    }
   });
 
   // Clicking the modal overlay or close button closes the modal
