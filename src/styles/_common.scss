@@ -172,9 +172,13 @@ button {
 
 // Most hero sections share the same CSS
 section#hero {
+  display: flex;
+  justify-content: center;
   overflow: hidden;
-  max-height: 600px;
+  max-height: 800px;
   min-height: 300px;
+  height: 40vw;
+
   img {
     width: 100vw;
     height: auto;
