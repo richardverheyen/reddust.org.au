@@ -1,13 +1,5 @@
 #about-reports {
 
-  #hero {
-    img {
-      @media (min-width: 1500px) {
-        top: 0;
-      }
-    }
-  }
-
   #about-nav {
     a[href="/about/reports"] {
       color: $reddust-rust;

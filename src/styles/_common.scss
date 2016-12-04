@@ -170,21 +170,42 @@ button {
 
 // Most hero sections share the same CSS
 section#hero {
-  display: flex;
-  justify-content: center;
   overflow: hidden;
-  max-height: 800px;
+  position: relative;
   min-height: 300px;
-  height: 40vw;
+  @media (min-width: 1700px) {
+    display: flex;
+    justify-content: center;
+  }
 
   img {
     width: 100vw;
     height: auto;
+    max-height: 800px;
     @media (max-width: 632px) {
-      min-height: 100%;
-      min-width: 100%;
-      width: auto;
+      position: absolute;
+      top: 0;
       height: 300px;
+      width: auto;
+    }
+    @media (min-width: 1700px) {
+      height: 800px;
+      width: auto;
+    }
+  }
+  &.right {
+    img {
+      @media (max-width: 632px) {
+        right: 0;
+      }
+    }
+  }
+  &.center {
+    img {
+      @media (max-width: 632px) {
+        left: 50vw;
+        transform: translateX(-50%);
+      }
     }
   }
 }
