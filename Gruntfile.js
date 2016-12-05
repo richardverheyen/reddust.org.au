@@ -3,6 +3,7 @@ module.exports = function(grunt) {
   'use strict';
 
   require('time-grunt')(grunt);
+  require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
 
   grunt.initConfig({
 
@@ -107,15 +108,53 @@ module.exports = function(grunt) {
       }
     },
 
-    jshint: {
-      files: ['src/js/main.js'],
+    // jshint: {
+    //   files: ['src/js/main.js'],
+    //   options: {
+    //     force: false,
+    //     globals: {
+    //       jQuery: true,
+    //       console: true,
+    //       module: true,
+    //       document: true
+    //     }
+    //   }
+    // },
+
+    // eslint: {
+    //   all: ['src/js/main.js']
+    // },
+
+    eslint: {
+
+      files: {
+        options: {
+          configFile: 'eslint.json',
+          fix: true,
+          rulesdir: ['eslint_rules']
+        },
+        src: ['src/js/main.js']
+      }
+
+      // options: {
+      //   config: 'eslint.json',
+      //   silent: true
+      // },
+      // src: ['src/js/main.js']
+    },
+
+    // eslint: {
+    //   src: ['src/js/main.js']
+    // },
+
+    babel: {
       options: {
-        force: false,
-        globals: {
-          jQuery: true,
-          console: true,
-          module: true,
-          document: true
+        sourceMap: true,
+        presets: ['es2015']
+      },
+      dist: {
+        files: {
+          'temp/js/main.js': 'src/js/main.js'
         }
       }
     },
@@ -123,7 +162,7 @@ module.exports = function(grunt) {
     uglify: {
       dist: {
         files: {
-          'temp/js/main.min.js': ['src/js/main.js'],
+          'temp/js/main.min.js': ['temp/js/main.js'],
           'temp/js/localstorage_safari_private_shim.min.js': ['src/js/localstorage_safari_private_shim.js'],
           'dist/assets/js/outdated-browser.min.js': ['src/js/outdated-browser.js']
         }
@@ -231,7 +270,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
+  // grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('gruntify-eslint');
+  // grunt.loadNpmTasks("grunt-contrib-eslint");
+  // grunt.loadNpmTasks('eslint-grunt');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   // grunt.loadNpmTasks('grunt-html-prettyprinter');
@@ -247,7 +289,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['clean', 'copy', 'build-HTML', 'build-CSS', 'build-JS', 'sitemap']);
   grunt.registerTask('build-HTML', ['handlebarslayouts']);
   grunt.registerTask('build-CSS', ['sass', 'postcss']);
-  grunt.registerTask('build-JS', ['jshint', 'uglify', 'concat', 'clean:temp']);
+  grunt.registerTask('build-JS', ['eslint', 'babel', 'uglify', 'concat', 'clean:temp']);
   grunt.registerTask('sitemap', ['xml_sitemap', 'replace:sitemap_dist']);
   grunt.registerTask('serve', ['connect', 'watch']);
 
