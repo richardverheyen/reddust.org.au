@@ -33,6 +33,7 @@ function openModal() {
   if (!$modal.hasClass('velocity-animating')) {
     $('body').addClass('prevent-scroll'); // prevent users from scrolling the content behind the modal
     $('#modals').show();
+    checkModalCentre();
     $overlay.velocity('stop').velocity({
       opacity: 1
     }, speed, easing);
@@ -59,6 +60,21 @@ function closeModal() {
       $('#modals').hide();
       $('body').removeClass('prevent-scroll');
     });
+  }
+}
+
+function checkModalCentre() {
+  var $overlay = $('#modals .overlay');
+  var $modal = $('#modals .modal');
+  var windowHeight = $(window).height();
+  var modalHeight = $modal.height() + 40;
+  console.log('has modal and overlay', windowHeight, modalHeight);
+  if (modalHeight > windowHeight) {
+    $overlay.removeClass('centre-content');
+    console.log('top');
+  } else {
+    $overlay.addClass('centre-content');
+    console.log('centre');
   }
 }
 
@@ -136,5 +152,22 @@ $(document).ready(function() {
   $('#modals .modal').on('click', function(event) {
     event.stopPropagation();
   });
+
+  // button closes the modal
+  $('#modals').find('.overlay, .modal>svg').on('click', function() {
+    closeModal();
+  });
+
+  // Prevent the modal from closing when clicking inside the modal box
+  $('#modals .modal').on('click', function(event) {
+    event.stopPropagation();
+  });
+
+  // If this page has modals, check the centre on each resize of screen
+  if ($('#modals').length) {
+    $(window).resize(function() {
+      checkModalCentre();
+    });
+  }
 
 });

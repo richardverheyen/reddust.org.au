@@ -355,34 +355,62 @@ section.tiles {
 
 #modals {
   display: none;
-  .overlay {
+  > div {
+    position: fixed;
+    z-index: 2;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
     position: fixed;
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    background: RGBA(0,0,0,0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 20px;
+    min-width: 320px;
     max-width: none;
-    opacity: 0;
-    .modal {
-      position: relative;
-      background: $reddust-bone;
-      svg {
-        width: 20px;
-        height: 20px;
-        padding: 20px;
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        cursor: pointer;
+    @media (max-width: 400px) {
+      padding: 10px;
+    }
+    .overlay {
+      position: fixed;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      background: rgba(black, .5);
+      background: rgba($reddust-rust, .8);
+      user-select: none;
+      padding: 20px;
+      min-width: 320px;
+      box-sizing: border-box;
+      max-width: none;
+      display: flex;
+      justify-content: center;
+      &.centre-content {
+        align-items: center;
+      }
+      .modal {
+        position: relative;
         background: $reddust-bone;
-        &:hover {
-          path[fill="#D66839"] {
-            fill: $reddust-rust;
+        svg {
+          width: 20px;
+          height: 20px;
+          padding: 20px;
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          cursor: pointer;
+          background: $reddust-bone;
+          &:hover {
+            path[fill="#D66839"] {
+              fill: $reddust-rust;
+            }
           }
         }
       }
