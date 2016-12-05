@@ -25,6 +25,43 @@ if (!!ga) {
   ga('send', 'pageview');
 }
 
+function openModal() {
+  var speed = 700;
+  var easing = 'easeOutExpo';
+  var $overlay = $('#modals .overlay');
+  var $modal = $('#modals .modal');
+  if (!$modal.hasClass('velocity-animating')) {
+    $('body').addClass('prevent-scroll'); // prevent users from scrolling the content behind the modal
+    $('#modals').show();
+    $overlay.velocity('stop').velocity({
+      opacity: 1
+    }, speed, easing);
+    $modal.velocity('stop').velocity({
+      translateY: ['0%', '30%'],
+      scale: [1, 0.9]
+    }, speed, easing);
+  }
+}
+
+function closeModal() {
+  var speed = 400;
+  var easing = 'easeOutExpo';
+  var $overlay = $('#modals .overlay');
+  var $modal = $('#modals .modal');
+  if (!$modal.hasClass('velocity-animating')) {
+    $overlay.velocity('stop').velocity({
+      opacity: 0
+    }, speed, easing);
+    $modal.velocity('stop').velocity({
+      translateY: '30%',
+      scale: 0.9
+    }, speed, easing, function() {
+      $('#modals').hide();
+      $('body').removeClass('prevent-scroll');
+    });
+  }
+}
+
 $(document).ready(function() {
 
   // Open & close the mobile navigation
@@ -82,7 +119,7 @@ $(document).ready(function() {
     var $img = $(this).find('.img').clone();
     var $modal = $('#modals .modal');
     $('#modals .modal .content').html('').append($img).append($bio);
-    $('#modals').show();
+    openModal();
     if ($img.length) {
       $modal.addClass('has-image');
     } else {
@@ -92,7 +129,7 @@ $(document).ready(function() {
 
   // Clicking the modal overlay or close button closes the modal
   $('#modals').find('.overlay, .modal>svg').on('click', function() {
-    $('#modals').hide();
+    closeModal();
   });
 
   // Prevent the modal from closing when clicking inside the modal box

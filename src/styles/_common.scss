@@ -10,6 +10,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $reddust-bone;
+  &.prevent-scroll {
+    overflow: hidden;
+  }
 }
 
 // The general layout of the page
@@ -364,6 +367,7 @@ section.tiles {
     justify-content: center;
     padding: 30px;
     max-width: none;
+    opacity: 0;
     .modal {
       position: relative;
       background: $reddust-bone;
