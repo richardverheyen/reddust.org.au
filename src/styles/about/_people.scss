@@ -25,8 +25,8 @@
     }
     .content {
       padding: 4vw;
-      @media (min-width: 1080px) {
-        padding: 60px;
+      @media (min-width: 1250px) {
+        padding: 50px;
       }
       @media (max-width: 750px) {
         padding: 30px;
@@ -37,9 +37,9 @@
       }
       .img {
         flex-shrink: 0;
-        margin-bottom: 22px;
+        margin: 0 0 22px;
         @media (min-width: 701px) {
-          margin-right: 30px;
+          margin: 0 30px 0 0;
         }
         img {
           width: 100%;
