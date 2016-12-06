@@ -289,7 +289,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['clean', 'copy', 'build-HTML', 'build-CSS', 'build-JS', 'sitemap']);
   grunt.registerTask('build-HTML', ['handlebarslayouts']);
   grunt.registerTask('build-CSS', ['sass', 'postcss']);
-  grunt.registerTask('build-JS', ['eslint', 'babel', 'uglify', 'concat', 'clean:temp']);
+  grunt.registerTask('build-JS', ['babel', 'uglify', 'concat', 'clean:temp']);
   grunt.registerTask('sitemap', ['xml_sitemap', 'replace:sitemap_dist']);
   grunt.registerTask('serve', ['connect', 'watch']);
 
