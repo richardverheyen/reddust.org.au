@@ -251,10 +251,9 @@ section#hero {
       padding: 20px;
       min-width: 320px;
       box-sizing: border-box;
-      max-width: none;
-      display: flex;
-      justify-content: center;
       &.centre-content {
+        display: flex;
+        justify-content: center;
         align-items: center;
       }
       .modal {

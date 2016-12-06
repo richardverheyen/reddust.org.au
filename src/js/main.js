@@ -68,13 +68,10 @@ function checkModalCentre() {
   var $modal = $('#modals .modal');
   var windowHeight = $(window).height();
   var modalHeight = $modal.height() + 40;
-  console.log('has modal and overlay', windowHeight, modalHeight);
-  if (modalHeight > windowHeight) {
+  if (modalHeight >= windowHeight) {
     $overlay.removeClass('centre-content');
-    console.log('top');
   } else {
     $overlay.addClass('centre-content');
-    console.log('centre');
   }
 }
 
