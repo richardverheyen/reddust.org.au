@@ -2,7 +2,7 @@
 section.tiles.people {
   > div {
     padding: 0;
-    max-width: 1820px;
+    max-width: 2600px;
   }
   ul {
     display: flex;
@@ -20,12 +20,16 @@ section.tiles.people {
     padding: 0;
     background: $reddust-rust;
     overflow: hidden;
-    min-width: 260px;
-    min-height: 260px;
+    // min-width: 260px;
+    // min-height: 260px;
     // max-width: 364px;
     // max-height: 364px;
-    width: 20vw;
-    height: 20vw;
+    width: 16.6667vw;
+    height: 16.6667vw;
+    @media (max-width: 1560px) {
+      width: 20vw;
+      height: 20vw;
+    }
     @media (max-width: 1300px) {
       width: 25vw;
       height: 25vw;
@@ -39,6 +43,8 @@ section.tiles.people {
       height: 50vw;
     }
     @media (max-width: 520px) {
+      max-width: none;
+      max-height: none;
       width: 100vw;
       height: 100vw;
     }
