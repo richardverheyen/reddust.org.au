@@ -128,7 +128,7 @@
         font-size: 45px;
         color: $reddust-rust;
         text-transform: capitalize;
-        margin: 70px auto 0;
+        margin: 70px auto 20px;
         @media (max-width: 900px) {
           font-size: 4vw;
         }
@@ -147,7 +147,7 @@
   #impact {
     background: url('/assets/img/landing/home-banner-impact@2x.jpg');
     background-size: cover;
-    background-position-x: 26%;
+    background-position: 26% 50%;
     height: 75vw;
     max-height: 750px;
     min-height: 450px;
