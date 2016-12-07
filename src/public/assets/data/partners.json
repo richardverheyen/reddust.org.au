@@ -30,10 +30,30 @@
     "intro": "Launched in July 2012, the Telco Together Foundation is a registered charity that brings together the telecommunications industry in support of disadvantaged communities.Members of the Foundation include Optus, Vodafone, NBN Co, Dodo, M2, AAPT, Alcatel, Community Telco, Eftel, Telcoinabox, Vocus Communications, Smart Business Telco and Globe Telecom.",
     "url": "http://www.telcotogether.org/"
   }, {
+    "name": "Kmart",
+    "logo": "kmart@2x.jpg",
+    "intro": "In 2015 Kmart launched a partnership with Red Dust Role Models as part of our ongoing commitment to support Indigenous communities and increase awareness about Indigenous culture within the business. Red Dust Role Models works in collaboration with remote Indigenous communities in the Northern Territory to deliver innovative health promotion programs that encourage Indigenous youth to live a healthy lifestyle.",
+    "url": "http://www.kmart.com.au/"
+  }, {
+    "name": "Hilton",
+    "logo": "hilton@2x.jpg",
+    "intro": "Hilton has been partnered with Red Dust since 2014, assisting with travel needs.",
+    "url": "http://www3.hilton.com/en/index.html"
+  }, {
     "name": "DrinkWise Australia",
     "logo": "drink-wise.jpg",
     "intro": "DrinkWise Australia is an independent, not-for-profit organisation focused on promoting cultural change to reduce the harm arising from the irresponsible consumption of alcohol.Their vision is to improve the Australian drinking culture so that consuming alcohol too young and to excess is considered undesirable.DrinkWise Australia provides generous support for our Strong Young Women' s and Strong Young Men' s programs.",
     "url": "https://drinkwise.org.au/"
+  }, {
+    "name": "ACPE",
+    "logo": "acpe@2x.jpg",
+    "intro": "Australian College of Physical Education (ACPE) has extended its cultural experience program in 2016 welcoming a new partnership with Red Dust Role Models. ACPE is committed in continuing to support this life-changing program as a pivotal part of the College’s Reconciliation Action Plan.",
+    "url": "https://www.acpe.edu.au/"
+  }, {
+    "name": "Holiday Inn",
+    "logo": "holiday-inn@2x.jpg",
+    "intro": "Since 2015, Holiday Inn has partnered with Red Dust, supporting with travel requirements and needs.",
+    "url": "https://www.ihg.com/hotels/us/en/reservation"
   }, {
     "name": "Coles Online",
     "logo": "coles-online.jpg",
@@ -60,10 +80,20 @@
     "intro": "Clayton Utz assists a wide range of community partners and clients each year.They provide regular legal advice, volunteers and financial support to a number of community organisations and charities.Clayton Utz also assist individuals who need one - off help with specific legal problems and regularly make one - off donations to charities.",
     "url": "https://www.claytonutz.com/"
   }, {
+    "name": "NICA",
+    "logo": "nica@2x.jpg",
+    "intro": "In July 2015 NICA partnered with Red Dust Role Models for the first time. NICA took part in their Remote Healthy Living Program in Walangkura Primary, Kintore, Walangura NT working with children from pre-prep to junior secondary school.",
+    "url": "www.nica.com.au/"
+  }, {
     "name": "Chifley Resort",
     "logo": "chifleyresort.jpg",
     "intro": "Chifley Alice Springs Resort is a longtime friend of Red Dust.We are thankful for Chifley providing us with comfortable accommodation, delicious meals and great service before and after each Red Dust program delivery in the central desert.",
     "url": "http://www.silverneedlehotels.com/chifley/alice-springs"
+  }, {
+    "name": "Christ Church Grammar",
+    "logo": "ccgs@2x.jpg",
+    "intro": "Since 2008, Christ Church Grammar has supported our programs with Red Dust Role Models, enabling Year 6 students to visit Areyonga.",
+    "url": "https://www.ccgs.vic.edu.au/"
   }, {
     "name": "DoubleTree By Hilton",
     "logo": "double-tree.jpg",
