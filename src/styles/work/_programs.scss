@@ -155,7 +155,7 @@
             }
           }
         }
-        &.slide-2 {
+        &.slide-text {
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -179,45 +179,53 @@
             line-height: 160%;
             margin: 0 auto;
             max-width: 80vw;
+            @media (max-width: 700px) {
+              font-size: 14px;
+            }
+            @media (max-width: 500px) {
+              font-size: 2.5vw;
+            }
             @media (max-width: 400px) {
               font-size: 11px;
             }
 
           }
         }
-        &.slide-3 {
+        &.slide-map {
           display: flex;
           flex-direction: column;
           align-items: center;
-          h3 {
-            font-size: 20px;
-            color: $reddust-sunset;
-            font-family: $montserrat-bold;
-            margin: 20px auto 10px;
-            max-width: 80vw;
-
-          }
-          h1 {
-            font-size: 38px;
-            color: $reddust-rust;
-            max-width: 80vw;
-            margin: 0 auto;
-            @media (max-width: 400px) {
-              font-size: 15px;
+          position: relative;
+          div {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 100%;
+            h1 {
+              font-size: 38px;
+              color: $reddust-rust;
+              max-width: 80vw;
+              margin: 20px auto 0;
+              @media (max-width: 900px) {
+                font-size: 4vw;
+              }
+              @media (max-width: 400px) {
+                font-size: 15px;
+              }
             }
-          }
-          img {
-            margin: 0 auto;
-            @media (max-width: 800px) {
-              transform: none;
-            }
-            @media (max-width: 450px) {
-              width: 90vw;
-              margin-top: 35px;
+            img {
+              height: 75%;
+              margin: auto 0;
+              @media (max-width: 450px) {
+                height: 60%;
+              }
             }
           }
         }
-        &.slide-4 {
+        &.slide-dates {
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -290,11 +298,8 @@
       .slide-2 {
         background-image: url('/assets/img/work/programs/healthy-living-2.jpg');
       }
-      .slide-3 {
-        background-image: url('/assets/img/work/programs/healthy-living-3.jpg');
-        // img {
-        //   transform: translateY(-15px) translateX(-10px);
-        // }
+      .slide-map {
+        background-image: url('/assets/img/work/programs/healthy-living-map.jpg');
       }
       .slide-4 {
         background-image: url('/assets/img/work/programs/healthy-living-4.jpg');
@@ -309,12 +314,15 @@
       }
       .slide-3 {
         background-image: url('/assets/img/work/programs/strong-young-men-3.jpg');
-        // img {
-        //   transform: translateY(-28px) translateX(-15px);
-        // }
       }
       .slide-4 {
         background-image: url('/assets/img/work/programs/strong-young-men-4.jpg');
+      }
+      .slide-5 {
+        background-image: url('/assets/img/work/programs/strong-young-men-5.jpg');
+      }
+      .slide-map {
+        background-image: url('/assets/img/work/programs/strong-young-men-map.jpg');
       }
     }
     &#strong-young-women {
@@ -324,11 +332,8 @@
       .slide-2 {
         background-image: url('/assets/img/work/programs/strong-young-women-2.jpg');
       }
-      .slide-3 {
-        background-image: url('/assets/img/work/programs/strong-young-women-3.jpg');
-        // img {
-        //   transform: translateY(-20px) translateX(-15px);
-        // }
+      .slide-map {
+        background-image: url('/assets/img/work/programs/strong-young-women-map.jpg');
       }
     }
   }
