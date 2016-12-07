@@ -143,6 +143,22 @@ $(document).ready(function() {
     }
   });
 
+  // Clicking a partner opens the modal, only if screen width is below 720px
+  $('.tiles.partners li').on('click', function() {
+    if ($(window).width() <= 720) {
+      var $bio = $(this).find('.bio').clone();
+      var $img = $(this).find('.img').clone();
+      var $modal = $('#modals .modal');
+      $('#modals .modal .content').html('').append($img).append($bio);
+      openModal();
+      if ($img.length) {
+        $modal.addClass('has-image');
+      } else {
+        $modal.removeClass('has-image');
+      }
+    }
+  });
+
   // Clicking the modal overlay or close button closes the modal
   $('#modals').find('.overlay, .modal>svg').on('click', function() {
     closeModal();
