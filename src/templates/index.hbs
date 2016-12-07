@@ -96,7 +96,6 @@
       <div>
         <h1>Our partners</h1>
         <p>Red Dust Role Models would not exist without the invaluable support of our partners.</p>
-
         <ul>
           {{#partners}}
             <li>
@@ -107,7 +106,6 @@
                   </div>
                   <div class="back">
                     <h2>{{name}}</h2>
-                    <h3>{{type}}</h3>
                     <p>{{intro}}</p>
                     <a href="{{url}}" title="{{name}}" target="_blank" class="button">Website</a>
                   </div>
@@ -116,6 +114,24 @@
             </li>
           {{/partners}}
         </ul>
+      </div>
+    </section>
+
+    <section id="modals">
+      <div>
+        <div class="overlay">
+          <div class="modal">
+            {{> close-icon-svg}}
+            <div class="content">
+              <div class="img">
+
+              </div>
+              <div class="bio">
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

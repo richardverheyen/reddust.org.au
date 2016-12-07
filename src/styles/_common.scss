@@ -260,6 +260,16 @@ section#hero {
       .modal {
         position: relative;
         background: $reddust-bone;
+        max-width: 800px;
+        min-height: 300px;
+        width: 100%;
+        margin: 0 auto;
+        @media (max-width: 700px) {
+          max-width: 460px !important;
+        }
+        &.has-image {
+          max-width: 1080px;
+        }
         svg {
           width: 20px;
           height: 20px;
@@ -275,6 +285,57 @@ section#hero {
             }
           }
         }
+        .content {
+          padding: 4vw;
+          @media (min-width: 1250px) {
+            padding: 50px;
+          }
+          @media (max-width: 750px) {
+            padding: 30px;
+          }
+          @media (min-width: 701px) {
+            display: flex;
+            flex-flow: row nowrap;
+          }
+          .img {
+            flex-shrink: 0;
+            margin: 0 0 22px;
+            @media (min-width: 701px) {
+              margin: 0 30px 0 0;
+            }
+            img {
+              width: 100%;
+              height: auto;
+              max-width: 400px;
+              max-height: 400px;
+              @media (min-width: 701px) {
+                width: 33vw;
+              }
+            }
+          }
+          .bio {
+            width: 100%;
+            h2,
+            h3 {
+              font-family: $montserrat-bold;
+              text-transform: uppercase;
+              line-height: 120%;
+            }
+            h2 {
+              font-size: 36px;
+              margin-bottom: 5px;
+              padding-right: 40px;
+            }
+            h3 {
+              font-size: 20px;
+              color: $reddust-sunset;
+            }
+            p {
+              line-height: 150%;
+              font-size: 16px;
+            }
+          }
+        }
       }
     }
   }
@@ -282,7 +343,6 @@ section#hero {
 
 #coming-soon {
   background-color: $reddust-cream;
-
   > div {
     min-height: 420px;
     height: 80vh;

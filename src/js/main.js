@@ -145,11 +145,15 @@ $(document).ready(function() {
 
   // Clicking a partner opens the modal, only if screen width is below 720px
   $('.tiles.partners li').on('click', function() {
+    console.log($(window).width());
     if ($(window).width() <= 720) {
-      var $bio = $(this).find('.bio').clone();
-      var $img = $(this).find('.img').clone();
+      var $img = $(this).find('.front img').clone();
+      var $h2 = $(this).find('.back h2').clone();
+      var $p = $(this).find('.back p').clone();
+      var $a = $(this).find('.back a').clone();
       var $modal = $('#modals .modal');
-      $('#modals .modal .content').html('').append($img).append($bio);
+      $modal.find('.img').html('').append($img);
+      $modal.find('.bio').html('').append($h2).append($p).append($a);
       openModal();
       if ($img.length) {
         $modal.addClass('has-image');

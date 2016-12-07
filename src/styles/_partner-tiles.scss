@@ -45,6 +45,7 @@ section.tiles.partners {
       height: 33.3333vw;
       min-width: 160px;
       min-height: 160px;
+      cursor: pointer;
     }
     // 2 columns for iPhone 4
     @media (max-width: 480px) {
@@ -101,8 +102,7 @@ section.tiles.partners {
           display: flex;
           flex-flow: column nowrap;
           justify-content: center;
-          h2,
-          h3 {
+          h2 {
             font-family: $montserrat-bold;
             text-transform: uppercase;
             color: white;
@@ -114,12 +114,6 @@ section.tiles.partners {
             h2 {
               font-size: 18px;
             }
-          }
-
-          h3 {
-            font-size: 13px;
-            margin: 0 0 13px;
-            color: $reddust-rust;
           }
           p {
             font-family: $montserrat-regular;
