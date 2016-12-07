@@ -103,6 +103,7 @@
             line-height: 130%;
             color: $reddust-cream;
             margin-top: 110px;
+            text-transform: capitalize;
             @media (max-width: 1200px) {
               font-size: 4vw;
               margin-top: 20px;
@@ -168,6 +169,7 @@
             font-size: 20px;
             margin: 20px 0;
             max-width: 80vw;
+            text-transform: capitalize;
             @media (max-width: 400px) {
               margin: 10px 0;
               font-size: 14px;
@@ -209,11 +211,12 @@
               color: $reddust-rust;
               max-width: 80vw;
               margin: 20px auto 0;
+              text-transform: capitalize;
               @media (max-width: 900px) {
                 font-size: 4vw;
               }
               @media (max-width: 400px) {
-                font-size: 15px;
+                font-size: 17px;
               }
             }
             img {
@@ -221,6 +224,9 @@
               margin: auto 0;
               @media (max-width: 450px) {
                 height: 60%;
+              }
+              @media (max-width: 380px) {
+                height: 50%;
               }
             }
           }
@@ -236,10 +242,17 @@
               color: $reddust-cream;
               text-align: center;
               font-size: 40px;
-              margin-bottom: 40px;
+              margin: 0 auto 40px;
               max-width: 76vw;
+              text-transform: capitalize;
+              @media (max-width: 900px) {
+                font-size: 4vw;
+              }
+              @media (max-width: 550px) {
+                margin-bottom: 20px;
+              }
               @media (max-width: 400px) {
-                font-size: 15px;
+                font-size: 17px;
               }
             }
             h2 {
@@ -269,20 +282,37 @@
               display: flex;
               flex-flow: row wrap;
               padding-left: 100px;
+              @media (max-width: 550px) {
+                padding-left: 0;
+                flex-wrap: nowrap;
+                flex-direction: column;
+              }
               > div {
                 width: 50%;
                 margin-bottom: 40px;
+                @media (max-width: 550px) {
+                  margin-bottom: 5px;
+                }
                 h3 {
-                  font-size: 28px;
                   font-size: 20px;
                   margin-bottom: 6px;
                   max-width: 76vw;
+                  @media (max-width: 550px) {
+                    font-size: 16px;
+                    min-width: 130px;
+                    margin-bottom: 2px;
+                  }
 
                 }
                 p {
                   margin: 0 auto;
                   font-size: 16px;
                   max-width: 76vw;
+                  @media (max-width: 550px) {
+                    font-size: 12px;
+                    min-width: 130px;
+                    margin-left: 5px;
+                  }
 
                 }
               }
@@ -314,6 +344,9 @@
       }
       .slide-3 {
         background-image: url('/assets/img/work/programs/strong-young-men-3.jpg');
+        h2 {
+          color: $reddust-rust;
+        }
       }
       .slide-4 {
         background-image: url('/assets/img/work/programs/strong-young-men-4.jpg');
