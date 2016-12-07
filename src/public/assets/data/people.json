@@ -54,11 +54,11 @@
     "image": "",
     "bio": "Sam started with Red Dust in February 2013 after completing a Bachelor of General Studies at Monash University majoring in International Marketing in 1999. Sam’s previous role before Red Dust was with Treasury Wine Estate (Formerly Fosters Group); where she worked in Brand Marketing on several premium wine brands, including Penfolds, Seppelt and Coldstream Hills, for over five years."
   }, {
-    "name": "Jonathan Hermawan Tjapaltjarri",
+    "name": "Jonathan Lindsay-Tjapaltjarri Hermawan",
     "role": "Manager Central Australia",
     "category": "staff",
     "image": "",
-    "bio": "Jonathan is a fluent Pintupi-Luritja speaking man from the NT community of Walungurru (Kintore). He is a fully qualified teacher/educator and proud advocate for Aboriginal community leadership, youth empowerment and reconciliation. Based in Alice Springs, Jonathan currently works for Red Dust as an Alcohol and Men’s Health Educator and Coordinator, journeying with Aboriginal males (youth and adults) and their families."
+    "bio": "Jonathan is the Manager for Central Australia and also facilitates Red Dust's men and boys behaviour change and cultural leadership programs. He is multilingual and has cultural connections extending from Walungurru qualifications in teaching/education, alcohol and other drugs (AOD), automotive mechanics, music and theology. He is a strident advocate for Aboriginal community leadership, youth empowerment, many-ways learning and Reconciliation in action. "
   }, {
     "name": "Lara Davenport",
     "role": "Healthy Living Program Coordinator",
@@ -78,10 +78,10 @@
     "image": "",
     "bio": "Emilie joined Red Dust mid 2016 as a volunteer and not to long became a valuable member of the team as Business and Communications Manager. With a background in education and a Bachelor’s Degree in Creative Arts majoring in Professional Writing, Emilie has travelled extensively throughout Asia as an educator prior to settling back home in Melbourne."
   }, {
-    "name": "Mitch Firth",
+    "name": "Mitch Tambo",
     "role": "Role Model",
     "category": "role-model-arts",
-    "image": "mitch-firth@2x.jpg",
+    "image": "mitch-tambo@2x.jpg",
     "bio": ""
   }, {
     "name": "Fiona Scicluna",
@@ -89,12 +89,6 @@
     "category": "role-model-arts",
     "image": "fiona-scicluna@2x.jpg",
     "bio": "Fiona grew up in Sydney, Australia and began her dance training at the McDonald College of performing arts before continuing on to Dance World 301 and then to Glenn Wood Tap. She is trained in many difference areas of dance including jazz, tap, stomp and salsa. She has worked all over the world including New York City, London, Germany and Amsterdam."
-  }, {
-    "name": "David Callow",
-    "role": "Role Model",
-    "category": "role-model-arts",
-    "image": "",
-    "bio": "David Callow is a freelance photographer specialising in sporting features. Based in Melbourne, David is a regular Red Duster, shooting and producing the many photos during the tours."
   }, {
     "name": "Shura Taft",
     "role": "Role Model",
@@ -125,24 +119,6 @@
     "category": "role-model-arts",
     "image": "raymond-walters-japanangka@2x.jpg",
     "bio": "Born in Alice Springs. Raymond’s grandfather’s country is Ngarleyekwerleng in the Western Desert near Yuendumu, and his grandmother’s country is Alhalkerre Atnangkerre. He brings his expertise in Sport & Recreation, Remote/Urban Aboriginal Community Development, Family & Child Welfare, Alcohol & Other Drugs Awareness and Consultancy on Aboriginal Community Engagement policies and procedures."
-  }, {
-    "name": "Anthea Lindquist",
-    "role": "Role Model",
-    "category": "role-model-health",
-    "image": "",
-    "bio": "Anthea has a long-standing interest in Indigenous rights and health in Australia. She has been involved in a number of roles in Australia and overseas to pursue this passion and really make a difference. Anthea completed her final months of medical school in the N.T in 2008, and has furthered her study with specialist training in Obstetrics and Gynecology."
-  }, {
-    "name": "Naomi Corfield",
-    "role": "Role Model",
-    "category": "role-model-health",
-    "image": "",
-    "bio": ""
-  }, {
-    "name": "Nicole Border",
-    "role": "Role Model",
-    "category": "role-model-health",
-    "image": "nicole-border@2x.jpg",
-    "bio": "Nicole’s became involved with Red Dust in 2006 when she joined a tour out to the remote community of Kintore. Nicole studied Psychology and explored the psychosocial factors associated with physical activity behaviour in her Honours thesis. She then went on to complete a Masters Degree in Health Promotion, focusing her work on Aboriginal and Torres Strait Islander health and chronic disease. "
   }, {
     "name": "Bridget a’Beckett",
     "role": "Role Model",
@@ -179,18 +155,6 @@
     "category": "role-model-music",
     "image": "adam-thompson@2x.jpg",
     "bio": "Adam created the music workshop that he has evolved throughout his 10-year association with Red Dust Role Models and its founding organisation, which forms the music program for Red Dust’s Lifestyle Education Program. A singer, songwriter, entertainer and engaging speaker, Adam is widely known for his success as the lead singer for ARIA-award winning band Chocolate Starfish."
-  }, {
-    "name": "Kate Lynch",
-    "role": "Role Model",
-    "category": "role-model-sport",
-    "image": "kate-lynch@2x.jpg",
-    "bio": "As a passionate swimmer Kate stepped out of the pool and into the coaching world, whilst studying a Bachelor of Education and Commerce at Deakin University. Working in the aquatic and recreation sector for over 10 years, Kate has lectured at national and international conferences, developed educational and health programs as well as managed facilities in both metropolitan and remote Australia."
-  }, {
-    "name": "Jill Noe",
-    "role": "Role Model",
-    "category": "role-model-sport",
-    "image": "jill-noe@2x.jpg",
-    "bio": "Originally from Portland, Oregon Jill is a professional basketball player for the Nunawading Spectres. Receiving an undergrad in Journalism and Mass Communication and my Masters in Liberal Arts and Sciences from Arizona State University."
   }, {
     "name": "Carley McKay",
     "role": "Role Model",
@@ -341,12 +305,6 @@
     "category": "role-model-sport",
     "image": "linley-frame@2x.jpg",
     "bio": "Linley won the 1991 World 100-metre Breaststroke Championship and an additional two silver medals in the 200-metre Breaststroke and the 4×100 Medley Relay at the same meet. During her career she was a Pan Pacific champion and won three World Short course medals, plus many other international medals throughout a career that spanned sixteen years."
-  }, {
-    "name": "Anil Kumble",
-    "role": "Role Model",
-    "category": "role-model-sport",
-    "image": "",
-    "bio": "A former Indian Cricketer and captain of the Indian Test cricket team, Anil is a right-arm leg spin bowler and a right-hand batsman. Currently the leading wicket-taker for India in both Test and One Day International matches. At present he is the third highest wicket-taker in Test cricket and one of only three bowlers to have taken over 600 Test wickets."
   }, {
     "name": "Kyle Vander Kuyp",
     "role": "Role Model",
