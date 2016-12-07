@@ -25,6 +25,7 @@ if (!!ga) {
   ga('send', 'pageview');
 }
 
+// Animates open the modal
 function openModal() {
   var speed = 700;
   var easing = 'easeOutExpo';
@@ -44,6 +45,7 @@ function openModal() {
   }
 }
 
+// Animates close the modal
 function closeModal() {
   var speed = 400;
   var easing = 'easeOutExpo';
@@ -63,6 +65,7 @@ function closeModal() {
   }
 }
 
+// Make sure the modal centres vertically, yet is scrollable if content is taller than the window
 function checkModalCentre() {
   var $overlay = $('#modals .overlay');
   var $modal = $('#modals .modal');
