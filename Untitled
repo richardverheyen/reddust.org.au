@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,  initial-scale = 1.0, user-scalable = no">
+        <link href="https://az29734.vo.msecnd.net/static/onboarding/css/stylesheet.css" rel="stylesheet" type="text/css" /> {PAGERESOURCES}
+        <!-- Set the viewport width to device width for mobile -->
+        <title>Onboarding - {PAGETITLE}</title>
+        <!-- Included CSS Files -->
+        <!--[if lt IE 9]>
+    <link rel="stylesheet" href="">
+  <![endif]-->
+        <!-- IE Fix for HTML5 Tags -->
+        <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+        <style>
+            html,
+            body,
+            #aspnetForm {
+                height: auto;
+                background-color: #232323;
+            }
+
+            #backTotop {
+                bottom: 15px;
+                padding: 5px 10px;
+                position: absolute;
+                right: 0;
+            }
+
+            .wrapper {
+                position: relative
+            }
+
+            video {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .footer {
+                background: none repeat scroll 0 0 #000000;
+                padding: 20px 0;
+                text-align: right;
+            }
+
+            div.columns>img,
+            p img {
+                width: 100%
+            }
+
+            .lightboxDiv img {
+                width: auto
+            }
+
+            #task-list-content {
+                transition: all 0.3s ease-out 0s;
+                -webkit-transition: top 0.3s ease-in-out 0s;
+                min-height: 30px;
+            }
+
+            .eight ol {
+                padding-left: 22px;
+            }
+
+            .eight ol li {
+                list-style: decimal outside none;
+                padding-left: 15px;
+                font-size: 16px
+            }
+
+            #handler,
+            .nav p:first-child {
+                display: none;
+            }
+
+            .handler {
+                display: none;
+                font-size: 32px
+            }
+
+            #task-list .step {
+                background: url("https://az29734.vo.msecnd.net/static/onboarding/images/Icons-03.png") no-repeat scroll -4px 4px rgba(0, 0, 0, 0);
+                border-bottom: 1px solid #cccccc;
+                border-radius: 0;
+                margin: 0;
+                padding: 10px 0;
+                position: relative;
+            }
+
+            #task-list ul.groups li:first-child div.heading {
+                padding-top: 0px;
+            }
+
+            #task-list ul.groups li:first-child div.heading {
+                padding-top: 0px;
+            }
+
+            .label {
+                display: inline;
+            }
+
+            @media only screen and (max-width: 1024px) {
+                .nav p:first-child {
+                    display: block;
+                }
+                .header .handler {
+                    display: inline;
+                    margin: 20px;
+                    vertical-align: text-bottom;
+                }
+                .nav p:first-child {
+                    text-align: right;
+                    margin-bottom: 0;
+                }
+                .nav .handler {
+                    display: inline;
+                    margin-right: 20px;
+                }
+                .header .handler+img {
+                    vertical-align: middle;
+                }
+                #cms-menu {
+                    width: 100%
+                }
+                .row.nav {
+                    margin-left: -300px;
+                    width: 300px;
+                    min-height: 100%;
+                    min-width: 0;
+                    position: absolute;
+                    top: 0;
+                    transition: margin-left 0.5s ease-in-out 0s;
+                    -webkit-transition: margin-left 0.5s ease-in-out 0s;
+                    z-index: 9999;
+                }
+                #handler:checked~.nav {
+                    margin-left: 0
+                }
+                /* Fix Android default browsers v<= 4.1.2 */
+                body {
+                    -webkit-animation: bugfix infinite 1s;
+                }
+                @-webkit-keyframes bugfix {
+                    from {
+                        padding: 0;
+                    }
+                    to {
+                        padding: 0;
+                    }
+                }
+            }
+            /** PUP Styles **/
+
+            body,
+            .row .main-container {
+                background: white;
+            }
+
+            .row.main-container div.eight {
+                max-width: 760px;
+                width: 65vw;
+            }
+
+            .row.wrapper {
+                display: flex;
+                justify-content: center;
+            }
+
+            @media (max-width: 1025px) {
+                .row.nav>p {
+                    display: flex;
+                    align-items: center;
+                    text-align: left;
+                    height: 80px;
+                }
+            }
+
+            @media (min-width: 1025px) {
+                #cms-menu {
+                    display: flex;
+                    justify-content: flex-end;
+                    height: 40px;
+                    width: 90vw;
+                    max-width: 1080px;
+                    /*background-color: #575757!important;*/
+                }
+                #logo-image {
+                    margin-left: 20px;
+                }
+            }
+
+            @media (max-width: 950px) {
+                .row.main-container {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+                .eight.columns,
+                .four.columns.tasks {
+                    margin: 20px auto!important;
+                    width: 90vw!important;
+                    max-width: 700px;
+                }
+            }
+
+            .header {
+                padding: 0!important;
+            }
+
+            .header .row {
+                display: flex;
+                align-items: flex-end;
+            }
+
+            .header .handler,
+            .row.nav .handler {
+                margin: auto 20px;
+            }
+
+            .footer {
+                padding: 20px 0;
+                width: auto!important;
+            }
+
+            iframe {
+                max-width: 86vw;
+            }
+
+            .footer .row {
+                display: flex;
+                justify-content: center;
+                padding: 0 20px;
+            }
+
+            .footer .row:before,
+            .footer .row:after {
+                display: none;
+            }
+
+            .footer .row ul {
+                padding-left: 0;
+            }
+
+            .footer .row ul li {
+                list-style: none;
+                text-align: left;
+                color: white;
+            }
+
+            .footer .row ul li a {
+                color: white;
+            }
+
+            .footer .row ul li a:hover {
+                text-decoration: underline;
+            }
+
+            .footer .row p {
+                margin-top: auto;
+                color: white;
+            }
+
+            .footer .row h5 {
+                text-align: left;
+                color: white;
+            }
+
+            @media (max-width: 600px) {
+                .eight.columns {
+                    padding: 0;
+                }
+                .eight.columns>div {
+                    padding: 2em 1em!important;
+                }
+            }
+            /*Ivy specific styles:*/
+
+            .header {
+                background-color: #8DC63F;
+            }
+
+            .header .row h2 {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 38px;
+                color: #fff;
+                margin: auto 20px 9px auto;
+            }
+
+            .row.nav,
+            #cms-menu,
+            .four.columns.tasks,
+            #pup-task-list>h5,
+            .footer {
+                background-color: #006648!important;
+            }
+
+            #logo-image {
+                width: 120px;
+                height: auto;
+            }
+
+            #cms-menu>li a {
+                color: #fff;
+            }
+
+            #cms-menu .selected a,
+            #cms-menu>li:hover a {
+                color: #8DC63F!important;
+            }
+
+            #cms-menu .selected {
+                background-color: #000000;
+            }
+
+            @media(max-width: 1025px) {
+                .header {
+                    padding: 0!important;
+                }
+                .header .row h2 {
+                    font-size: 32px;
+                }
+                #logo-image {
+                    width: 100px;
+                    height: 80px;
+                }
+            }
+
+            @media (max-width: 600px) {
+                .header .row h2 {
+                    font-size: 22px;
+                }
+                .eight.columns div {
+                    flex-direction: column;
+                }
+            }
+
+            @media (max-width: 400px) {
+                .eight.columns div img {
+                    display: none;
+                }
+            }
+
+            .row {
+                width: 1080px;
+            }
+
+            #task-list {
+                padding: 0 5%;
+                min-height: 450px;
+            }
+
+            #task-list .content {
+                padding: 5px 0;
+                margin-right: 0;
+            }
+
+            #task-list-content {
+                width: 90%;
+            }
+
+            #task-list ul.groups li div.heading {
+                color: #006648;
+            }
+
+            #task-list .step {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                justify-content: space-around;
+                background-position: 0%;
+                padding: 0;
+                padding: 3px 0 3px 36px;
+            }
+
+            #task-list .date {
+                position: static;
+            }
+
+            @media (min-width:950px) {
+                .four.columns.tasks {
+                    margin-top: 60px;
+                    min-width: 350px;
+                }
+            }
+
+            .eight.columns {
+                margin-right: 0;
+                padding-right: 0;
+                margin-left: 0;
+                padding-left: 0;
+            }
+
+            #task-list .content a {
+                font-size: 12px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <input id="handler" type="checkbox" onclick="null" hidden />
+        <div class="header">
+            <div class="row">
+                <label class="handler" for="handler"> ≡ </label>
+                <img id="logo-image" src="https://az29734.vo.msecnd.net/clients/811/team-ivy-logo-green-background.jpg" alt="Logo" />
+                <h2>Onboarding</h2>
+            </div>
+        </div>
+
+        <div class="row nav">
+            <p><label class="handler" for="handler"> ≡ </label></p>
+            {CONTENTMENU}
+
+        </div>
+        <div class="row wrapper">
+            <div class="twelve columns">
+                v class="row wrapper">
+                <div class="twelve columns">
