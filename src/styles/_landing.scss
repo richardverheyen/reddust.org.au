@@ -4,10 +4,11 @@
   #video-hero {
     position: relative;
     width: 100vw;
-    height: 56vw;
+    height: 62vw;
     min-height: 400px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     @media (max-width: 700px) {
       background-image: url('/assets/img/landing/home-banner.jpg');
@@ -16,18 +17,20 @@
     }
 
     > iframe {
-      position: absolute;
-      width: 100vw;
-      height: 56vw;
+      position: fixed;
+      width: 125vw;
+      height: 100vh;
       min-height: 400px;
       max-height: none;
       top: 0;
+      z-index: -2;
       @media (max-width: 700px) {
         display: none;
       }
     }
 
     > div {
+      position: relative;
       z-index: 1;
       height: 57vw;
       display: flex;
@@ -274,6 +277,7 @@
   }
 
   #how-you-can-help {
+    background: $reddust-bone;
     > div {
       display: flex;
       flex-direction: column;
@@ -359,6 +363,7 @@
     }
   }
   #partners {
+    background: $reddust-bone;
     > div {
       padding: 0;
       max-width: none;
