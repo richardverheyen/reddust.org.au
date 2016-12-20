@@ -21,7 +21,9 @@ environment = isProduction ? 'production' : 'staging';
 
 if (!!ga) {
   ga('create', 'UA-34474019-10', 'auto');
-  ga('set', { dimension1: environment });
+  ga('set', {
+    dimension1: environment
+  });
   ga('send', 'pageview');
 }
 
@@ -95,6 +97,22 @@ $(document).ready(function() {
     }
   });
 
+  // Make any hashtag link scroll with animation to element with matching ID
+  // Example: <a href="#features"> will scroll to element with ID #features
+  // Commonly found in the #hero of each page
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+
   // Animate the horizantal program sliders
   $('.program-slider nav img').on('click', function() {
     var $section = $(this).parents('section'); // reusable jQuery selector
@@ -109,15 +127,23 @@ $(document).ready(function() {
       // if first slide, spring left and back
       if (!isAnimating) {
         $ul.velocity('stop')
-          .velocity({ translateX: '150px' }, 250, "easeOutQuad")
-          .velocity({ translateX: '0px' }, 250, "easeInSine");
+          .velocity({
+            translateX: '150px'
+          }, 250, "easeOutQuad")
+          .velocity({
+            translateX: '0px'
+          }, 250, "easeInSine");
       }
     } else if (newSlide > amountOfSlides) {
       // if last slide, spring right and back
       if (!isAnimating) {
         $ul.velocity('stop')
-          .velocity({ translateX: '-150px' }, 250, "easeOutQuad")
-          .velocity({ translateX: '0px' }, 250, "easeInSine");
+          .velocity({
+            translateX: '-150px'
+          }, 250, "easeOutQuad")
+          .velocity({
+            translateX: '0px'
+          }, 250, "easeInSine");
       }
     } else {
       // if not first or last slide, slide to next or previous slide
