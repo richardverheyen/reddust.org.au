@@ -20,6 +20,17 @@
     <section id="video-archive">
       <div>
         <ul>
+          {{#music-videos-top}}
+            <li>
+              <img src="{{image}}" />
+              <div>
+                <h3>{{title}}</h3>
+                <h4>{{location}}</h4>
+                <h5>{{date}}</h5>
+                <a href="{{link}}" class="button" target="_blank">Watch</a>
+              </div>
+            </li>
+          {{/music-videos-top}}
           <li>
             <img src="/assets/img/work/music-videos/hold-the-community@2x.jpg" />
             <div>
@@ -164,7 +175,17 @@
               <a href="https://vimeo.com/112795975" class="button" target="_blank">Watch</a>
             </div>
           </li>
-
+          {{#music-videos-bottom}}
+            <li>
+              <img src="{{image}}" />
+              <div>
+                <h3>{{title}}</h3>
+                <h4>{{location}}</h4>
+                <h5>{{date}}</h5>
+                <a href="{{link}}" class="button" target="_blank">Watch</a>
+              </div>
+            </li>
+          {{/music-videos-bottom}}
         </ul>
       </div>
     </section>

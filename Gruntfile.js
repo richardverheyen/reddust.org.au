@@ -62,7 +62,9 @@ module.exports = function(grunt) {
           modules: ['src/templates/helpers/helpers-*.js'],
           context: [
             "src/public/assets/data/partners.json",
-            "src/public/assets/data/people.json"
+            "src/public/assets/data/people.json",
+            "src/public/assets/data/music-videos-top.json",
+            "src/public/assets/data/music-videos-bottom.json"
           ]
         }
       }
