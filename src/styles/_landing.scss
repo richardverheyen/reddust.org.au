@@ -1,6 +1,4 @@
 #landing {
-  background-color: $reddust-bone;
-
   #video-hero {
     position: relative;
     width: 100vw;
@@ -10,7 +8,7 @@
     justify-content: center;
     align-items: center;
     @media (max-width: 700px) {
-      background-image: url('/assets/img/landing/home-banner.jpg');
+      background-image: url('/assets/img/landing/hero.jpg');
       background-size: cover;
       background-position: 80%;
     }
@@ -20,7 +18,7 @@
       width: 100vw;
       height: 56vw;
       min-height: 400px;
-      max-height: none;
+      max-height: 70vw;
       top: 0;
       @media (max-width: 700px) {
         display: none;
@@ -61,7 +59,7 @@
 
       a {
         position: absolute;
-        bottom: 10%;
+        bottom: 20%;
         img {
           width: 70px;
           padding: 10px;
