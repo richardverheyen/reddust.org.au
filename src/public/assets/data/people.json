@@ -46,13 +46,13 @@
     "role": "Director",
     "category": "director",
     "image": "paul-guerra@2x.jpg",
-    "bio": "Paul has enjoyed a 20-year career in the telecommunications sector working at senior levels for renowned companies Motorola and Vodafone. Paul has a strong record in sales and marketing and has been instrumental in solidifying the presence of both organisations in Australia. Paul also dedicates some of his time to serve as a Director on several charity-based organisations."
+    "bio": "Paul has enjoyed a 20-year career in the telecommunications sector working at senior levels for renowned companies Motorola and Vodafone. Paul has a strong record in sales and marketing and has been instrumental in solidifying the presence of both organisations in Australia. Paul also dedicates some of his time to serve as a Director on several charity-based organisations in Australia. Paul also dedicates some of his time to serve as a director on several charity-based organisations."
   }, {
     "name": "Darren Smith",
     "role": "Chief Executive Officer",
     "category": "staff",
     "image": "",
-    "bio": "Darren has been involved with Red Dust for over 12 years and brings to his role a ten-year career as a professional basketball player and management experience. As the Chief Executive Officer, he coordinates the effective delivery of programs throughout Australia and leads teams on the ground while out bush, as well as looking after all other aspects of the organisation."
+    "bio": "Darren has been involved with Red Dust for over twelve years and brings to his role a ten-year career as a professional basketball player and management experience. As the Chief Executive Officer, he coordinates the effective delivery of programs throughout Australia and leads teams on the ground while out bush, as well as looking after all other aspects of the organisation."
   }, {
     "name": "Samantha Guttridge",
     "role": "Partnerships Manager",
@@ -341,6 +341,12 @@
     "category": "role-model-sport",
     "image": "linley-frame@2x.jpg",
     "bio": "Linley won the 1991 World 100-metre Breaststroke Championship and an additional two silver medals in the 200-metre Breaststroke and the 4×100 Medley Relay at the same meet. During her career she was a Pan Pacific champion and won three World Short course medals, plus many other international medals throughout a career that spanned sixteen years."
+  }, {
+    "name": "Anil Kumble",
+    "role": "Role Model",
+    "category": "role-model-sport",
+    "image": "",
+    "bio": "A former Indian Cricketer and captain of the Indian Test cricket team, Anil is a right-arm leg spin bowler and a right-hand batsman. Currently the leading wicket-taker for India in both Test and One Day International matches. At present he is the third highest wicket-taker in test cricket and one of only three bowlers to have taken over 600 test wickets."
   }, {
     "name": "Kyle Vander Kuyp",
     "role": "Role Model",
