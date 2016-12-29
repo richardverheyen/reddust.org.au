@@ -1,0 +1,21 @@
+{
+  "name": "reddust",
+  "description": "",
+  "main": "",
+  "authors": [
+    "richardverheyen <richard.verheyen@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/janwerkhoven/reddust.org.au",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^3.1.1",
+    "velocity": "^1.4.1"
+  }
+}
