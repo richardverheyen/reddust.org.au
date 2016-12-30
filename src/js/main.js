@@ -97,6 +97,24 @@ $(document).ready(function() {
     }
   });
 
+  //Number countup
+  $(document).ready(function() {
+    $('#impact').find('.counter-wrapper').each(function() {
+      var countUpToValue = $(this).find('h1').attr('value');
+      $(this).find('h1').attr('id', countUpToValue);
+      var options = {  
+        useEasing: true,
+          useGrouping: true,
+          separator: ',',
+          decimal: '.',
+          prefix: '',
+          suffix: ''
+      };
+      var demo = new CountUp(countUpToValue, 0, countUpToValue, 0, 9 * (countUpToValue / 1709), options);
+      demo.start();
+    });
+  });
+
   // Make any hashtag link scroll with animation to element with matching ID
   // Example: <a href="#features"> will scroll to element with ID #features
   // Commonly found in the #hero of each page
