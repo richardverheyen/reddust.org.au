@@ -98,6 +98,16 @@ $(document).ready(function() {
   });
 
   //Number countup
+  $(window).scroll(function() {
+    var hT = $('#scroll-to').offset().top,
+      hH = $('#scroll-to').outerHeight(),
+      wH = $(window).height(),
+      wS = $(this).scrollTop();
+    if (wS > (hT + hH - wH)) {
+      alert('you have scrolled to the h1!');
+    }
+  });
+
   $(document).ready(function() {
     $('#impact').find('.counter-wrapper').each(function() {
       var countUpToValue = $(this).find('h1').attr('value');
@@ -110,7 +120,7 @@ $(document).ready(function() {
           prefix: '',
           suffix: ''
       };
-      var demo = new CountUp(countUpToValue, 0, countUpToValue, 0, 9 * (countUpToValue / 1709), options);
+      var demo = new CountUp(countUpToValue, 0, countUpToValue, 0, 5 * (countUpToValue / 1709), options);
       demo.start();
     });
   });
