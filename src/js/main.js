@@ -80,6 +80,40 @@ function checkModalCentre() {
   }
 }
 
+var animatingCounters = false;
+
+// Check whether to animate the landing page counters or not
+function checkWhetherToAnimateCounters() {
+  // Only bind this this on logic on the landing page, avoid collisions on other pages
+  var triggerTop = $('#landing .counter-wrapper').first().offset().top;
+  var windowBottom = $(window).scrollTop() + $(window).height();
+  // console.log(triggerTop, windowBottom);
+  if (!animatingCounters) {
+    if (windowBottom > triggerTop) {
+      animatingCounters = true;
+      animateCounters();
+    }
+  }
+}
+
+// Animate the counters on the landing page
+function animateCounters() {
+  $('#impact').find('.counter-wrapper').each(function() {
+    var countUpToValue = $(this).find('h1').attr('value');
+    $(this).find('h1').attr('id', countUpToValue);
+    var options = {  
+      useEasing: true,
+        useGrouping: true,
+        separator: ',',
+        decimal: '.',
+        prefix: '',
+        suffix: ''
+    };
+    var demo = new CountUp(countUpToValue, 0, countUpToValue, 0, 5 * (countUpToValue / 1709), options);
+    demo.start();
+  });
+}
+
 $(document).ready(function() {
 
   // Open & close the mobile navigation
@@ -97,33 +131,17 @@ $(document).ready(function() {
     }
   });
 
-  //Number countup
-  $(window).scroll(function() {
-    var hT = $('#scroll-to').offset().top,
-      hH = $('#scroll-to').outerHeight(),
-      wH = $(window).height(),
-      wS = $(this).scrollTop();
-    if (wS > (hT + hH - wH)) {
-      alert('you have scrolled to the h1!');
-    }
-  });
+  // Things to fire ONLY on the landing page (avoid unexpected future collisions)
+  if ($('body').attr('id') === 'landing') {
 
-  $(document).ready(function() {
-    $('#impact').find('.counter-wrapper').each(function() {
-      var countUpToValue = $(this).find('h1').attr('value');
-      $(this).find('h1').attr('id', countUpToValue);
-      var options = {  
-        useEasing: true,
-          useGrouping: true,
-          separator: ',',
-          decimal: '.',
-          prefix: '',
-          suffix: ''
-      };
-      var demo = new CountUp(countUpToValue, 0, countUpToValue, 0, 5 * (countUpToValue / 1709), options);
-      demo.start();
+    // On load
+    checkWhetherToAnimateCounters();
+    // On scroll
+    $(window).scroll(function() {
+      checkWhetherToAnimateCounters();
     });
-  });
+
+  }
 
   // Make any hashtag link scroll with animation to element with matching ID
   // Example: <a href="#features"> will scroll to element with ID #features
