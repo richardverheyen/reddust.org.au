@@ -146,11 +146,12 @@
 
         img {
           position: absolute;
-          top: 0;
-          left: 0;
+          top: 50%;
+          left: 50%;
           min-height: 100%;
           min-width: 100%;
           max-width: 843px;
+          transform: translate(-50%,-50%);
         }
       }
 

@@ -2,9 +2,10 @@
   #video-hero {
     position: relative;
     width: 100vw;
-    height: 56vw;
+    height: 52vw;
     min-height: 400px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     @media (max-width: 700px) {
@@ -14,12 +15,13 @@
     }
 
     > iframe {
-      position: absolute;
-      width: 100vw;
-      height: 56vw;
+      position: fixed;
+      width: 240vh;
+      height: 110vh;
       min-height: 400px;
       max-height: 70vw;
       top: 0;
+      z-index: -2;
       @media (max-width: 700px) {
         display: none;
       }
@@ -59,7 +61,8 @@
 
       a {
         position: absolute;
-        bottom: 20%;
+        bottom: 15%;
+
         img {
           width: 70px;
           padding: 10px;
@@ -70,84 +73,6 @@
       }
     }
   }
-
-  // TODO: @Richard below is your code for the background video that sticks to the background.
-  // The code is however not responsive and will be commented out until fixed. Indulge us!
-
-  // #video-hero {
-  //   position: relative;
-  //   width: 100vw;
-  //   height: 62vw;
-  //   min-height: 400px;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: flex-start;
-  //   align-items: center;
-  //   @media (max-width: 700px) {
-  //     background-image: url('/assets/img/landing/home-banner.jpg');
-  //     background-size: cover;
-  //     background-position: 80%;
-  //   }
-  //
-  //   > iframe {
-  //     position: fixed;
-  //     width: 125vw;
-  //     height: 120vh;
-  //     min-height: 400px;
-  //     max-height: none;
-  //     top: 0;
-  //     z-index: -2;
-  //     @media (max-width: 700px) {
-  //       display: none;
-  //     }
-  //   }
-  //
-  //   > div {
-  //     position: relative;
-  //     z-index: 1;
-  //     height: 57vw;
-  //     display: flex;
-  //     flex-flow: column wrap;
-  //     justify-content: center;
-  //     align-items: center;
-  //     padding: 0;
-  //
-  //     h1 {
-  //       color: $reddust-gold;
-  //       font-size: 45px;
-  //       text-align: center;
-  //       text-transform: capitalize;
-  //       margin-bottom: 20px;
-  //       text-shadow: 1px 1px 10px RGBA(0,0,0,0.5);
-  //       @media (max-width: 1100px) {
-  //         font-size: 4vw;
-  //       }
-  //       @media (max-width: 600px) {
-  //         font-size: 24px;
-  //       }
-  //       @media (max-width: 450px) {
-  //         font-size: 22px;
-  //       }
-  //
-  //       span {
-  //         display: block;
-  //         color: white;
-  //       }
-  //     }
-  //
-  //     a {
-  //       position: absolute;
-  //       bottom: 10%;
-  //       img {
-  //         width: 70px;
-  //         padding: 10px;
-  //         @media (max-width: 800px) {
-  //           width: 50px;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 
   #about-link {
     background-color: $reddust-gold;

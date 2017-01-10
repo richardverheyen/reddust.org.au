@@ -180,6 +180,7 @@ module.exports = function(grunt) {
           'dist/assets/js/main.js': [
             'bower_components/jquery/dist/jquery.min.js',
             'bower_components/velocity/velocity.min.js',
+            'bower_components/countUp.js/dist/countUp.min.js',
             'src/js/main.js'
           ]
         }
@@ -189,6 +190,7 @@ module.exports = function(grunt) {
           'dist/assets/js/main.min.js': [
             'bower_components/jquery/dist/jquery.min.js',
             'bower_components/velocity/velocity.min.js',
+            'bower_components/countUp.js/dist/countUp.min.js',
             'temp/js/main.min.js'
           ]
         }
