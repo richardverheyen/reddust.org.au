@@ -27,6 +27,12 @@ gulp.task('copy-public', ['delete-dist'], function() {
 gulp.task('compile-html', ['delete-dist'], function() {
   return gulp.src('src/templates/pages/**/*.+(html|nunjucks)')
     .pipe(data(function() {
+      return require('./src/data/music-videos-top.json')
+    }))
+    .pipe(data(function() {
+      return require('./src/data/music-videos-bottom.json')
+    }))
+    .pipe(data(function() {
       return require('./src/data/partners.json')
     }))
     .pipe(nunjucksRender({ path: ['src/templates'] }))
