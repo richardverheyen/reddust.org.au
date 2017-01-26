@@ -1,0 +1,62 @@
+{% extends "layout.nunjucks" %}
+
+{% block meta %}
+  <title>People</title>
+  <meta name="description" content="">
+{% endblock %}
+
+{% block id %}about-reports{% endblock %}
+
+{% block main %}
+
+  <section id="hero">
+    <img src="" alt=""/>
+  </section>
+
+  {% include "partials/about-nav.html" %}
+
+  <section id="filter">
+    <div>
+      <p>Sort by:</p>
+      <button>Everyone</button>
+      <button>Directors</button>
+      <button>Staff</button>
+      <button>Members</button>
+    </div>
+  </section>
+
+  <section id="people" class="tiles people">
+    <div>
+      <ul>
+        {% for person in people %}
+          <li class="{{person.category}} {%if person.image %}image{% else %}no-image{% endif %}">
+            <div>
+              {%if image %}
+                <div class="img">
+                  <img src="/assets/img/people/{{person.image}}" alt="{{person.name}} - {{person.position}} at Red Dust"/>
+                </div>
+              {% endif %}
+              <div class="bio">
+                <h2>{{person.name}}</h2>
+                <h3>{{person.role}}</h3>
+                <p>{{person.bio}}</p>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section id="modals">
+    <div>
+      <div class="overlay">
+        <div class="modal">
+          {% include "partials/close-icon-svg.html" %}
+          <div class="content"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
