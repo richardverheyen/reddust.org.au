@@ -1,0 +1,65 @@
+{{#extend "layout"}}
+
+  {{#replace "meta"}}
+    <title>People</title>
+    <meta name="description" content="">
+  {{/replace}}
+
+  {{#replace "body-id"}}about-people{{/replace}}
+
+  {{#replace "main"}}
+
+    <section id="hero">
+      <img src="" alt="" />
+    </section>
+
+    {{> about-nav}}
+
+    <section id="filter">
+      <div>
+        <p>Sort by:</p>
+        <button>Everyone</button>
+        <button>Directors</button>
+        <button>Staff</button>
+        <button>Members</button>
+      </div>
+    </section>
+
+    <section id="people" class="tiles people">
+      <div>
+        <ul>
+          {{#people}}
+            <li class="{{category}} {{#if image}}image{{else}}no-image{{/if}}">
+              <div>
+                {{#if image}}
+                <div class="img">
+                  <img src="/assets/img/people/{{image}}" alt="{{name}} - {{position}} at Red Dust" />
+                </div>
+                {{/if}}
+                <div class="bio">
+                  <h2>{{name}}</h2>
+                  <h3>{{role}}</h3>
+                  <p>{{bio}}</p>
+                </div>
+              </div>
+            </li>
+          {{/people}}
+        </ul>
+      </div>
+    </section>
+
+    <section id="modals">
+      <div>
+        <div class="overlay">
+          <div class="modal">
+            {{> close-icon-svg}}
+            <div class="content">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  {{/replace}}
+{{/extend}}

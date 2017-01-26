@@ -1,0 +1,59 @@
+{{#extend "layout"}}
+
+  {{#replace "meta"}}
+    <title>Partners</title>
+    <meta name="description" content="">
+  {{/replace}}
+
+  {{#replace "body-id"}}about-partners{{/replace}}
+
+  {{#replace "main"}}
+
+    <section id="hero" class="center">
+      <img src="/assets/img/about/partners/hero.jpg" />
+    </section>
+
+    {{> about-nav}}
+
+    <section id="intro">
+      <div>
+        <h4>We wish to thank our partners for their support.</h4>
+        <p>Red Dust Role Models would not exist without the invaluable support of our funding partners, whose continuous support allows us to plan, deliver and expand our programs and projects.</p>
+      </div>
+    </section>
+
+    <section id="partners" class="tiles partners">
+      <div>
+        <ul>
+          {{#partners}}
+            <li>
+
+              <div class="flip-container">
+                <div class="flipper">
+
+                  <div class="front">
+                    <img src="/assets/img/partners/{{logo}}" />
+                  </div>
+                  <div class="back">
+                    <h2>{{name}}</h2>
+                    <!-- <h3>{{type}}</h3> -->
+                    <p>{{intro}}</p>
+                    <a href="{{url}}" title="{{name}}" target="_blank" class="button">Website</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          {{/partners}}
+        </ul>
+      </div>
+    </section>
+
+    <section id="become">
+      <div>
+        <h4>Become a Partner</h4>
+        <a class="button" href="mailto:darren@reddust.org.au" target="_blank">Contact us</a>
+      </div>
+    </section>
+
+  {{/replace}}
+{{/extend}}
