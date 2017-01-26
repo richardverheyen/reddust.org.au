@@ -10,6 +10,7 @@ var gulp = require('gulp');
 var del = require('del');
 var nunjucksRender = require('gulp-nunjucks-render');
 var prettify = require('gulp-jsbeautifier');
+var data = require('gulp-data');
 
 // Delete the dist folder
 gulp.task('delete-dist', function() {
@@ -23,8 +24,11 @@ gulp.task('copy-public', ['delete-dist'], function() {
 });
 
 // Compile all HTML pages
-gulp.task('nunjucks', ['delete-dist'], function() {
+gulp.task('compile-html', ['delete-dist'], function() {
   return gulp.src('src/templates/pages/**/*.+(html|nunjucks)')
+    .pipe(data(function() {
+      return require('./src/data/partners.json')
+    }))
     .pipe(nunjucksRender({ path: ['src/templates'] }))
     .pipe(prettify({ config: './prettify.json' }))
     .pipe(gulp.dest('dist'))

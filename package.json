@@ -2,7 +2,7 @@
   "name": "reddust.org.au",
   "version": "1.0.0",
   "homepage": "http://www.reddust.org.au",
-  "description": "The website of an none-profit organisation promotion health development in remote indigenous aborginal communities in the Northern Territories of Australia.",
+  "description": "The website of an none-profit organisation that promotes better health for indigenous aborginal communities in the Northern Territories of Australia.",
   "author": "Jan Werkhoven, Richard Verheyen & Hannah Sutton",
   "license": "UNLICENSED",
   "repository": {
@@ -15,6 +15,7 @@
   "devDependencies": {
     "del": "^2.2.2",
     "gulp": "^3.9.1",
+    "gulp-data": "^1.2.1",
     "gulp-jsbeautifier": "^2.0.4",
     "gulp-nunjucks-render": "^2.0.0"
   }
