@@ -1,8 +1,15 @@
 // Documentation
+
+// Gulp:
+// http://gulpjs.com/
 // https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md
 // https://github.com/gulpjs/gulp/blob/master/docs/API.md
 // https://zellwk.com/blog/nunjucks-with-gulp/
-// http://gulpjs.com/
+
+// JS Beautify:
+// https://github.com/tarunc/gulp-jsbeautifier
+// https://github.com/einars/js-beautify/
+// https://github.com/victorporof/Sublime-HTMLPrettify
 
 'use strict';
 
@@ -14,6 +21,7 @@ var data = require('gulp-data');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var minifyCSS = require('gulp-clean-css');
 
 // Watch all the files and run specific tasks if one changes
 // gulp.task('watch', function() {
@@ -41,26 +49,26 @@ gulp.task('compile-html', ['delete-dist'], function() {
     .pipe(data(function() { return require('./src/data/people.json') }))
     .pipe(data(function() { return require('./src/data/videos.json') }))
     .pipe(nunjucksRender({ path: ['src/templates'] }))
-    .pipe(prettify({ config: './prettify.json' }))
+    .pipe(prettify({ config: './jsbeautifyrc.json' }))
     .pipe(gulp.dest('dist'))
 });
 
 // Compile all CSS to dist folder
 gulp.task('compile-css', ['delete-dist'], function() {
   return gulp.src('src/styles/imports.scss')
-    .pipe(sass())
+    .pipe(sass({
+      outputStyle: 'expanded'
+    }))
     .pipe(autoprefixer({
       browsers: ['> 1% in AU', 'Explorer > 9', 'Firefox >= 17', 'Chrome >= 10', 'Safari >= 6', 'iOS >= 6'],
       cascade: false
     }))
     .pipe(rename('styles.css'))
     .pipe(gulp.dest('dist/assets/css'))
-});
-
-// Minify the CSS file
-gulp.task('minify-css', ['compile-css'], function() {
-  return gulp.src('dist/assets/css/styles.css')
-    .pipe(cleanCSS())
+    .pipe(minifyCSS())
     .pipe(rename('styles.min.css'))
     .pipe(gulp.dest('dist/assets/css'));
 });
+
+// Build entire dist folder
+gulp.task('build', ['compile-html', 'compile-css']);
