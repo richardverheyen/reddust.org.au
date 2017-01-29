@@ -23,6 +23,9 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var minifyCSS = require('gulp-clean-css');
 
+var concat = require('gulp-concat'),
+  var uglify = require('gulp-uglify');
+
 // Watch all the files and run specific tasks if one changes
 // gulp.task('watch', function() {
 //   gulp.watch(['src/public/**/*'], ['copy-public']);
@@ -42,7 +45,7 @@ gulp.task('copy-public', ['delete-dist'], function() {
     .pipe(gulp.dest('dist/'));
 });
 
-// Compile all HTML pages
+// Compile all HTML
 gulp.task('compile-html', ['delete-dist'], function() {
   return gulp.src('src/templates/pages/**/*.+(html|nunjucks)')
     .pipe(data(function() { return require('./src/data/partners.json') }))
@@ -53,7 +56,7 @@ gulp.task('compile-html', ['delete-dist'], function() {
     .pipe(gulp.dest('dist'))
 });
 
-// Compile all CSS to dist folder
+// Compile all CSS
 gulp.task('compile-css', ['delete-dist'], function() {
   return gulp.src('src/styles/imports.scss')
     .pipe(sass({
@@ -70,5 +73,19 @@ gulp.task('compile-css', ['delete-dist'], function() {
     .pipe(gulp.dest('dist/assets/css'));
 });
 
-// Build entire dist folder
-gulp.task('build', ['compile-html', 'compile-css']);
+// Compile all JS
+gulp.task('compile-js', ['delete-dist'], function() {
+  return gulp.src([
+      'bower_components/jquery/dist/jquery.min.js',
+      'file2.js',
+      'file3.js'
+    ])
+    .pipe(concat('scripts.js'))
+    .pipe(gulp.dest('dist/assets/js'))
+    .pipe(uglify())
+    .pipe(rename('scripts.min.js'))
+    .pipe(gulp.dest('dist/assets/js'));
+});
+
+// Build the entire dist folder
+gulp.task('build', ['copy-public', 'compile-html', 'compile-css', 'compile-js']);
