@@ -1,3 +1,5 @@
+/*! Scripts for www.reddust.org.au */
+
 isProduction = location.host === 'www.reddust.org.au' ? true : false;
 environment = isProduction ? 'production' : 'staging';
 
