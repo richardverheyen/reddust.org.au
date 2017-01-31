@@ -5,6 +5,7 @@
 // https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md
 // https://github.com/gulpjs/gulp/blob/master/docs/API.md
 // https://zellwk.com/blog/nunjucks-with-gulp/
+// https://mozilla.github.io/nunjucks/templating.html#raw
 
 // JS Beautify:
 // https://github.com/tarunc/gulp-jsbeautifier
@@ -95,6 +96,7 @@ function compileCss() {
     .pipe(connect.reload());
 }
 
+// Minify the project JS to the temp folder
 function minifyTempJs() {
   return gulp.src('./src/js/main.js')
     .pipe(uglify({ preserveComments: 'license' }))
@@ -102,6 +104,7 @@ function minifyTempJs() {
     .pipe(gulp.dest('temp'));
 }
 
+// Merge the vendor JS and project JS (unminified)
 function concatJs() {
   return gulp.src([
       'bower_components/jquery/dist/jquery.min.js',
@@ -113,6 +116,7 @@ function concatJs() {
     .pipe(gulp.dest('dist/assets/js'));
 }
 
+// Merge the vendor JS and minified project JS
 function concatJsMin() {
   return gulp.src([
       'bower_components/jquery/dist/jquery.min.js',
@@ -132,9 +136,10 @@ function watch() {
   gulp.watch(['src/templates/**/*.+(html|nunjucks|json)'], compileHtml);
   gulp.watch(['src/styles/**/*.scss'], compileCss);
   // gulp.watch(['src/js/**/*.js'], compileJs); // TODO
+  // gulp.watch(['gulpfile.js', 'package.json', 'bower.json'], build); // TODO
 }
 
-// Run a local server on
+// Run a local server on http://localhost:9000
 function serve() {
   connect.server({
     root: 'dist',
@@ -143,9 +148,7 @@ function serve() {
   });
 }
 
-// TODO: reload on change gulpfile
-// TODO: outdated browsers
-
+// Create Gulp commands
 gulp.task(watch);
 gulp.task(serve);
 gulp.task('compileJs', gulp.parallel(concatJs, gulp.series(minifyTempJs, concatJsMin), copyOutdatedBrowser));

@@ -5,7 +5,7 @@
   <meta name="description" content="">
 {% endblock %}
 
-{% block id %}about-reports{% endblock %}
+{% block id %}about-people{% endblock %}
 
 {% block main %}
 
@@ -31,7 +31,7 @@
         {% for person in people %}
           <li class="{{person.category}} {%if person.image %}image{% else %}no-image{% endif %}">
             <div>
-              {%if image %}
+              {%if person.image %}
                 <div class="img">
                   <img src="/assets/img/people/{{person.image}}" alt="{{person.name}} - {{person.position}} at Red Dust"/>
                 </div>
