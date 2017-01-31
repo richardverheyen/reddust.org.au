@@ -27,37 +27,42 @@ var uglify = require('gulp-uglify');
 var replace = require('gulp-replace');
 
 // Watch all the files and run specific tasks if one changes
-// gulp.task('watch', function() {
-//   gulp.watch(['src/public/**/*'], ['copy-public']);
-//   gulp.watch(['src/templates/**/*.+(html|nunjucks)', 'src/data/**/*.json'], ['compile-html']);
-//   gulp.watch(['src/styles/**/*.scss'], ['scss']);
-//   gulp.watch(['src/js/**/*.js'], ['js']);
-// });
+gulp.task('watch', function() {
+  gulp.watch(['src/public/**/*'], ['copy-public']);
+  gulp.watch(['src/templates/**/*.+(html|nunjucks|json)'], ['compile-html']);
+  gulp.watch(['src/styles/**/*.scss'], ['compile-css']);
+  gulp.watch(['src/js/**/*.js'], ['compile-js']);
+});
 
 // Delete the dist folder
 gulp.task('delete-dist', function() {
   return del(['dist']);
 });
 
+// Delete the temp folder
+gulp.task('delete-temp', ['compile-js'], function() {
+  return del(['temp']);
+});
+
 // Copy over the files in the public folder "as they are" to the dist folder
-gulp.task('copy-public', ['delete-dist'], function() {
+gulp.task('copy-public', function() {
   return gulp.src('src/public/**/*')
     .pipe(gulp.dest('dist/'));
 });
 
 // Compile all HTML
-gulp.task('compile-html', ['delete-dist'], function() {
+gulp.task('compile-html', function() {
   return gulp.src('src/templates/pages/**/*.+(html|nunjucks)')
-    .pipe(data(function() { return require('./src/data/partners.json') }))
-    .pipe(data(function() { return require('./src/data/people.json') }))
-    .pipe(data(function() { return require('./src/data/videos.json') }))
+    .pipe(data(function() { return require('./src/templates/data/partners.json') }))
+    .pipe(data(function() { return require('./src/templates/data/people.json') }))
+    .pipe(data(function() { return require('./src/templates/data/videos.json') }))
     .pipe(nunjucksRender({ path: ['src/templates'] }))
     .pipe(prettify({ config: './jsbeautifyrc.json' }))
     .pipe(gulp.dest('dist'))
 });
 
 // Compile all CSS
-gulp.task('compile-css', ['delete-dist'], function() {
+gulp.task('compile-css', function() {
   return gulp.src('src/styles/imports.scss')
     .pipe(sass({ outputStyle: 'expanded' }))
     .pipe(autoprefixer({
@@ -72,17 +77,17 @@ gulp.task('compile-css', ['delete-dist'], function() {
 });
 
 // Compile all JS
-gulp.task('compile-js', ['delete-dist', 'minify-js', 'concat-js', 'concat-js-min'], function() {});
+gulp.task('compile-js', ['minify-js', 'concat-js', 'concat-js-min']);
 
 // Uglify the JS file of this project (not the vendors)
-gulp.task('minify-js', ['delete-dist'], function() {
+gulp.task('minify-js', function() {
   return gulp.src('./src/js/main.js')
     .pipe(uglify({ preserveComments: 'license' }))
     .pipe(rename('scripts.min.js'))
-    .pipe(gulp.dest('tmp'));
+    .pipe(gulp.dest('temp'));
 });
 
-gulp.task('concat-js', ['delete-dist'], function() {
+gulp.task('concat-js', function() {
   return gulp.src([
       'bower_components/jquery/dist/jquery.min.js',
       'bower_components/velocity/velocity.min.js',
@@ -93,12 +98,12 @@ gulp.task('concat-js', ['delete-dist'], function() {
     .pipe(gulp.dest('dist/assets/js'))
 });
 
-gulp.task('concat-js-min', ['delete-dist', 'minify-js'], function() {
+gulp.task('concat-js-min', ['minify-js'], function() {
   return gulp.src([
       'bower_components/jquery/dist/jquery.min.js',
       'bower_components/velocity/velocity.min.js',
       'bower_components/countUp.js/dist/countUp.min.js',
-      'tmp/scripts.min.js'
+      'temp/scripts.min.js'
     ])
     .pipe(concat('scripts.min.js'), { newLine: '\n\n\n\n' })
     .pipe(replace(/^\s*\r?\n/gm, ''))
@@ -109,5 +114,9 @@ gulp.task('concat-js-min', ['delete-dist', 'minify-js'], function() {
 // TODO: outdated browsers
 // TODO: watch and rebuild
 
-// Build the entire dist folder
-gulp.task('build', ['copy-public', 'compile-html', 'compile-css', 'compile-js']);
+// Build the entire dist folder on bash `gulp build`
+gulp.task('build', ['delete-dist', 'build-dist']);
+gulp.task('build-dist', ['copy-public', 'compile-html', 'compile-css', 'compile-js', 'delete-temp']);
+
+// Build, watch and serve on bash `gulp`
+gulp.task('default', ['build', 'watch', 'serve'])
