@@ -11,58 +11,64 @@
 // https://github.com/einars/js-beautify/
 // https://github.com/victorporof/Sublime-HTMLPrettify
 
+// Gulp 4.0 alpha
+// https://demisx.github.io/gulp4/2015/01/15/install-gulp4.html
+// https://www.npmjs.com/package/gulp-4.0.build
+// http://stackoverflow.com/questions/22824546/how-to-run-gulp-tasks-sequentially-one-after-the-other
+
 'use strict';
 
 var gulp = require('gulp');
+var autoprefixer = require('gulp-autoprefixer');
+var concat = require('gulp-concat');
+var connect = require('gulp-connect');
+var data = require('gulp-data');
 var del = require('del');
+var minifyCSS = require('gulp-clean-css');
 var nunjucksRender = require('gulp-nunjucks-render');
 var prettify = require('gulp-jsbeautifier');
-var data = require('gulp-data');
 var rename = require('gulp-rename');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var minifyCSS = require('gulp-clean-css');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
 var replace = require('gulp-replace');
-
-// Watch all the files and run specific tasks if one changes
-gulp.task('watch', function() {
-  gulp.watch(['src/public/**/*'], ['copy-public']);
-  gulp.watch(['src/templates/**/*.+(html|nunjucks|json)'], ['compile-html']);
-  gulp.watch(['src/styles/**/*.scss'], ['compile-css']);
-  gulp.watch(['src/js/**/*.js'], ['compile-js']);
-});
+var sass = require('gulp-sass');
+var sitemap = require('gulp-sitemap');
+var uglify = require('gulp-uglify');
 
 // Delete the dist folder
-gulp.task('delete-dist', function() {
+function deleteDist() {
   return del(['dist']);
-});
+}
 
 // Delete the temp folder
-gulp.task('delete-temp', ['compile-js'], function() {
+function deleteTemp() {
   return del(['temp']);
-});
+}
 
 // Copy over the files in the public folder "as they are" to the dist folder
-gulp.task('copy-public', function() {
+function copyPublic() {
   return gulp.src('src/public/**/*')
-    .pipe(gulp.dest('dist/'));
-});
+    .pipe(gulp.dest('dist/'))
+    .pipe(connect.reload());
+}
 
 // Compile all HTML
-gulp.task('compile-html', function() {
+function compileHtml() {
   return gulp.src('src/templates/pages/**/*.+(html|nunjucks)')
     .pipe(data(function() { return require('./src/templates/data/partners.json') }))
     .pipe(data(function() { return require('./src/templates/data/people.json') }))
     .pipe(data(function() { return require('./src/templates/data/videos.json') }))
     .pipe(nunjucksRender({ path: ['src/templates'] }))
     .pipe(prettify({ config: './jsbeautifyrc.json' }))
+    .pipe(sitemap({
+      siteUrl: 'http://www.reddust.org.au',
+      changefreq: 'monthly',
+      priority: 0.5
+    }))
     .pipe(gulp.dest('dist'))
-});
+    .pipe(connect.reload());
+}
 
 // Compile all CSS
-gulp.task('compile-css', function() {
+function compileCss() {
   return gulp.src('src/styles/imports.scss')
     .pipe(sass({ outputStyle: 'expanded' }))
     .pipe(autoprefixer({
@@ -73,21 +79,18 @@ gulp.task('compile-css', function() {
     .pipe(gulp.dest('dist/assets/css'))
     .pipe(minifyCSS())
     .pipe(rename('styles.min.css'))
-    .pipe(gulp.dest('dist/assets/css'));
-});
+    .pipe(gulp.dest('dist/assets/css'))
+    .pipe(connect.reload());
+}
 
-// Compile all JS
-gulp.task('compile-js', ['minify-js', 'concat-js', 'concat-js-min']);
-
-// Uglify the JS file of this project (not the vendors)
-gulp.task('minify-js', function() {
+function minifyTempJs() {
   return gulp.src('./src/js/main.js')
     .pipe(uglify({ preserveComments: 'license' }))
     .pipe(rename('scripts.min.js'))
     .pipe(gulp.dest('temp'));
-});
+}
 
-gulp.task('concat-js', function() {
+function concatJs() {
   return gulp.src([
       'bower_components/jquery/dist/jquery.min.js',
       'bower_components/velocity/velocity.min.js',
@@ -95,10 +98,10 @@ gulp.task('concat-js', function() {
       'src/js/main.js'
     ])
     .pipe(concat('scripts.js'), { newLine: '\n\n' })
-    .pipe(gulp.dest('dist/assets/js'))
-});
+    .pipe(gulp.dest('dist/assets/js'));
+}
 
-gulp.task('concat-js-min', ['minify-js'], function() {
+function concatJsMin() {
   return gulp.src([
       'bower_components/jquery/dist/jquery.min.js',
       'bower_components/velocity/velocity.min.js',
@@ -108,15 +111,30 @@ gulp.task('concat-js-min', ['minify-js'], function() {
     .pipe(concat('scripts.min.js'), { newLine: '\n\n\n\n' })
     .pipe(replace(/^\s*\r?\n/gm, ''))
     .pipe(gulp.dest('dist/assets/js'))
-});
+    .pipe(connect.reload());
+}
 
-// TODO: sitemap
+// Rerun the task when a file changes
+function watch() {
+  gulp.watch(['src/public/**/*'], copyPublic);
+  gulp.watch(['src/templates/**/*.+(html|nunjucks|json)'], compileHtml);
+  gulp.watch(['src/styles/**/*.scss'], compileCss);
+  // gulp.watch(['src/js/**/*.js'], compileJs);
+}
+
+// Run a local server on
+function serve() {
+  connect.server({
+    root: 'dist',
+    livereload: true,
+    port: 9000,
+  });
+}
+
 // TODO: outdated browsers
-// TODO: watch and rebuild
 
-// Build the entire dist folder on bash `gulp build`
-gulp.task('build', ['delete-dist', 'build-dist']);
-gulp.task('build-dist', ['copy-public', 'compile-html', 'compile-css', 'compile-js', 'delete-temp']);
-
-// Build, watch and serve on bash `gulp`
-gulp.task('default', ['build', 'watch', 'serve'])
+gulp.task(watch);
+gulp.task(serve);
+gulp.task('compileJs', gulp.parallel(concatJs, gulp.series(minifyTempJs, concatJsMin)));
+gulp.task('build', gulp.series(deleteDist, gulp.parallel(copyPublic, compileHtml, compileCss, 'compileJs'), deleteTemp));
+gulp.task('default', gulp.series('build', gulp.parallel('watch', 'serve')));
