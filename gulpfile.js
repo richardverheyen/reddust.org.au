@@ -50,6 +50,12 @@ function copyPublic() {
     .pipe(connect.reload());
 }
 
+// Copy the outdatedbrowser script
+function copyOutdatedBrowser() {
+  return gulp.src('bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.js')
+    .pipe(gulp.dest('dist/assets/js/'))
+}
+
 // Compile all HTML
 function compileHtml() {
   return gulp.src('src/templates/pages/**/*.+(html|nunjucks)')
@@ -58,6 +64,7 @@ function compileHtml() {
     .pipe(data(function() { return require('./src/templates/data/videos.json') }))
     .pipe(nunjucksRender({ path: ['src/templates'] }))
     .pipe(prettify({ config: './jsbeautifyrc.json' }))
+    .pipe(gulp.dest('dist'))
     .pipe(sitemap({
       siteUrl: 'http://www.reddust.org.au',
       changefreq: 'monthly',
@@ -70,14 +77,19 @@ function compileHtml() {
 // Compile all CSS
 function compileCss() {
   return gulp.src('src/styles/imports.scss')
-    .pipe(sass({ outputStyle: 'expanded' }))
+    .pipe(sass({
+      outputStyle: 'expanded',
+      includePaths: require('node-normalize-scss').includePaths
+    }))
     .pipe(autoprefixer({
       browsers: ['> 1% in AU', 'Explorer > 9', 'Firefox >= 17', 'Chrome >= 10', 'Safari >= 6', 'iOS >= 6'],
       cascade: false
     }))
     .pipe(rename('styles.css'))
     .pipe(gulp.dest('dist/assets/css'))
-    .pipe(minifyCSS())
+    .pipe(minifyCSS({
+      keepSpecialComments: 'none'
+    }))
     .pipe(rename('styles.min.css'))
     .pipe(gulp.dest('dist/assets/css'))
     .pipe(connect.reload());
@@ -119,7 +131,7 @@ function watch() {
   gulp.watch(['src/public/**/*'], copyPublic);
   gulp.watch(['src/templates/**/*.+(html|nunjucks|json)'], compileHtml);
   gulp.watch(['src/styles/**/*.scss'], compileCss);
-  // gulp.watch(['src/js/**/*.js'], compileJs);
+  // gulp.watch(['src/js/**/*.js'], compileJs); // TODO
 }
 
 // Run a local server on
@@ -131,10 +143,11 @@ function serve() {
   });
 }
 
+// TODO: reload on change gulpfile
 // TODO: outdated browsers
 
 gulp.task(watch);
 gulp.task(serve);
-gulp.task('compileJs', gulp.parallel(concatJs, gulp.series(minifyTempJs, concatJsMin)));
+gulp.task('compileJs', gulp.parallel(concatJs, gulp.series(minifyTempJs, concatJsMin), copyOutdatedBrowser));
 gulp.task('build', gulp.series(deleteDist, gulp.parallel(copyPublic, compileHtml, compileCss, 'compileJs'), deleteTemp));
 gulp.task('default', gulp.series('build', gulp.parallel('watch', 'serve')));

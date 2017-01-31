@@ -2,7 +2,7 @@
 @import 'variables';
 @import 'mixins';
 
-// Normalise browsers
+// Normalise browsers 
 @import 'normalize';
 
 // Commons
@@ -28,5 +28,5 @@
 @import 'contact';
 @import 'support';
 
-// Outdate browsers
-// @import '../../bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.scss';
+// Outdated browser
+@import '../../bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.scss';
