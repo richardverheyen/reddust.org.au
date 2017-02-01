@@ -1,36 +1,23 @@
-isProduction = location.host === 'www.reddust.org.au' ? true : false;
-environment = isProduction ? 'production' : 'staging';
+/*! Scripts for www.reddust.org.au */
 
-// Google Analytics
+const isProduction = location.host === 'www.reddust.org.au' ? true : false;
+const environment = isProduction ? 'production' : 'staging';
 
-/* jshint ignore:start */
-
-(function(i, s, o, g, r, a, m) {
-  i['GoogleAnalyticsObject'] = r;
-  i[r] = i[r] || function() {
-    (i[r].q = i[r].q || []).push(arguments)
-  }, i[r].l = 1 * new Date();
-  a = s.createElement(o),
-    m = s.getElementsByTagName(o)[0];
-  a.async = 1;
-  a.src = g;
-  m.parentNode.insertBefore(a, m)
-})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-/* jshint ignore:end */
-
-if (!!ga) {
+// Fire page view to Google Analytics
+if (ga) {
   ga('create', 'UA-34474019-10', 'auto');
-  ga('set', { dimension1: environment });
+  ga('set', {
+    dimension1: environment
+  });
   ga('send', 'pageview');
 }
 
-<<<<<<< HEAD
+// Animates open the modal
 function openModal() {
-  var speed = 700;
-  var easing = 'easeOutExpo';
-  var $overlay = $('#modals .overlay');
-  var $modal = $('#modals .modal');
+  const speed = 700;
+  const easing = 'easeOutExpo';
+  const $overlay = $('#modals .overlay');
+  const $modal = $('#modals .modal');
   if (!$modal.hasClass('velocity-animating')) {
     $('body').addClass('prevent-scroll'); // prevent users from scrolling the content behind the modal
     $('#modals').show();
@@ -39,12 +26,13 @@ function openModal() {
       opacity: 1
     }, speed, easing);
     $modal.velocity('stop').velocity({
-      translateY: ['0%', '30%'],
+      translateY: ['0%', '10%'],
       scale: [1, 0.9]
     }, speed, easing);
   }
 }
 
+// Animates close the modal
 function closeModal() {
   var speed = 400;
   var easing = 'easeOutExpo';
@@ -55,7 +43,7 @@ function closeModal() {
       opacity: 0
     }, speed, easing);
     $modal.velocity('stop').velocity({
-      translateY: '30%',
+      translateY: '10%',
       scale: 0.9
     }, speed, easing, function() {
       $('#modals').hide();
@@ -64,79 +52,51 @@ function closeModal() {
   }
 }
 
+// Make sure the modal centres vertically, yet is scrollable if content is taller than the window
 function checkModalCentre() {
   var $overlay = $('#modals .overlay');
   var $modal = $('#modals .modal');
   var windowHeight = $(window).height();
   var modalHeight = $modal.height() + 40;
-  console.log('has modal and overlay', windowHeight, modalHeight);
-  if (modalHeight > windowHeight) {
+  if (modalHeight >= windowHeight) {
     $overlay.removeClass('centre-content');
-    console.log('top');
   } else {
     $overlay.addClass('centre-content');
-    console.log('centre');
   }
-=======
-// Animate open the modal
-function openModal() {
-  // $('#modals').show();
-
-  const easing = 'easeOutExpo';
-  const speed = 700;
-  if (config.environment !== 'test') {
-    $('body').addClass('prevent-scroll'); // prevent scrolling of the content behind the modal, only if not in testing
-  }
-  Ember.run.next(function() { // for the query param modals #modals does not exist yet
-    $('#modals').show();
-    $('#modals .overlay').velocity('stop').velocity({
-      opacity: 1
-    }, speed, easing);
-    $('#modals .modal').velocity('stop').velocity({
-      marginTop: '0%',
-      scale: 1
-    }, speed, easing);
-  });
-
-  this.controllerFor('application').set('closingModal', false);
-
 }
 
-// Animate close the modal
-function closeModal() {
-  $('#modals').hide();
+var animatingCounters = false;
 
-  const $ = Ember.$;
-  const $modal = $('#modals .modal');
-  const $overlay = $('#modals .overlay');
-  const speed = 400;
-  const easing = 'easeOutExpo';
-  const config = {
-    duration: speed,
-    easing: easing,
-    queue: false
-  };
+// Check whether to animate the landing page counters or not
+function checkWhetherToAnimateCounters() {
+  // Only bind this this on logic on the landing page, avoid collisions on other pages
+  var triggerTop = $('#landing .counter-wrapper').first().offset().top;
+  var windowBottom = $(window).scrollTop() + $(window).height();
+  // console.log(triggerTop, windowBottom);
+  if (!animatingCounters) {
+    if (windowBottom > triggerTop) {
+      animatingCounters = true;
+      animateCounters();
+    }
+  }
+}
 
-  // HACK: to allow for a smooth close animation of the modal
-  // The problem is that as soon as the route transitions, the modal content is removed from the template and
-  // suddenly the modal is way shorter and has blank content, before starting the fade / scale out animation.
-  // The hack is to temporary re-add the content and remove it once the animation is done (much like Liquid Fire does).
-  this.controllerFor('application').set('closingModal', true);
-
-  // Animate
-  $modal.velocity('stop').velocity({
-    marginTop: '30%',
-    scale: 0.85
-  }, config);
-  $overlay.velocity('stop').velocity({
-    opacity: 0
-  }, speed, easing, () => {
-    $('#modals').hide();
-    $('body').removeClass('prevent-scroll');
-    this.controllerFor('application').set('closingModal', false);
+// Animate the counters on the landing page
+function animateCounters() {
+  $('#impact').find('.counter-wrapper').each(function() {
+    var countUpToValue = $(this).find('h1').attr('value');
+    $(this).find('h1').attr('id', countUpToValue);
+    const options = {
+      useEasing: true,
+      useGrouping: true,
+      separator: ',',
+      decimal: '.',
+      prefix: '',
+      suffix: ''
+    };
+    var demo = new CountUp(countUpToValue, 0, countUpToValue, 0, 5 * (countUpToValue / 1709), options);
+    demo.start();
   });
-
->>>>>>> b825156c9b33dae118f2d4552f05c2762608795e
 }
 
 $(document).ready(function() {
@@ -156,6 +116,34 @@ $(document).ready(function() {
     }
   });
 
+  // Things to fire ONLY on the landing page (avoid unexpected future collisions)
+  if ($('body').attr('id') === 'landing') {
+
+    // On load
+    checkWhetherToAnimateCounters();
+    // On scroll
+    $(window).scroll(function() {
+      checkWhetherToAnimateCounters();
+    });
+
+  }
+
+  // Make any hashtag link scroll with animation to element with matching ID
+  // Example: <a href="#features"> will scroll to element with ID #features
+  // Commonly found in the #hero of each page
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+
   // Animate the horizantal program sliders
   $('.program-slider nav img').on('click', function() {
     var $section = $(this).parents('section'); // reusable jQuery selector
@@ -164,21 +152,28 @@ $(document).ready(function() {
     var currentSlide = $section.data('current') || 1; // if no data attribute is found on <section> then assume current slide is 1
     var increment = $(this).hasClass('next') ? 1 : -1;
     var newSlide = currentSlide + increment;
-    var newLeft = -100 * (newSlide - 1) + '%';
     var isAnimating = $ul.hasClass('velocity-animating') ? true : false;
     if (newSlide < 1) {
       // if first slide, spring left and back
       if (!isAnimating) {
         $ul.velocity('stop')
-          .velocity({ translateX: '150px' }, 250, "easeOutQuad")
-          .velocity({ translateX: '0px' }, 250, "easeInSine");
+          .velocity({
+            translateX: '150px'
+          }, 250, "easeOutQuad")
+          .velocity({
+            translateX: '0px'
+          }, 250, "easeInSine");
       }
     } else if (newSlide > amountOfSlides) {
       // if last slide, spring right and back
       if (!isAnimating) {
         $ul.velocity('stop')
-          .velocity({ translateX: '-150px' }, 250, "easeOutQuad")
-          .velocity({ translateX: '0px' }, 250, "easeInSine");
+          .velocity({
+            translateX: '-150px'
+          }, 250, "easeOutQuad")
+          .velocity({
+            translateX: '0px'
+          }, 250, "easeInSine");
       }
     } else {
       // if not first or last slide, slide to next or previous slide
@@ -196,15 +191,32 @@ $(document).ready(function() {
     var $img = $(this).find('.img').clone();
     var $modal = $('#modals .modal');
     $('#modals .modal .content').html('').append($img).append($bio);
-<<<<<<< HEAD
     openModal();
-=======
-    closeModal();
->>>>>>> b825156c9b33dae118f2d4552f05c2762608795e
     if ($img.length) {
       $modal.addClass('has-image');
     } else {
       $modal.removeClass('has-image');
+    }
+  });
+
+  // Clicking a partner opens the modal, only if screen width is below 720px
+  $('.tiles.partners li').on('click', function() {
+    console.log($(window).width());
+    debugger;
+    if ($(window).width() <= 720) {
+      var $img = $(this).find('.front img').clone();
+      var $h2 = $(this).find('.back h2').clone();
+      var $p = $(this).find('.back p').clone();
+      var $a = $(this).find('.back a').clone();
+      var $modal = $('#modals .modal');
+      $modal.find('.img').html('').append($img);
+      $modal.find('.bio').html('').append($h2).append($p).append($a);
+      openModal();
+      if ($img.length) {
+        $modal.addClass('has-image');
+      } else {
+        $modal.removeClass('has-image');
+      }
     }
   });
 

@@ -19,20 +19,22 @@
 
 'use strict';
 
-var gulp = require('gulp');
-var autoprefixer = require('gulp-autoprefixer');
-var concat = require('gulp-concat');
-var connect = require('gulp-connect');
-var data = require('gulp-data');
-var del = require('del');
-var minifyCSS = require('gulp-clean-css');
-var nunjucksRender = require('gulp-nunjucks-render');
-var prettify = require('gulp-jsbeautifier');
-var rename = require('gulp-rename');
-var replace = require('gulp-replace');
-var sass = require('gulp-sass');
-var sitemap = require('gulp-sitemap');
-var uglify = require('gulp-uglify');
+const gulp = require('gulp');
+const autoprefixer = require('gulp-autoprefixer');
+const concat = require('gulp-concat');
+const connect = require('gulp-connect');
+const data = require('gulp-data');
+const del = require('del');
+const minifyCSS = require('gulp-clean-css');
+const nunjucksRender = require('gulp-nunjucks-render');
+const prettify = require('gulp-jsbeautifier');
+const rename = require('gulp-rename');
+const replace = require('gulp-replace');
+const sass = require('gulp-sass');
+const sitemap = require('gulp-sitemap');
+const uglify = require('gulp-uglify');
+const eslint = require('gulp-eslint');
+const babel = require('gulp-babel');
 
 // Delete the dist folder
 function deleteDist() {
@@ -77,7 +79,7 @@ function compileHtml() {
 
 // Compile all CSS
 function compileCss() {
-  return gulp.src('src/styles/imports.scss')
+  return gulp.src('src/styles/app.scss')
     .pipe(sass({
       outputStyle: 'expanded',
       includePaths: require('node-normalize-scss').includePaths
@@ -96,9 +98,18 @@ function compileCss() {
     .pipe(connect.reload());
 }
 
-// Minify the project JS to the temp folder
-function minifyTempJs() {
-  return gulp.src('./src/js/main.js')
+function lintJs() {
+  return gulp.src(['src/js/app.js'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
+}
+
+function transformAndMinifyJs() {
+  return gulp.src(['src/js/app.js'])
+    .pipe(babel({ presets: ['es2015'] }))
+    .pipe(rename('scripts.js'))
+    .pipe(gulp.dest('temp'))
     .pipe(uglify({ preserveComments: 'license' }))
     .pipe(rename('scripts.min.js'))
     .pipe(gulp.dest('temp'));
@@ -110,10 +121,12 @@ function concatJs() {
       'bower_components/jquery/dist/jquery.min.js',
       'bower_components/velocity/velocity.min.js',
       'bower_components/countUp.js/dist/countUp.min.js',
-      'src/js/main.js'
+      'src/js/vendor/google-analytics.js',
+      'temp/scripts.js'
     ])
     .pipe(concat('scripts.js'), { newLine: '\n\n' })
-    .pipe(gulp.dest('dist/assets/js'));
+    .pipe(gulp.dest('dist/assets/js'))
+    .pipe(connect.reload());
 }
 
 // Merge the vendor JS and minified project JS
@@ -122,6 +135,7 @@ function concatJsMin() {
       'bower_components/jquery/dist/jquery.min.js',
       'bower_components/velocity/velocity.min.js',
       'bower_components/countUp.js/dist/countUp.min.js',
+      'src/js/vendor/google-analytics.js',
       'temp/scripts.min.js'
     ])
     .pipe(concat('scripts.min.js'), { newLine: '\n\n\n\n' })
@@ -151,6 +165,37 @@ function serve() {
 // Create Gulp commands
 gulp.task(watch);
 gulp.task(serve);
-gulp.task('compileJs', gulp.parallel(concatJs, gulp.series(minifyTempJs, concatJsMin), copyOutdatedBrowser));
-gulp.task('build', gulp.series(deleteDist, gulp.parallel(copyPublic, compileHtml, compileCss, 'compileJs'), deleteTemp));
-gulp.task('default', gulp.series('build', gulp.parallel('watch', 'serve')));
+gulp.task('compileJs',
+  gulp.series(
+    gulp.series(
+      lintJs,
+      transformAndMinifyJs
+    ),
+    gulp.parallel(
+      concatJs,
+      concatJsMin,
+      copyOutdatedBrowser
+    )
+  )
+);
+gulp.task('build',
+  gulp.series(
+    deleteDist,
+    gulp.parallel(
+      copyPublic,
+      compileHtml,
+      compileCss,
+      'compileJs'
+    ),
+    deleteTemp
+  )
+);
+gulp.task('default',
+  gulp.series(
+    'build',
+    gulp.parallel(
+      'watch',
+      'serve'
+    )
+  )
+);
