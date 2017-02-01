@@ -201,8 +201,6 @@ $(document).ready(function() {
 
   // Clicking a partner opens the modal, only if screen width is below 720px
   $('.tiles.partners li').on('click', function() {
-    console.log($(window).width());
-    debugger;
     if ($(window).width() <= 720) {
       var $img = $(this).find('.front img').clone();
       var $h2 = $(this).find('.back h2').clone();
