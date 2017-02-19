@@ -26,7 +26,7 @@
   }, {
     "name": "Will Minson",
     "role": "Director",
-    "category": "director",
+    "category": "director role-model",
     "image": "will-minson@2x.jpg",
     "bio": "A longtime Red Dust Role Model, Will was warmly welcomed to the board at the end of 2014. A former player in the Western Bulldogs, Will was selected 20th overall in the AFL Draft and began his professional career when he debuted in 2004. Most recently, Will completed his Sciences Degree from the University of Melbourne. "
   }, {
@@ -48,17 +48,17 @@
     "image": "paul-guerra@2x.jpg",
     "bio": "Paul has enjoyed a 20-year career in the telecommunications sector working at senior levels for renowned companies Motorola and Vodafone. Paul has a strong record in sales and marketing and has been instrumental in solidifying the presence of both organisations in Australia. Paul also dedicates some of his time to serve as a Director on several charity-based organisations in Australia. Paul also dedicates some of his time to serve as a director on several charity-based organisations."
   }, {
+    "name": "Deanne Minniecon",
+    "role": "Director",
+    "category": "director",
+    "image": "",
+    "bio": "Deanne is both Aboriginal and Torres Strait Islander decent and holds a Graduate Diploma in Health Promotion and a Master of Health Science (Health Promotion).  Deanne has led a number of preventative health programs and strategies targeting Aboriginal and Torres Strait Islander peoples across Queensland and had provided advice on key preventive health initiatives nationally."
+  }, {
     "name": "Darren Smith",
     "role": "Chief Executive Officer",
     "category": "staff",
-    "image": "",
+    "image": "darren-smith@2x.jpg",
     "bio": "Darren has been involved with Red Dust for over twelve years and brings to his role a ten-year career as a professional basketball player and management experience. As the Chief Executive Officer, he coordinates the effective delivery of programs throughout Australia and leads teams on the ground while out bush, as well as looking after all other aspects of the organisation."
-  }, {
-    "name": "Samantha Guttridge",
-    "role": "Partnerships Manager",
-    "category": "staff",
-    "image": "",
-    "bio": "Sam started with Red Dust in February 2013 after completing a Bachelor of General Studies at Monash University majoring in International Marketing in 1999. Sam's previous role before Red Dust was with Treasury Wine Estate (Formerly Fosters Group); where she worked in Brand Marketing on several premium wine brands, including Penfolds, Seppelt and Coldstream Hills, for over five years."
   }, {
     "name": "Jonathan Lindsay-Tjapaltjarri Hermawan",
     "role": "Manager Central Australia",
@@ -75,7 +75,7 @@
     "name": "Billie O'Keefe",
     "role": "Strong Young Women's Program Senior Project Officer",
     "category": "staff",
-    "image": "",
+    "image": "billie-okeefe@2x.jpg",
     "bio": "Prior joining the Red Dust team in 2016, Billie has worked in the N.T for ten years in community development, child maternity and health promotion. She completed a Bachelor's in Community Development and is currently studying Health Sciences part-time with a pathway into medicine."
   }, {
     "name": "Emilie Goegan",
@@ -83,6 +83,12 @@
     "category": "staff",
     "image": "",
     "bio": "Emilie joined Red Dust mid 2016 as a volunteer and not to long became a valuable member of the team as Business and Communications Manager. With a background in education and a Bachelor's Degree in Creative Arts majoring in Professional Writing, Emilie has travelled extensively throughout Asia as an educator prior to settling back home in Melbourne."
+  }, {
+    "name": "Nina Braid",
+    "role": "Staff Member",
+    "category": "staff",
+    "image": "",
+    "bio": "Nina began working for Red Dust at the beginning of 2017 as Engagement and Fundraising Manager. For the last ten years Nina had worked for the Commonwealth Government in Indigenous Land Corporation and in Health and Employment. Nina obtained at BA in Aboriginal Policy and Management and is currently completing her Masters of Management at the University of South Australia."
   }, {
     "name": "Mitch Tambo",
     "role": "Role Model",
@@ -132,18 +138,6 @@
     "image": "",
     "bio": "Anthea has a long-standing interest in Indigenous rights and health in Australia. She has been involved in a number of roles in Australia and overseas to pursue this passion and really make a difference. Anthea completed her final months of medical school in the N.T. in 2008, and has furthered her study with specialist training in Obstetrics and Gynecology."
   }, {
-    "name": "Naomi Border",
-    "role": "Role Model",
-    "category": "role-model-arts",
-    "image": "",
-    "bio": ""
-  }, {
-    "name": "Nicole Border",
-    "role": "Role Model",
-    "category": "role-model-arts",
-    "image": "nicole-border@2x.jpg",
-    "bio": "Nicole became involved with Red Dust in 2006 when she joined a tour out to the remote community of Kintore. Nicole studied psychology and explored the psychosocial factors associated with the physical activity behaviour in her Honours thesis. She then went on to complete a Masters Degree in Health Promotion, focusing her work on Aboriginal and Torres Strait Islander health and chronic disease."
-  }, {
     "name": "David Callow",
     "role": "Role Model",
     "category": "role-model-arts",
@@ -192,18 +186,6 @@
     "image": "kate-lynch@2x.jpg",
     "bio": "As a passionate swimmer Kate stepped out of the pool and into the coaching world, whilst studying a Bachelor of Education and Commerce at Deakin University. Working in the aquatic and recreation sector for over 10 years, Kate has lectured at national and international conferences, developed educational and healthy programs as well as managed facilities in both metropolitan and remote Australia."
   }, {
-    "name": "Jill Noe",
-    "role": "Role Model",
-    "category": "role-model",
-    "image": "jill-noe@2x.jpg",
-    "bio": "Originally from Portland, Oregon, Jill is a professional basketball player for the Nunawading Spectres. receiving an undergraduate degree in Journalism and Mass Communication and a Masters in Liberal Arts and Sciences from Arizona State University"
-  }, {
-    "name": "Carley McKay",
-    "role": "Role Model",
-    "category": "role-model-sport",
-    "image": "carley-mckay@2x.jpg",
-    "bio": "Carley spent all of 2007 training for rowing at the AIS and has been involved in the national selection process over a four year period. She has enjoyed multiple state championship victories as well as some international travel as part of her rowing career. Carley also has a double degree in Chemical Engineering and Commerce from the University of Melbourne."
-  }, {
     "name": "Rhianne Kerr",
     "role": "Role Model",
     "category": "role-model-sport",
@@ -216,35 +198,11 @@
     "image": "",
     "bio": "Jonathon has been actively playing basketball for the past 17 years and currently plays with the Dandenong Rangers in Victoria. In 2001 Jonathon gained a full scholarship and began a 4 year NCAA basketball career. During this time Jonathon graduated with a Bachelor of Business Administration with a minor in Sports Management from Nova Southeastern University in Florida."
   }, {
-    "name": "Tim Callan",
-    "role": "Role Model",
-    "category": "role-model-sport",
-    "image": "",
-    "bio": "Tim is a former Australia Rules Football player. He was first recruited in the Bulldogs' under 18 side and went on to become one of the Bulldogs key players. Tim played a key role in the success of their first seven undefeated rounds in 2007, a highlight in the Bulldogs history. He retired in 2010 with a great career behind him."
-  }, {
-    "name": "Jarrod Harbrow",
-    "role": "Role Model",
-    "category": "role-model-sport",
-    "image": "",
-    "bio": "Jarrod is an Australia Rules Football player making his debut in 2007 for the Western Bulldogs where his pace, skill and running abilities shone. At the end of the 2010 season Jarrod chose to join the Gold Coast Suns where he could return to Queensland and his family and begin playing on a newly established AFL side."
-  }, {
     "name": "Tom Lonergan",
     "role": "Role Model",
     "category": "role-model-sport",
     "image": "",
     "bio": "Tom is an Australia Rules Football player. After being selected by the Geelong Cats, Tom spent two years in their VFL side before going on to play as a permanent player of the team. Tom played a career-defining season of football in 2010, when he played 22 out of 25 possible games which included two finals and in which he set many career bests in disposals, marks, handballs and tackles."
-  }, {
-    "name": "Lindsay Gilbee",
-    "role": "Role Model",
-    "category": "role-model-sport",
-    "image": "",
-    "bio": "Lindsay is an Australia Rules Football player first selected by the Bulldogs in the 3rd round of the 1999 National AFL Draft after he completed his season with the Eastern Ranges in the TAC cup. Lindsay was regarded as one of the Bulldogs best kickers of the football and built his reputation as 'the man with the golden boot'."
-  }, {
-    "name": "Tom Hill",
-    "role": "Role Model",
-    "category": "role-model-sport",
-    "image": "",
-    "bio": "Tom is an Australian Rules Football player. After missing out on the NAB AFL Draft pick of 2009, Tom went on to continue football in NSW where he faced a serious injury to the knee. However, through persistence and hard work, Tom realized his ambition when he was successful in the 2010 selection and since then has been a key player to the Western Bulldogs AFL side."
   }, {
     "name": "Glenn Manton",
     "role": "Role Model",
@@ -258,12 +216,6 @@
     "image": "",
     "bio": "Gavin is a retired AFL Player, playing in two premierships with Essendon and Port Adelaide. Wanganeen is a Brownlow Medallist and is considered one of the finest Indigenous players to date."
   }, {
-    "name": "Will Minson",
-    "role": "Role Model",
-    "category": "role-model-sport",
-    "image": "will-minson@2x.jpg",
-    "bio": "Adelaide-born Will Minson made his AFL debut with the Western Bulldogs in 2004 and was nominated for the NAB Rising Star Award in 2006. A founding member of Red Dust Role Models, the multi-talented ruckman also studies civil engineering at University of Melbourne and is known as an excellent saxophonist and cook."
-  }, {
     "name": "Hannah Macdougall",
     "role": "Role Model",
     "category": "role-model-sport",
@@ -275,12 +227,6 @@
     "category": "role-model-sport",
     "image": "",
     "bio": "Hugh is an Australia Rules Football player. Drafted in 2006 by the NAB Draft as a 17-year-old by Port Adelaide, it was only 2 and a half years before a knee injury forced him into retirement. Hugh's career though was one full of highlights and coaches and teammates described him as an \"outstanding young man\"."
-  }, {
-    "name": "Leah Rush",
-    "role": "Role Model",
-    "category": "role-model-sport",
-    "image": "",
-    "bio": "Leah is a professional basketball player who has played for various teams throughout the United States, Australia, and Europe. She played collegiate basketball at the University of Oklahoma, and began her professional career in the WNBA and several teams throughout Europe and Australia. Leah has a master's degree in development anthropology from the University of Durham in the UK."
   }, {
     "name": "Lori Chizik",
     "role": "Role Model",
@@ -324,12 +270,6 @@
     "image": "",
     "bio": "Brett's NBL basketball career has spanned twelve years - winning two championships and representing Australia sixteen times. Brett is an active contributor to Red Dust, both in the field as a Role Model and in the field of graphic and visual arts."
   }, {
-    "name": "Tash Alabakov",
-    "role": "Role Model",
-    "category": "role-model-sport",
-    "image": "",
-    "bio": "Tash is a female basketball player, during the 2006/2007 WNBL season Tash was a part of the Bulleen Boomers development squad. Currently playing for the Nunawading Spectres in the SEABL competition Tash aspires to permanently play on a WNBL team. Tash is also in her last year of university studying Health Promotion which involves empowering individuals and equipping them with the knowledge and skills to make healthy lifestyle choices."
-  }, {
     "name": "Glen Singleton",
     "role": "Role Model",
     "category": "role-model-sport",
@@ -341,12 +281,6 @@
     "category": "role-model-sport",
     "image": "linley-frame@2x.jpg",
     "bio": "Linley won the 1991 World 100-metre Breaststroke Championship and an additional two silver medals in the 200-metre Breaststroke and the 4×100 Medley Relay at the same meet. During her career she was a Pan Pacific champion and won three World Short course medals, plus many other international medals throughout a career that spanned sixteen years."
-  }, {
-    "name": "Anil Kumble",
-    "role": "Role Model",
-    "category": "role-model-sport",
-    "image": "",
-    "bio": "A former Indian Cricketer and captain of the Indian Test cricket team, Anil is a right-arm leg spin bowler and a right-hand batsman. Currently the leading wicket-taker for India in both Test and One Day International matches. At present he is the third highest wicket-taker in test cricket and one of only three bowlers to have taken over 600 test wickets."
   }, {
     "name": "Kyle Vander Kuyp",
     "role": "Role Model",
