@@ -123,9 +123,13 @@ header {
             @media (max-width: 870px) {
               margin: 0;
             }
-            &:hover {
-              color: $reddust-gold;
-              text-decoration: none;
+
+            //Remove hover effect for mobile view
+            @media (min-width: 600px) {
+              &:hover {
+                color: $reddust-gold;
+                text-decoration: none;
+              }
             }
 
             img {
