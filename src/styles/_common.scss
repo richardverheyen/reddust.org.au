@@ -82,6 +82,7 @@ button {
   color: $reddust-gold;
   cursor: pointer;
   outline: 0;
+  flex-shrink: 0;
   &.support {
     margin: 2px 0;
     &:hover {
