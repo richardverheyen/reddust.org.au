@@ -82,34 +82,43 @@ button {
   color: $reddust-gold;
   cursor: pointer;
   outline: 0;
+  flex-shrink: 0;
   &.support {
     margin: 2px 0;
-    &:hover {
-      color: $reddust-sunset;
-      border-color: $reddust-sunset;
+    @media (min-width: 600px) {
+      &:hover {
+        color: $reddust-sunset;
+        border-color: $reddust-sunset;
+      }
     }
   }
   &.rust {
     background-color: $reddust-rust;
-    &:hover {
-      background-color: $reddust-sunset;
-      border-color: $reddust-sunset;
+    @media (min-width: 600px) {
+      &:hover {
+        background-color: $reddust-sunset;
+        border-color: $reddust-sunset;
+      }
     }
   }
   &.gold {
     color: $reddust-gold;
     border-color: $reddust-gold;
-    &:hover {
-      color: $reddust-cream;
-      border-color: $reddust-cream;
+    @media (min-width: 600px) {
+      &:hover {
+        color: $reddust-cream;
+        border-color: $reddust-cream;
+      }
     }
   }
   &.cream {
     color: $reddust-cream;
     border-color: $reddust-cream;
-    &:hover {
-      color: $reddust-sunset;
-      border-color: $reddust-sunset;
+    @media (min-width: 600px) {
+      &:hover {
+        color: $reddust-sunset;
+        border-color: $reddust-sunset;
+      }
     }
   }
   &.large {
@@ -134,12 +143,14 @@ button {
   img:nth-last-child(1) {
     display: none;
   }
-  &:hover {
-    img:nth-last-child(2) {
-      display: none;
-    }
-    img:nth-last-child(1) {
-      display: block;
+  @media (min-width: 600px) {
+    &:hover {
+      img:nth-last-child(2) {
+        display: none;
+      }
+      img:nth-last-child(1) {
+        display: block;
+      }
     }
   }
 }
@@ -150,16 +161,20 @@ button {
     display: flex;
   }
   @media (max-width: 900px) {
-    section:nth-child(1) {
+    footer,
+    section {
+      position: relative;
       filter: blur(2px);
 
       &::before {
         content: ('');
         position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 400px;
+        height: 100%;
         background: rgba(0,0,0,0.7);
-        z-index: 1;
+        z-index: 2;
       }
     }
   }

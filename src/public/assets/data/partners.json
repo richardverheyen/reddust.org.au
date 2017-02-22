@@ -1,38 +1,38 @@
 {
   "partners": [{
     "name": "Australian Government",
-    "logo": "australian-government-department-of-social-services.jpg",
+    "logo": "australiangov@2x.jpg",
     "intro": "At the beginning of 2016, the Australian Government Department of Social Services partnered with Red Dust to provide support for the Strong Young Women's Program.",
     "url": "https://www.dss.gov.au/"
   }, {
     "name": "Nike",
-    "logo": "nike.jpg",
+    "logo": "nike@2x.jpg",
     "intro": "Nike Australia has established a long and significant relationship with Red Dust Role Models.As a founding corporate partner, Nike Australia has seen Red Dust Role Models develop into an effective program that sees the lives of indigenous youth enriched.Nike believes in the power of sport to unleash potential.",
     "url": "http://www.nike.com/"
   }, {
     "name": "Network Ten",
-    "logo": "ten.jpg",
+    "logo": "ten@2x.jpg",
     "intro": "Ten Network Holdings is committed to supporting and giving back to the communities in which we operate and helping our staff find ways to work with a diverse range of foundations and not-for-profit organisations including Red Dust Role Models.",
     "url": "https://tenplay.com.au/"
   }, {
     "name": "Coles Express",
-    "logo": "coles-express.jpg",
+    "logo": "colesexpress@2x.jpg",
     "intro": "Coles Express has partnered with Red Dust Role Models since 2014. Working in remote Indigenous communities​ across the Top End for more than 20 years, Red Dust Role Models 'Healthy Living' programs encourage Indigenous youth to learn more about health, and inspire them to live healthier lifestyles.",
     "url": "https://www.colesexpress.com.au/"
   }, {
     "name": "Danone",
-    "logo": "danone-nutricia.png",
+    "logo": "danone-nutricia@2x.jpg",
     "intro": "Commencing the partnership with Red Dust in 2016 in support of the Community of Peppimenarti, Danone and Red Dust are very excited by what we can achieve together in the area of health. For over 100 years Danone Nutricia has been at the forefront of research in infant nutrition and our pioneering efforts continue today.",
     "url": "http://www.danonenutricia.com.au/"
   }, {
     "name": "Johnson & Johnson",
-    "logo": "johnson-and-johnson.jpg",
+    "logo": "johnsonjohnson@2x.jpg",
     "intro": "In early 2015, Johnson & Johnson signed on to partner with Red Dust to support our Healthy Living initiatives in the Kintore community.Johnson & Johnson supports community - based programs that improve health and well - being.",
     "url": "https://www.jnj.com.au/"
   }, {
     "name": "Telco Together Foundation",
-    "logo": "telco.jpg",
-    "intro": "Launched in July 2012, the Telco Together Foundation is a registered charity that brings together the telecommunications industry in support of disadvantaged communities.Members of the Foundation include Optus, Vodafone, NBN Co, Dodo, M2, AAPT, Alcatel, Community Telco, Eftel, Telcoinabox, Vocus Communications, Smart Business Telco and Globe Telecom.",
+    "logo": "telco@2x.jpg",
+    "intro": "Launched in July 2012, the Telco Together Foundation is a registered charity that brings together the telecommunications industry in support of disadvantaged communities.Members of the Foundation include Telstra, Optus, Vodafone, Vocus Communications, NBN Co, Nokia, Community Telco, Inabox, Smart Business Telco and Globe Telecom.",
     "url": "http://www.telcotogether.org/"
   }, {
     "name": "Kmart",
@@ -46,7 +46,7 @@
     "url": "http://www3.hilton.com/en/index.html"
   }, {
     "name": "DrinkWise Australia",
-    "logo": "drink-wise.jpg",
+    "logo": "drinkwise@2x.jpg",
     "intro": "DrinkWise Australia is an independent, not-for-profit organisation focused on promoting cultural change to reduce the harm arising from the irresponsible consumption of alcohol.Their vision is to improve the Australian drinking culture so that consuming alcohol too young and to excess is considered undesirable.DrinkWise Australia provides generous support for our Strong Young Women' s and Strong Young Men' s programs.",
     "url": "https://drinkwise.org.au/"
   }, {
@@ -61,17 +61,17 @@
     "url": "https://www.ihg.com/hotels/us/en/reservation"
   }, {
     "name": "Coles Online",
-    "logo": "coles-online.jpg",
+    "logo": "colesonline@2x.jpg",
     "intro": "More than 1,000 Coles Express team members donate to Red Dust through regular payroll deductions, to help fund programs at Daly River, located 224 km south west of Darwin.More than 15 team members have visited Daly River as role models, generously giving their time, sharing culture and life experiences and offering practical assistance.",
     "url": "https://shop.coles.com.au//online/national"
   }, {
     "name": "Edgewise",
-    "logo": "edge-wise.jpg",
+    "logo": "edgewise@2x.jpg",
     "intro": "Edgewise is an Australian owned and operated professional services organization, specializing in the provision of insurance broking services to businesses of all sizes across all industries.With collectively over 100 years of experience in the insurance industry, Edgewise knows what it takes to source the most appropriate protection for both individual and business assets.",
     "url": "http://www.edgewise.com.au/"
   }, {
     "name": "McGrathNicol",
-    "logo": "mcgrathnicol.jpg",
+    "logo": "mcgrathnicol@2x.jpg",
     "intro": "McGrathNicol is an independent boutique advisory firm specialising in Corporate Advisory, Forensic, Transaction Services and Corporate Recovery.We are a market leader in Australia and in New Zealand, with more than 30 Partners and 300 people across the region.",
     "url": "http://www.mcgrathnicol.com/"
   }, {
@@ -79,11 +79,6 @@
     "logo": "northern-territory-government.jpg",
     "intro": "As the presiding Government over most of the remote communities where Red Dust Role Models conducts its programs, the Northern Territory Government is a strong advocate of the Red Dust organisation providing much appreciated funding to support our health and education initiatives.",
     "url": "https://nt.gov.au/"
-  }, {
-    "name": "Clayton Utz",
-    "logo": "clayton-utz.jpg",
-    "intro": "Clayton Utz assists a wide range of community partners and clients each year.They provide regular legal advice, volunteers and financial support to a number of community organisations and charities.Clayton Utz also assist individuals who need one - off help with specific legal problems and regularly make one - off donations to charities.",
-    "url": "https://www.claytonutz.com/"
   }, {
     "name": "NICA",
     "logo": "nica@2x.jpg",
@@ -95,18 +90,13 @@
     "intro": "Chifley Alice Springs Resort is a longtime friend of Red Dust.We are thankful for Chifley providing us with comfortable accommodation, delicious meals and great service before and after each Red Dust program delivery in the central desert.",
     "url": "http://www.silverneedlehotels.com/chifley/alice-springs"
   }, {
-    "name": "Christ Church Grammar",
-    "logo": "ccgs@2x.jpg",
-    "intro": "Since 2008, Christ Church Grammar has supported our programs with Red Dust Role Models, enabling Year 6 students to visit Areyonga.",
-    "url": "https://www.ccgs.vic.edu.au/"
-  }, {
     "name": "DoubleTree By Hilton",
     "logo": "double-tree.jpg",
     "intro": "As a Red Dust partner, Hilton has been a strong supporter of our programs and is a major accommodation partner, providing rooms and facilities for our staff whilst in Darwin.",
     "url": "http://doubletree3.hilton.com/"
   }, {
     "name": "Working Dog",
-    "logo": "working-dog.jpg",
+    "logo": "workingdog@2x.jpg",
     "intro": "Founded in January 1993, Working Dog is the creative minds behind The Castle, The Dish, Frontline, Thank God You 're Here, The Panel, Russell Coight's All Aussie Adventures, The Hollowmen, Utopia and now HYBPA",
     "url": "http://www.workingdog.com/"
   }, {
