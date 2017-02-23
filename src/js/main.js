@@ -142,18 +142,43 @@ $(document).ready(function() {
     });
 
   }
+  //People Page filter logic
+  var filters = {};
+  filters.founder = 0;
+  filters.patron = 0;
+  filters.board = 0;
+  filters.staff = 0;
 
-  //People page filter toggle
+  //Filter dropdown toggle
+  // TODO: add clickoff when you click on anything but the desired toggle area
+  // TODO: add clickon and clickoff for the selected-filter 'status' button itself
   $('#filter>div>div').on('click', function(e) {
     if (e.target !== this)
       return;
     $('#filter ul').toggleClass('active');
   });
 
-  //Select filters in People page
+  //Select Filters from dropdown
   $('#filter ul button').on('click', function() {
-    $(this).toggleClass('active');
+    $(this).toggleClass('selected');
+    var selectedClasses = $(this).attr('class');
+
+    if (selectedClasses.includes('selected')) {
+      toggleTo = false;
+    } else {
+      toggleTo = true;
+    };
+    var selectedFilter = selectedClasses.replace(' selected', '');
+
+    console.log(selectedFilter, toggleTo);
+    toggleFilters(selectedFilter, toggleTo);
   });
+
+  //Toggle filters based on user selection
+  toggleFilters = function(selectedFilter) {
+
+    $('#people ul').find('.' + selectedFilter).toggleClass('active');
+  };
 
   // Make any hashtag link scroll with animation to element with matching ID
   // Example: <a href="#features"> will scroll to element with ID #features

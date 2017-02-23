@@ -28,12 +28,13 @@
 
       }
       div {
+        display: flex;
+        justify-content: flex-start;
         background: white;
         overflow: visible;
         position: relative;
         z-index: 1;
-        width: 160px;
-        padding-right: 40px;
+        width: 200px;
         cursor: pointer;
         &:after {
           content: ('');
@@ -62,7 +63,7 @@
           border-right: 1px $reddust-rust solid;
           background-color: $reddust-cream;
           user-select: none;
-          &.active {
+          &.selected {
             background-color: darken($reddust-cream, 10);
           }
 
