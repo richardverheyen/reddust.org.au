@@ -143,6 +143,18 @@ $(document).ready(function() {
 
   }
 
+  //People page filter toggle
+  $('#filter>div>div').on('click', function(e) {
+    if (e.target !== this)
+      return;
+    $('#filter ul').toggleClass('active');
+  });
+
+  //Select filters in People page
+  $('#filter ul button').on('click', function() {
+    $(this).toggleClass('active');
+  });
+
   // Make any hashtag link scroll with animation to element with matching ID
   // Example: <a href="#features"> will scroll to element with ID #features
   // Commonly found in the #hero of each page
