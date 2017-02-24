@@ -143,11 +143,13 @@ $(document).ready(function() {
 
   }
   //People Page filter logic
-  var filters = {};
-  filters.founder = 0;
-  filters.patron = 0;
-  filters.board = 0;
-  filters.staff = 0;
+  var filters = {
+    everyone: true,
+    founder: false,
+    patron: false,
+    board: false,
+    staff: false
+  };
 
   //Filter dropdown toggle
   // TODO: add clickoff when you click on anything but the desired toggle area
@@ -158,27 +160,67 @@ $(document).ready(function() {
     $('#filter ul').toggleClass('active');
   });
 
-  //Select Filters from dropdown
+  //////Select Filters from dropdown
   $('#filter ul button').on('click', function() {
-    $(this).toggleClass('selected');
-    var selectedClasses = $(this).attr('class');
 
-    if (selectedClasses.includes('selected')) {
+    var $button = $(this);
+
+    var selectedClasses = $button.attr('class');
+    //Identify the the 'selected' status
+
+    if ($button.hasClass('selected')) {
       toggleTo = false;
     } else {
       toggleTo = true;
-    };
-    var selectedFilter = selectedClasses.replace(' selected', '');
+    }
 
-    console.log(selectedFilter, toggleTo);
-    toggleFilters(selectedFilter, toggleTo);
+    //Toggle the 'selected' status after you've identified it
+    $button.toggleClass('selected');
+
+    //Identify the string of the selected filter and change it's status in the filters object
+    var selectedFilter = selectedClasses.replace(' selected', '');
+    filters[selectedFilter] = toggleTo;
+
+    applyPeopleFilters();
   });
 
-  //Toggle filters based on user selection
-  toggleFilters = function(selectedFilter) {
+  // Make a people-tile visible if it contains one or more active filter classes
+  applyPeopleFilters = function() {
+    console.log('Applying people filters');
+    //identify the unique classes for each of the tiles
+    $('#people ul>li').each(function() {
 
-    $('#people ul').find('.' + selectedFilter).toggleClass('active');
-  };
+      var $categories = $(this).attr('data');
+
+      //Remove the image or no-image classes from the tiles without damaging the
+      multipleFiltersTest = $categories.includes(' ');
+      if (multipleFiltersTest) {
+        var filterArray = $categories.split(' '),
+          filter1 = filterArray[0],
+          filter2 = filterArray[1];
+      } else {
+        var filter1 = $categories;
+      };
+
+      if (filters.everyone == true) {
+        var status = true;
+        console.log('everyone is active');
+      } else if (filters[filter1]) {
+        var status = true;
+      } else if (filters[filter2]) {
+        var status = true;
+      } else {
+        var status = false;
+      };
+
+      if (status) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      };
+
+    });
+  }
 
   // Make any hashtag link scroll with animation to element with matching ID
   // Example: <a href="#features"> will scroll to element with ID #features
