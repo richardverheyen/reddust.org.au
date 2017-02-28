@@ -142,85 +142,51 @@ $(document).ready(function() {
     });
 
   }
-  //People Page filter logic
-  var filters = {
-    everyone: true,
-    founder: false,
-    patron: false,
-    board: false,
-    staff: false
-  };
 
   //Filter dropdown toggle
-  // TODO: add clickoff when you click on anything but the desired toggle area
-  // TODO: add clickon and clickoff for the selected-filter 'status' button itself
-  $('#filter>div>div').on('click', function(e) {
-    if (e.target !== this)
-      return;
+  $('#filter>div>div').on('click', function() {
+    event.stopPropagation();
     $('#filter ul').toggleClass('active');
   });
 
-  //////Select Filters from dropdown
-  $('#filter ul button').on('click', function() {
-
-    var $button = $(this);
-
-    var selectedClasses = $button.attr('class');
-    //Identify the the 'selected' status
-
-    if ($button.hasClass('selected')) {
-      toggleTo = false;
-    } else {
-      toggleTo = true;
-    }
-
-    //Toggle the 'selected' status after you've identified it
-    $button.toggleClass('selected');
-
-    //Identify the string of the selected filter and change it's status in the filters object
-    var selectedFilter = selectedClasses.replace(' selected', '');
-    filters[selectedFilter] = toggleTo;
-
-    applyPeopleFilters();
+  // Add click - off functionality to the dropdown
+  $('body').on('click', function() {
+    if ($('#filter ul').hasClass('active')) {
+      $('#filter ul').toggleClass('active');
+    };
   });
 
-  // Make a people-tile visible if it contains one or more active filter classes
-  applyPeopleFilters = function() {
-    console.log('Applying people filters');
-    //identify the unique classes for each of the tiles
-    $('#people ul>li').each(function() {
+  //Display the active filter
+  $('#filter ul button').on('click', function(event) {
 
-      var $categories = $(this).attr('data');
+    var filterName = $(this).attr('class');
+    var $people = $('#people li');
+    var $visibles = $('#people ul .' + filterName);
+    var easing = 'easeOutExpo';
+    var speed = 1000; // milliseconds
 
-      //Remove the image or no-image classes from the tiles without damaging the
-      multipleFiltersTest = $categories.includes(' ');
-      if (multipleFiltersTest) {
-        var filterArray = $categories.split(' '),
-          filter1 = filterArray[0],
-          filter2 = filterArray[1];
-      } else {
-        var filter1 = $categories;
-      };
+    // Set the button states text
+    $('#selected-filter').text(filterName);
+    $('#filter ul button').removeClass('selected');
+    $('#filter ul .' + filterName).addClass('selected');
 
-      if (filters.everyone == true) {
-        var status = true;
-        console.log('everyone is active');
-      } else if (filters[filter1]) {
-        var status = true;
-      } else if (filters[filter2]) {
-        var status = true;
-      } else {
-        var status = false;
-      };
+    // Hide all people
+    $people.addClass('hidden');
 
-      if (status) {
-        $(this).show();
-      } else {
-        $(this).hide();
-      };
-
+    // Animate in the visible people
+    $visibles.removeClass('hidden').css({
+      opacity: 0
+    }).each(function(i) {
+      var delay = i * 80; // milliseconds
+      $(this).delay(delay).velocity({
+        scale: [1, .8],
+        opacity: [1, 0],
+      }, easing, speed);
     });
-  }
+
+    // Prevent the parent dropdown from closing
+    event.stopPropagation();
+  });
 
   // Make any hashtag link scroll with animation to element with matching ID
   // Example: <a href="#features"> will scroll to element with ID #features
