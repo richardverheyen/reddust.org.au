@@ -17,11 +17,19 @@
 
     <section id="filter">
       <div>
-        <p>Sort by:</p>
-        <button>Everyone</button>
-        <button>Directors</button>
-        <button>Staff</button>
-        <button>Members</button>
+        <p>Sort by</p>
+
+        <div>
+          <button id="selected-filter">Everyone</button>
+          <ul>
+            <button class="everyone selected">Everyone</button>
+            <button class="founder">Founder</button>
+            <button class="patron">Patron</button>
+            <button class="board">Board</button>
+            <button class="staff">Staff</button>
+            <button class="ambassadors">Ambassadors</button>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -32,9 +40,9 @@
             <li class="{{category}} {{#if image}}image{{else}}no-image{{/if}}">
               <div>
                 {{#if image}}
-                <div class="img">
-                  <img src="/assets/img/people/{{image}}" alt="{{name}} - {{position}} at Red Dust" />
-                </div>
+                  <div class="img">
+                    <img src="/assets/img/people/{{image}}" alt="{{name}} - {{position}} at Red Dust" />
+                  </div>
                 {{/if}}
                 <div class="bio">
                   <h2>{{name}}</h2>

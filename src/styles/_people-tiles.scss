@@ -3,144 +3,150 @@ section.tiles.people {
   > div {
     padding: 0;
     max-width: 2600px;
-  }
-  ul {
-    display: flex;
-    flex-flow: row wrap;
-    background-color: $reddust-sunset;
-    @media (min-width: 780px) {
-      justify-content: center;
-    }
-  }
-  li {
-    padding: 1px;
-    box-sizing: border-box;
-    background: $reddust-bone;
-    position: relative;
-    cursor: pointer;
-    padding: 0;
-    background: $reddust-rust;
-    overflow: hidden;
-    // min-width: 260px;
-    // min-height: 260px;
-    // max-width: 364px;
-    // max-height: 364px;
-    width: 16.6667vw;
-    height: 16.6667vw;
-    @media (max-width: 1560px) {
-      width: 20vw;
-      height: 20vw;
-    }
-    @media (max-width: 1300px) {
-      width: 25vw;
-      height: 25vw;
-    }
-    @media (max-width: 1040px) {
-      width: 33.3333vw;
-      height: 33.3333vw;
-    }
-    @media (max-width: 780px) {
-      width: 50vw;
-      height: 50vw;
-    }
-    @media (max-width: 520px) {
-      max-width: none;
-      max-height: none;
-      width: 100vw;
-      height: 100vw;
-    }
-    // To randomise the background colours of people tiles we apply these odd nth-child sequences
-    &:nth-child(4n+1) {
-      background: $reddust-yinnar;
-    }
-    &:nth-child(4n+2) {
-      background: $reddust-rust;
-    }
-    &:nth-child(4n+3) {
-      background: $reddust-sunset;
-    }
-    &:nth-child(4n+4) {
-      background: $reddust-gold;
-    }
-    &:nth-child(7n+1) {
-      background: $reddust-yinnar;
-    }
-    &:nth-child(7n-2) {
-      background: $reddust-rust;
-    }
-    &:nth-child(7n+2) {
-      background: $reddust-sunset;
-    }
-    &:nth-child(7n+5) {
-      background: $reddust-gold;
-    }
-    &.image {
-      &:hover {
-        img {
-          transform: scale(1.06);
-        }
-      }
-      img {
-        width: 100%;
-        height: 100%;
-        transition: transform 500ms ease;
-      }
-      h2 {
-        font-family: $montserrat-bold;
-        font-size: 18px;
-        line-height: 130%;
-        text-transform: uppercase;
-        letter-spacing: 0.4px;
-        color: white;
-        position: absolute;
-        bottom: 3.5%;
-        right: 6%;
-        text-shadow: 0 0 10px RGBA(0,0,0,0.2);
-        text-align: right;
-      }
-      h3 {
-        display: none;
-      }
-    }
-    &.no-image {
-      &:hover {
-        > div {
-          transform: scale(1.06);
-        }
-      }
-      > div {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        text-align: center;
-        display: flex;
-        flex-flow: column nowrap;
+
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      background-color: $reddust-sunset;
+      @media (min-width: 780px) {
         justify-content: center;
-        transition: transform 500ms ease;
       }
-      h2,
-      h3 {
-        text-transform: uppercase;
-        padding: 0 20px;
-        line-height: 130%;
+
+      li {
+        padding: 1px;
+        box-sizing: border-box;
+        background: $reddust-bone;
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+        background: $reddust-rust;
+        overflow: hidden;
+        // min-width: 260px;
+        // min-height: 260px;
+        // max-width: 364px;
+        // max-height: 364px;
+        width: 16.6667vw;
+        height: 16.6667vw;
+        &.hidden {
+          display: none;
+        }
+        @media (max-width: 1560px) {
+          width: 20vw;
+          height: 20vw;
+        }
+        @media (max-width: 1300px) {
+          width: 25vw;
+          height: 25vw;
+        }
+        @media (max-width: 1040px) {
+          width: 33.3333vw;
+          height: 33.3333vw;
+        }
+        @media (max-width: 780px) {
+          width: 50vw;
+          height: 50vw;
+        }
+        @media (max-width: 520px) {
+          max-width: none;
+          max-height: none;
+          width: 100vw;
+          height: 100vw;
+        }
+        // To randomise the background colours of people tiles we apply these odd nth-child sequences
+        &:nth-child(4n+1) {
+          background: $reddust-yinnar;
+        }
+        &:nth-child(4n+2) {
+          background: $reddust-rust;
+        }
+        &:nth-child(4n+3) {
+          background: $reddust-sunset;
+        }
+        &:nth-child(4n+4) {
+          background: $reddust-gold;
+        }
+        &:nth-child(7n+1) {
+          background: $reddust-yinnar;
+        }
+        &:nth-child(7n-2) {
+          background: $reddust-rust;
+        }
+        &:nth-child(7n+2) {
+          background: $reddust-sunset;
+        }
+        &:nth-child(7n+5) {
+          background: $reddust-gold;
+        }
+        &.image {
+          &:hover {
+            img {
+              transform: scale(1.06);
+            }
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            transition: transform 500ms ease;
+          }
+          h2 {
+            font-family: $montserrat-bold;
+            font-size: 18px;
+            line-height: 130%;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            color: white;
+            position: absolute;
+            bottom: 3.5%;
+            right: 6%;
+            text-shadow: 0 0 10px RGBA(0,0,0,0.2);
+            text-align: right;
+          }
+          h3 {
+            display: none;
+          }
+        }
+        &.no-image {
+          &:hover {
+            > div {
+              transform: scale(1.06);
+            }
+          }
+          > div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            transition: transform 500ms ease;
+          }
+          h2,
+          h3 {
+            text-transform: uppercase;
+            padding: 0 20px;
+            line-height: 130%;
+          }
+          h2 {
+            font-family: $montserrat-bold;
+            font-size: 27px;
+            color: $reddust-bone;
+            margin-bottom: 10px;
+          }
+          h3 {
+            font-family: $montserrat-regular;
+            font-size: 19px;
+            color: $reddust-cream;
+            letter-spacing: 0.5px;
+          }
+        }
+        p {
+          display: none;
+        }
       }
-      h2 {
-        font-family: $montserrat-bold;
-        font-size: 27px;
-        color: $reddust-bone;
-        margin-bottom: 10px;
-      }
-      h3 {
-        font-family: $montserrat-regular;
-        font-size: 19px;
-        color: $reddust-cream;
-        letter-spacing: 0.5px;
-      }
-    }
-    p {
-      display: none;
     }
   }
+
 }

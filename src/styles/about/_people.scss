@@ -8,7 +8,90 @@
     }
   }
   #filter {
-    display: none;
-    background: $reddust-stone;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    height: 80px;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: visible;
+
+      p {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: normal;
+        padding-right: 20px;
+        user-select: none;
+
+      }
+      div {
+        display: flex;
+        justify-content: flex-start;
+        background: white;
+        overflow: visible;
+        position: relative;
+        z-index: 1;
+        width: 200px;
+        cursor: pointer;
+        &:after {
+          content: ('');
+          position: absolute;
+          left: 160px;
+          top: 0;
+          background: $reddust-cream url('/assets/img/icons/downer.svg');
+          background-size: 70%;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 39px;
+          height: 38px;
+          border: 1px $reddust-yinnar solid;
+          border-left: none;
+        }
+        button {
+          color: $reddust-yinnar;
+          width: 160px;
+          height: 40px;
+          font-size: 12px;
+          font-weight: normal;
+          border-radius: 0;
+          border: none;
+          border-bottom: 1px $reddust-yinnar solid;
+          border-left: 1px $reddust-yinnar solid;
+          border-right: 1px $reddust-yinnar solid;
+          background-color: $reddust-cream;
+          user-select: none;
+          &.selected {
+            background-color: darken($reddust-cream, 10);
+          }
+
+        }
+        #selected-filter {
+          border-top: 1px $reddust-yinnar solid;
+        }
+        ul {
+          position: absolute;
+          top: 40px;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          overflow: hidden;
+          background-color: white;
+          height: 0;
+          transition: all ease-out 400ms;
+          &.active {
+            height: 240px;
+          }
+          @media (min-width: 600px) {
+            button:hover {
+              background-color: darken($reddust-cream, 20);
+            }
+          }
+        }
+      }
+    }
   }
 }
