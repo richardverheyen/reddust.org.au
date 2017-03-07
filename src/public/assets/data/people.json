@@ -51,7 +51,7 @@
     "name": "Deanne Minniecon",
     "role": "Director",
     "category": "everyone board",
-    "image": "",
+    "image": "deanne-minniecon@2x.jpg",
     "bio": "Deanne is both Aboriginal and Torres Strait Islander decent and holds a Graduate Diploma in Health Promotion and a Master of Health Science (Health Promotion).  Deanne has led a number of preventative health programs and strategies targeting Aboriginal and Torres Strait Islander peoples across Queensland and had provided advice on key preventive health initiatives nationally."
   }, {
     "name": "Darren Smith",
@@ -60,11 +60,11 @@
     "image": "darren-smith@2x.jpg",
     "bio": "Darren has been involved with Red Dust for over twelve years and brings to his role a ten-year career as a professional basketball player and management experience. As the Chief Executive Officer, he coordinates the effective delivery of programs throughout Australia and leads teams on the ground while out bush, as well as looking after all other aspects of the organisation."
   }, {
-    "name": "Jonathan Lindsay-Tjapaltjarri Hermawan",
+    "name": "Jonathan Hermawan Tjapaltjarri",
     "role": "Manager Central Australia",
     "category": "everyone staff",
-    "image": "",
-    "bio": "Jonathan is a multi-cultural and multi-lingual man whose family and cultural connections extend from Walungurru (Kintore) Community throughout Central Australia, West Australia and Queensland. He has qualifications in teaching/education, alcohol and other drugs (AOD), automotive mechanics, music and theology. He is a strident advocate for Aboriginal community leadership, youth empowerment, many-ways learning and Reconciliation in action. Jonathan is the Manager for Central Australia and also facilitates Red Dust's men and boys behaviour change and cultural leadership programs."
+    "image": "jonathan-hermawan@2x.jpg",
+    "bio": "Jonathan is a fluent Pintupi-Luritja speaking man from the NT community of Walungurru (Kintore). He is a qualified teacher/educator and proud advocate for Aboriginal community leadership, youth empowerment and reconciliation. Based in Alice Springs, Jonathan works for Red Dust as an Alcohol and Men’s Health Educator and Coordinator, journeying with Aboriginal males (youth and adults) and their families."
   }, {
     "name": "Lara Davenport",
     "role": "Healthy Living Program Coordinator",
@@ -81,7 +81,7 @@
     "name": "Emilie Goegan",
     "role": "Business & Communications Manager",
     "category": "everyone staff",
-    "image": "",
+    "image": "emilie-goegan@2x.jpg",
     "bio": "Emilie joined Red Dust mid 2016 as a volunteer and not to long became a valuable member of the team as Business and Communications Manager. With a background in education and a Bachelor's Degree in Creative Arts majoring in Professional Writing, Emilie has travelled extensively throughout Asia as an educator prior to settling back home in Melbourne."
   }, {
     "name": "Nina Braid",
@@ -128,7 +128,7 @@
   }, {
     "name": "Raymond Walters Japanangka",
     "role": "Role Model",
-    "category": "everyone staff arts",
+    "category": "everyone ambassadors staff arts",
     "image": "raymond-walters-japanangka@2x.jpg",
     "bio": "Born in Alice Springs. Raymond's grandfather's country is Ngarleyekwerleng in the Western Desert near Yuendumu, and his grandmother's country is Alhalkerre Atnangkerre. He brings his expertise in Sport & Recreation, Remote/Urban Aboriginal Community Development, Family & Child Welfare, Alcohol & Other Drugs Awareness and Consultancy on Aboriginal Community Engagement policies and procedures."
   }, {
@@ -260,7 +260,7 @@
   }, {
     "name": "Melanie Jones",
     "role": "Role Model",
-    "category": "everyone staff sport",
+    "category": "everyone ambassadors staff sport",
     "image": "",
     "bio": "Melanie (MJ) is known as a pioneer for women's cricket in Australia and around the world. She brings a wealth of sporting experience and achievement to her role, having represented Australia in all forms of international cricket. A qualified teacher, she is currently pursuing a media career while also working closely with elite female athletes in career development with Elite Sports Properties – Majestic Division. "
   }, {
@@ -278,13 +278,13 @@
   }, {
     "name": "Linley Frame",
     "role": "Role Model",
-    "category": "everyone staff sport",
+    "category": "everyone ambassadors staff sport",
     "image": "linley-frame@2x.jpg",
     "bio": "Linley won the 1991 World 100-metre Breaststroke Championship and an additional two silver medals in the 200-metre Breaststroke and the 4×100 Medley Relay at the same meet. During her career she was a Pan Pacific champion and won three World Short course medals, plus many other international medals throughout a career that spanned sixteen years."
   }, {
     "name": "Kyle Vander Kuyp",
     "role": "Role Model",
-    "category": "everyone staff sport",
+    "category": "everyone ambassadors staff sport",
     "image": "kyle-vander-kuyp@2x.jpg",
     "bio": "Kyle is an Indigenous Australian athlete and a descendant of the Yuin Clan of south coast NSW and the Woromi Clan of north coast NSW. He holds the Australian record for 110m Hurdles (13.29 sec) and the Australian record for 60m Hurdles indoors (7.73 sec), and has been National Champion 12 times, including a silver medal in the 1994 Commonwealth Games."
   }, {
@@ -296,7 +296,7 @@
   }, {
     "name": "Luke Darcy",
     "role": "Role Model",
-    "category": "everyone staff sport",
+    "category": "everyone ambassadors staff sport",
     "image": "luke-darcy@2x.jpg",
     "bio": "Luke is a former Australian rules footballer who played for the Western Bulldogs, a team he captained for 2 years. Debuting in 1994, Luke is regarded as one of the Bulldogs' most successful ruckmen/forwards. In 2001 he took out the Charles Sutton Medal, and continued to stamp his name on the game in the following seasons. "
   }]

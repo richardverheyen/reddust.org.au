@@ -87,7 +87,6 @@ function checkWhetherToAnimateCounters() {
   // Only bind this this on logic on the landing page, avoid collisions on other pages
   var triggerTop = $('#landing .counter-wrapper').first().offset().top;
   var windowBottom = $(window).scrollTop() + $(window).height();
-  // console.log(triggerTop, windowBottom);
   if (!animatingCounters) {
     if (windowBottom > triggerTop) {
       animatingCounters = true;
@@ -133,15 +132,13 @@ $(document).ready(function() {
 
   // Things to fire ONLY on the landing page (avoid unexpected future collisions)
   if ($('body').attr('id') === 'landing') {
-
     // On load
     checkWhetherToAnimateCounters();
     // On scroll
     $(window).scroll(function() {
       checkWhetherToAnimateCounters();
     });
-
-  }
+  };
 
   //Filter dropdown toggle
   $('#filter>div>div').on('click', function() {
@@ -158,10 +155,27 @@ $(document).ready(function() {
 
   //Display the active filter
   $('#filter ul button').on('click', function(event) {
+    $element = $(this);
+    if ($element.hasClass('selected')) {} else {
+      applyFilters(event, $element);
+    };
+    event.stopPropagation();
 
-    var filterName = $(this).attr('class');
+  });
+
+  //Applies filters which are either chosen by the user in the dropdown, or stored in sessionStorage
+  function applyFilters(event, element) {
+
+    //If the function is running with a stored filter, apply it then delete it from session storage
+    if (sessionStorage.getItem('storedFilter')) {
+      var filterName = sessionStorage.getItem('storedFilter');
+      sessionStorage.removeItem('storedFilter');
+    } else {
+      var filterName = element.attr('class');
+    };
+
     var $people = $('#people li');
-    var $visibles = $('#people ul .' + filterName);
+    var $visibles = $('#people ul li.' + filterName);
     var easing = 'easeOutExpo';
     var speed = 1000; // milliseconds
 
@@ -171,12 +185,11 @@ $(document).ready(function() {
     $('#filter ul .' + filterName).addClass('selected');
 
     // Hide all people
-    $people.addClass('hidden');
+    $people.hide().stop().velocity('stop');
 
-    // Animate in the visible people
-    $visibles.removeClass('hidden').css({
+    $visibles.css({
       opacity: 0
-    }).each(function(i) {
+    }).show().each(function(i) {
       var delay = i * 80; // milliseconds
       $(this).delay(delay).velocity({
         scale: [1, .8],
@@ -186,7 +199,18 @@ $(document).ready(function() {
 
     // Prevent the parent dropdown from closing
     event.stopPropagation();
+  }
+
+  // Pre-apply filters when user navigates to People using the footer links
+  $('footer a.filter').on('click', function() {
+    var $filter = $(this).attr('class').replace('filter ', '');
+    sessionStorage.setItem('storedFilter', $filter);
   });
+
+  //on page load, check if there is a stored filter from a page nagivation
+  if (sessionStorage.getItem('storedFilter')) {
+    applyFilters();
+  } else {};
 
   // Make any hashtag link scroll with animation to element with matching ID
   // Example: <a href="#features"> will scroll to element with ID #features
@@ -262,7 +286,6 @@ $(document).ready(function() {
 
   // Clicking a partner opens the modal, only if screen width is below 720px
   $('.tiles.partners li').on('click', function() {
-    console.log($(window).width());
     if ($(window).width() <= 720) {
       var $img = $(this).find('.front img').clone();
       var $h2 = $(this).find('.back h2').clone();
