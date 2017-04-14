@@ -197,8 +197,6 @@ $(document).ready(function() {
       }, easing, speed);
     });
 
-    // Prevent the parent dropdown from closing
-    event.stopPropagation();
   }
 
   // Pre-apply filters when user navigates to People using the footer links
