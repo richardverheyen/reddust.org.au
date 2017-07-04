@@ -287,6 +287,12 @@
                 flex-wrap: nowrap;
                 flex-direction: column;
               }
+              &.three-columns {
+                padding: 0;
+                > div {
+                  width: 33.3333%;
+                }
+              }
               > div {
                 width: 50%;
                 margin-bottom: 40px;
